@@ -48,7 +48,7 @@ class __TwigTemplate_27e4707a4a4a9cae6b877548892534dbc088bb91fef70f84cdcf95a52c2
 <div class=\"container\">
 
     <div class=\"page-header\">
-        <h2>Overview Of Kami<small>Basic concepts</small></h2>
+        <h2>Overview Of Sunal <small>Basic concepts</small></h2>
     </div>
     <p>
         This page demonstrates the basic CMS features.
@@ -208,7 +208,7 @@ class __TwigTemplate_27e4707a4a4a9cae6b877548892534dbc088bb91fef70f84cdcf95a52c2
 <div class=\"container\">
 
     <div class=\"page-header\">
-        <h2>Overview Of Kami<small>Basic concepts</small></h2>
+        <h2>Overview Of Sunal <small>Basic concepts</small></h2>
     </div>
     <p>
         This page demonstrates the basic CMS features.
