@@ -1,8 +1,4 @@
-<<<<<<< Updated upstream
-1590574390a:1:{s:11:"plugins.htm";a:9:{s:8:"fileName";s:11:"plugins.htm";s:7:"content";s:784:"title = "Plugin components"
-=======
-1590574920a:1:{s:11:"plugins.htm";a:9:{s:8:"fileName";s:11:"plugins.htm";s:7:"content";s:784:"title = "Plugin components"
->>>>>>> Stashed changes
+1591513468a:1:{s:11:"plugins.htm";a:9:{s:8:"fileName";s:11:"plugins.htm";s:7:"content";s:784:"title = "Plugin components"
 url = "/demo/plugins"
 layout = "default"
 

@@ -1,8 +1,4 @@
-<<<<<<< Updated upstream
-1590574390a:1:{s:22:"placeholder/layout.txt";a:6:{s:8:"fileName";s:22:"placeholder/layout.txt";s:7:"content";s:50:"<head>
-=======
-1590574920a:1:{s:22:"placeholder/layout.txt";a:6:{s:8:"fileName";s:22:"placeholder/layout.txt";s:7:"content";s:50:"<head>
->>>>>>> Stashed changes
+1591513469a:1:{s:22:"placeholder/layout.txt";a:6:{s:8:"fileName";s:22:"placeholder/layout.txt";s:7:"content";s:50:"<head>
     ...
     {% placeholder head %}
 </head>

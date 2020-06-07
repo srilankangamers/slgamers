@@ -1,8 +1,4 @@
-<<<<<<< Updated upstream
-1590574390a:1:{s:8:"home.htm";a:8:{s:8:"fileName";s:8:"home.htm";s:7:"content";s:4546:"title = "Demonstration"
-=======
-1590574920a:1:{s:8:"home.htm";a:8:{s:8:"fileName";s:8:"home.htm";s:7:"content";s:4548:"title = "Demonstration"
->>>>>>> Stashed changes
+1591513468a:1:{s:8:"home.htm";a:8:{s:8:"fileName";s:8:"home.htm";s:7:"content";s:4552:"title = "Demonstration"
 url = "/"
 layout = "default"
 ==
@@ -15,7 +11,7 @@ layout = "default"
 <div class="container">
 
     <div class="page-header">
-        <h2>Overview Of Sunal <small>Basic concepts</small></h2>
+        <h2>Overview Of Sunal ASD <small>Basic concepts</small></h2>
     </div>
     <p>
         This page demonstrates the basic CMS features.
@@ -122,11 +118,7 @@ layout = "default"
     </div>
 
 </div>
-<<<<<<< Updated upstream
-";s:5:"mtime";i:1590573084;s:6:"markup";s:4484:"<div class="jumbotron">
-=======
-";s:5:"mtime";i:1590574260;s:6:"markup";s:4486:"<div class="jumbotron">
->>>>>>> Stashed changes
+";s:5:"mtime";i:1590574567;s:6:"markup";s:4490:"<div class="jumbotron">
     <div class="container">
         {% content "welcome.htm" %}
     </div>
@@ -135,7 +127,7 @@ layout = "default"
 <div class="container">
 
     <div class="page-header">
-        <h2>Overview Of Sunal <small>Basic concepts</small></h2>
+        <h2>Overview Of Sunal ASD <small>Basic concepts</small></h2>
     </div>
     <p>
         This page demonstrates the basic CMS features.

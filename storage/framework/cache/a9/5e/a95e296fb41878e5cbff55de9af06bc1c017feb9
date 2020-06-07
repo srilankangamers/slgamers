@@ -1,8 +1,4 @@
-<<<<<<< Updated upstream
-1590574390a:1:{s:7:"404.htm";a:8:{s:8:"fileName";s:7:"404.htm";s:7:"content";s:239:"title = "Page not found (404)"
-=======
-1590574920a:1:{s:7:"404.htm";a:8:{s:8:"fileName";s:7:"404.htm";s:7:"content";s:239:"title = "Page not found (404)"
->>>>>>> Stashed changes
+1591513468a:1:{s:7:"404.htm";a:8:{s:8:"fileName";s:7:"404.htm";s:7:"content";s:239:"title = "Page not found (404)"
 url = "/404"
 layout = "default"
 ==
