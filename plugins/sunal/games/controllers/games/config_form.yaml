@@ -1,0 +1,10 @@
+name: Games
+form: $/sunal/games/models/game/fields.yaml
+modelClass: Sunal\Games\Models\Game
+defaultRedirect: sunal/games/games
+create:
+    redirect: 'sunal/games/games/update/:id'
+    redirectClose: sunal/games/games
+update:
+    redirect: sunal/games/games
+    redirectClose: sunal/games/games

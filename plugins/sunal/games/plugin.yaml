@@ -1,0 +1,16 @@
+plugin:
+    name: 'sunal.games::lang.plugin.name'
+    description: 'sunal.games::lang.plugin.description'
+    author: sunal
+    icon: oc-icon-gamepad
+    homepage: ''
+navigation:
+    main-menu-item:
+        label: Games
+        url: sunal/games/games
+        icon: icon-gamepad
+        sideMenu:
+            side-menu-item:
+                label: Tournaments
+                url: sunal/games/tournaments
+                icon: icon-list

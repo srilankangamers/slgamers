@@ -1,0 +1,4 @@
+title: Tournaments
+modelClass: Sunal\Games\Models\Tournament
+toolbar:
+    buttons: reorder_toolbar

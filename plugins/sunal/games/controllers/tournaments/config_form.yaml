@@ -1,0 +1,10 @@
+name: Tournaments
+form: $/sunal/games/models/tournament/fields.yaml
+modelClass: Sunal\Games\Models\Tournament
+defaultRedirect: sunal/games/tournaments
+create:
+    redirect: 'sunal/games/tournaments/update/:id'
+    redirectClose: sunal/games/tournaments
+update:
+    redirect: sunal/games/tournaments
+    redirectClose: sunal/games/tournaments

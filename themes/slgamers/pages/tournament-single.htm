@@ -1,0 +1,21 @@
+title = "Tournament single"
+url = "/tournament-single/:slug"
+layout = "main"
+is_hidden = 0
+
+[builderDetails]
+modelClass = "Sunal\Games\Models\Tournament"
+identifierValue = "{{ :slug }}"
+modelKeyColumn = "slug"
+displayColumn = "tournament_title"
+notFoundMessage = "Record not found"
+==
+{% set record = builderDetails.record %}
+{% set displayColumn = builderDetails.displayColumn %}
+{% set notFoundMessage = builderDetails.notFoundMessage %}
+
+{% if record %}
+    {{ attribute(record, displayColumn) }}
+{% else %}
+    {{ notFoundMessage }}
+{% endif %}

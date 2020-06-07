@@ -98,34 +98,40 @@ class __TwigTemplate_a86dd9a10fda9b277616edb074aadc887a89e21e66d13b1f8effa4bb740
 \t</div>
 
 \t<!-- Header section -->
-\t<header class=\"header-section\">
-\t\t<a href=\"index.html\" class=\"site-logo\">
-\t\t\t<img src=\"";
-        // line 43
+\t<nav class=\"navbar navbar-expand-lg navbar-dark bg-dark\">
+  <a class=\"navbar-brand\" href=\"#\"><img src=\"";
+        // line 42
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/img/logo.png");
-        echo "\" alt=\"logo\">
-\t\t</a>
-\t\t<ul class=\"main-menu\">
-\t\t\t<li><a href=\"index.html\">Home</a></li>
-\t\t\t<li><a href=\"characters.html\">Characters</a></li>
-\t\t\t<li><a href=\"game.html\">Games</a></li>
-\t\t\t<li><a href=\"reviews.html\">Reviews</a></li>
-\t\t\t<li><a href=\"news.html\">News</a></li>
-\t\t\t<li><a href=\"single-post.html\">Page</a></li>
-\t\t</ul>
-\t\t<div class=\"header-add\">
-\t\t\t<img src=\"";
-        // line 54
-        echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/img/add.jpg");
-        echo "\" alt=\"\">
-\t\t</div>
-\t</header>
+        echo "\" alt=\"\"></a>
+  <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarNavDropdown\" aria-controls=\"navbarNavDropdown\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
+    <span class=\"navbar-toggler-icon\"></span>
+  </button>
+  <div class=\"collapse navbar-collapse\" id=\"navbarNavDropdown\">
+    <ul class=\"navbar-nav\">
+      <li class=\"nav-item active\">
+        <a class=\"nav-link\" href=\"";
+        // line 49
+        echo $this->extensions['Cms\Twig\Extension']->pageFilter("home");
+        echo "\">Home <span class=\"sr-only\">(current)</span></a>
+      </li>
+      <li class=\"nav-item\">
+        <a class=\"nav-link\" href=\"";
+        // line 52
+        echo $this->extensions['Cms\Twig\Extension']->pageFilter("games");
+        echo "\">Games</a>
+      </li>
+      <li class=\"nav-item\">
+        <a class=\"nav-link\" href=\"#\">Pricing</a>
+      </li>
+    </ul>
+  </div>
+</nav>
 \t<!-- Header section end -->
 
 \t";
-        // line 59
+        // line 62
         echo $this->env->getExtension('Cms\Twig\Extension')->pageFunction();
-        // line 60
+        // line 63
         echo "
 \t<!-- Footer section -->
 \t<div class=\"footer-section\">
@@ -135,7 +141,7 @@ class __TwigTemplate_a86dd9a10fda9b277616edb074aadc887a89e21e66d13b1f8effa4bb740
 \t\t\t\t\t<div class=\"footer-widget\">
 \t\t\t\t\t\t<div class=\"about-widget\">
 \t\t\t\t\t\t\t<img src=\"";
-        // line 68
+        // line 71
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/img/logo.png");
         echo "\" alt=\"\">
 \t\t\t\t\t\t\t<p>Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo. Morbi id dictum quam, ut commodo.</p>
@@ -229,31 +235,31 @@ class __TwigTemplate_a86dd9a10fda9b277616edb074aadc887a89e21e66d13b1f8effa4bb740
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t
 \t<!--====== Javascripts & Jquery ======-->
 \t<script src=\"";
-        // line 159
+        // line 162
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/js/jquery-3.2.1.min.js");
         echo "\"></script>
 \t<script src=\"";
-        // line 160
+        // line 163
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/js/bootstrap.min.js");
         echo "\"></script>
 \t<script src=\"";
-        // line 161
+        // line 164
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/js/jquery.slicknav.js");
         echo "\"></script>
 \t<script src=\"";
-        // line 162
+        // line 165
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/js/owl.carousel.min.js");
         echo "\"></script>
 \t<script src=\"";
-        // line 163
+        // line 166
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/js/circle-progress.min.js");
         echo "\"></script>
 \t<script src=\"";
-        // line 164
+        // line 167
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/js/jquery.magnific-popup.min.js");
         echo "\"></script>
 \t<script src=\"";
-        // line 165
+        // line 168
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/js/main.js");
         echo "\"></script>
 
@@ -273,7 +279,7 @@ class __TwigTemplate_a86dd9a10fda9b277616edb074aadc887a89e21e66d13b1f8effa4bb740
 
     public function getDebugInfo()
     {
-        return array (  257 => 165,  253 => 164,  249 => 163,  245 => 162,  241 => 161,  237 => 160,  233 => 159,  139 => 68,  129 => 60,  127 => 59,  119 => 54,  105 => 43,  84 => 25,  78 => 22,  74 => 21,  70 => 20,  66 => 19,  62 => 18,  58 => 17,  42 => 4,  37 => 1,);
+        return array (  263 => 168,  259 => 167,  255 => 166,  251 => 165,  247 => 164,  243 => 163,  239 => 162,  145 => 71,  135 => 63,  133 => 62,  120 => 52,  114 => 49,  104 => 42,  84 => 25,  78 => 22,  74 => 21,  70 => 20,  66 => 19,  62 => 18,  58 => 17,  42 => 4,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -318,22 +324,25 @@ class __TwigTemplate_a86dd9a10fda9b277616edb074aadc887a89e21e66d13b1f8effa4bb740
 \t</div>
 
 \t<!-- Header section -->
-\t<header class=\"header-section\">
-\t\t<a href=\"index.html\" class=\"site-logo\">
-\t\t\t<img src=\"{{'assets/img/logo.png'|theme}}\" alt=\"logo\">
-\t\t</a>
-\t\t<ul class=\"main-menu\">
-\t\t\t<li><a href=\"index.html\">Home</a></li>
-\t\t\t<li><a href=\"characters.html\">Characters</a></li>
-\t\t\t<li><a href=\"game.html\">Games</a></li>
-\t\t\t<li><a href=\"reviews.html\">Reviews</a></li>
-\t\t\t<li><a href=\"news.html\">News</a></li>
-\t\t\t<li><a href=\"single-post.html\">Page</a></li>
-\t\t</ul>
-\t\t<div class=\"header-add\">
-\t\t\t<img src=\"{{'assets/img/add.jpg'|theme}}\" alt=\"\">
-\t\t</div>
-\t</header>
+\t<nav class=\"navbar navbar-expand-lg navbar-dark bg-dark\">
+  <a class=\"navbar-brand\" href=\"#\"><img src=\"{{'assets/img/logo.png'|theme}}\" alt=\"\"></a>
+  <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarNavDropdown\" aria-controls=\"navbarNavDropdown\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
+    <span class=\"navbar-toggler-icon\"></span>
+  </button>
+  <div class=\"collapse navbar-collapse\" id=\"navbarNavDropdown\">
+    <ul class=\"navbar-nav\">
+      <li class=\"nav-item active\">
+        <a class=\"nav-link\" href=\"{{'home'|page}}\">Home <span class=\"sr-only\">(current)</span></a>
+      </li>
+      <li class=\"nav-item\">
+        <a class=\"nav-link\" href=\"{{'games'|page}}\">Games</a>
+      </li>
+      <li class=\"nav-item\">
+        <a class=\"nav-link\" href=\"#\">Pricing</a>
+      </li>
+    </ul>
+  </div>
+</nav>
 \t<!-- Header section end -->
 
 \t{% page %}

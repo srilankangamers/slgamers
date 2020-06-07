@@ -1,0 +1,61 @@
+fields:
+    tournament_title:
+        label: Title
+        span: auto
+        type: text
+    description:
+        label: Description
+        size: ''
+        span: auto
+        type: richeditor
+    slug:
+        label: Slug
+        span: auto
+        preset:
+            field: tournament_title
+            type: slug
+        type: text
+    platform:
+        label: Platform
+        span: auto
+        options:
+            PC: PC
+            Mobile: Mobile
+            Emulator: Emulator
+        type: balloon-selector
+    game_title:
+        label: 'Game Title'
+        span: auto
+        type: text
+    first_place:
+        label: 'First Place'
+        span: auto
+        type: number
+    end_date:
+        label: Date
+        mode: datetime
+        span: auto
+        type: datepicker
+    second_place:
+        label: 'Second Place'
+        span: auto
+        type: number
+    third_place:
+        label: 'Third Place'
+        span: right
+        type: number
+    four_to_ten:
+        label: 'Four to ten'
+        span: right
+        type: number
+    poster:
+        label: Poster
+        span: auto
+        mode: image
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        imageWidth: '300'
+        imageHeight: '300'
+        type: fileupload

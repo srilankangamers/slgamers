@@ -39,22 +39,25 @@
 	</div>
 
 	<!-- Header section -->
-	<header class="header-section">
-		<a href="index.html" class="site-logo">
-			<img src="{{'assets/img/logo.png'|theme}}" alt="logo">
-		</a>
-		<ul class="main-menu">
-			<li><a href="index.html">Home</a></li>
-			<li><a href="characters.html">Characters</a></li>
-			<li><a href="game.html">Games</a></li>
-			<li><a href="reviews.html">Reviews</a></li>
-			<li><a href="news.html">News</a></li>
-			<li><a href="single-post.html">Page</a></li>
-		</ul>
-		<div class="header-add">
-			<img src="{{'assets/img/add.jpg'|theme}}" alt="">
-		</div>
-	</header>
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="#"><img src="{{'assets/img/logo.png'|theme}}" alt=""></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="{{'home'|page}}">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{{'games'|page}}">Games</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Pricing</a>
+      </li>
+    </ul>
+  </div>
+</nav>
 	<!-- Header section end -->
 
 	{% page %}

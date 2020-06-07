@@ -1,0 +1,16 @@
+columns:
+    tournament_title:
+        label: Title
+        type: text
+        searchable: true
+        sortable: true
+    description:
+        label: Description
+        type: text
+        searchable: true
+        sortable: true
+    platform:
+        label: Platform
+        type: text
+        searchable: true
+        sortable: true

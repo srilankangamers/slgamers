@@ -1,0 +1,42 @@
+fields:
+    title:
+        label: Title
+        span: auto
+        type: text
+    description:
+        label: Description
+        size: ''
+        span: auto
+        type: richeditor
+    platform:
+        label: Platform
+        options:
+            PC: PC
+            Mobile: Mobile
+            Emulator: Emulator
+        span: auto
+        type: balloon-selector
+    slug:
+        label: Slug
+        span: auto
+        preset:
+            field: title
+            type: slug
+        type: text
+    tournaments:
+        label: Tournaments
+        nameFrom: tournament_title
+        descriptionFrom: description
+        span: auto
+        type: relation
+    poster:
+        label: Poster
+        mode: image
+        imageWidth: '400'
+        imageHeight: '300'
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: auto
+        type: fileupload
