@@ -77,10 +77,14 @@ class __TwigTemplate_a86dd9a10fda9b277616edb074aadc887a89e21e66d13b1f8effa4bb740
         // line 22
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/css/slicknav.min.css");
         echo "\"/>
+\t<link rel=\"stylesheet\" href=\"";
+        // line 23
+        echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/css/flip.css");
+        echo "\"/>
 
 \t<!-- Main Stylesheets -->
 \t<link rel=\"stylesheet\" href=\"";
-        // line 25
+        // line 26
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/css/style.css");
         echo "\"/>
 
@@ -100,7 +104,7 @@ class __TwigTemplate_a86dd9a10fda9b277616edb074aadc887a89e21e66d13b1f8effa4bb740
 \t<!-- Header section -->
 \t<nav class=\"navbar navbar-expand-lg navbar-dark bg-dark\">
   <a class=\"navbar-brand\" href=\"#\"><img src=\"";
-        // line 42
+        // line 43
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/img/logo.png");
         echo "\" alt=\"\"></a>
   <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarNavDropdown\" aria-controls=\"navbarNavDropdown\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
@@ -110,13 +114,13 @@ class __TwigTemplate_a86dd9a10fda9b277616edb074aadc887a89e21e66d13b1f8effa4bb740
     <ul class=\"navbar-nav\">
       <li class=\"nav-item active\">
         <a class=\"nav-link\" href=\"";
-        // line 49
+        // line 50
         echo $this->extensions['Cms\Twig\Extension']->pageFilter("home");
         echo "\">Home <span class=\"sr-only\">(current)</span></a>
       </li>
       <li class=\"nav-item\">
         <a class=\"nav-link\" href=\"";
-        // line 52
+        // line 53
         echo $this->extensions['Cms\Twig\Extension']->pageFilter("games");
         echo "\">Games</a>
       </li>
@@ -129,9 +133,9 @@ class __TwigTemplate_a86dd9a10fda9b277616edb074aadc887a89e21e66d13b1f8effa4bb740
 \t<!-- Header section end -->
 
 \t";
-        // line 62
-        echo $this->env->getExtension('Cms\Twig\Extension')->pageFunction();
         // line 63
+        echo $this->env->getExtension('Cms\Twig\Extension')->pageFunction();
+        // line 64
         echo "
 \t<!-- Footer section -->
 \t<div class=\"footer-section\">
@@ -141,7 +145,7 @@ class __TwigTemplate_a86dd9a10fda9b277616edb074aadc887a89e21e66d13b1f8effa4bb740
 \t\t\t\t\t<div class=\"footer-widget\">
 \t\t\t\t\t\t<div class=\"about-widget\">
 \t\t\t\t\t\t\t<img src=\"";
-        // line 71
+        // line 72
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/img/logo.png");
         echo "\" alt=\"\">
 \t\t\t\t\t\t\t<p>Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo. Morbi id dictum quam, ut commodo.</p>
@@ -214,9 +218,7 @@ class __TwigTemplate_a86dd9a10fda9b277616edb074aadc887a89e21e66d13b1f8effa4bb740
 \t\t\t\t\t</div>
 \t\t\t\t</div>
 \t\t\t</div>
-\t\t\t<div class=\"copyright\"><a href=\"\"><p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class=\"fa fa-heart\" aria-hidden=\"true\"></i> by <a href=\"https://colorlib.com\" target=\"_blank\">Colorlib</a>
-  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p></div>
+
 \t\t</div>
 \t\t<div class=\"social-links-warp\">
 \t\t\t<div class=\"container\">
@@ -235,34 +237,33 @@ class __TwigTemplate_a86dd9a10fda9b277616edb074aadc887a89e21e66d13b1f8effa4bb740
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t
 \t<!--====== Javascripts & Jquery ======-->
 \t<script src=\"";
-        // line 162
+        // line 161
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/js/jquery-3.2.1.min.js");
         echo "\"></script>
 \t<script src=\"";
-        // line 163
+        // line 162
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/js/bootstrap.min.js");
         echo "\"></script>
 \t<script src=\"";
-        // line 164
+        // line 163
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/js/jquery.slicknav.js");
         echo "\"></script>
 \t<script src=\"";
-        // line 165
+        // line 164
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/js/owl.carousel.min.js");
         echo "\"></script>
 \t<script src=\"";
-        // line 166
+        // line 165
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/js/circle-progress.min.js");
         echo "\"></script>
 \t<script src=\"";
-        // line 167
+        // line 166
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/js/jquery.magnific-popup.min.js");
         echo "\"></script>
 \t<script src=\"";
-        // line 168
+        // line 167
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/js/main.js");
         echo "\"></script>
-
 \t</body>
 </html>";
     }
@@ -279,7 +280,7 @@ class __TwigTemplate_a86dd9a10fda9b277616edb074aadc887a89e21e66d13b1f8effa4bb740
 
     public function getDebugInfo()
     {
-        return array (  263 => 168,  259 => 167,  255 => 166,  251 => 165,  247 => 164,  243 => 163,  239 => 162,  145 => 71,  135 => 63,  133 => 62,  120 => 52,  114 => 49,  104 => 42,  84 => 25,  78 => 22,  74 => 21,  70 => 20,  66 => 19,  62 => 18,  58 => 17,  42 => 4,  37 => 1,);
+        return array (  265 => 167,  261 => 166,  257 => 165,  253 => 164,  249 => 163,  245 => 162,  241 => 161,  149 => 72,  139 => 64,  137 => 63,  124 => 53,  118 => 50,  108 => 43,  88 => 26,  82 => 23,  78 => 22,  74 => 21,  70 => 20,  66 => 19,  62 => 18,  58 => 17,  42 => 4,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -306,6 +307,7 @@ class __TwigTemplate_a86dd9a10fda9b277616edb074aadc887a89e21e66d13b1f8effa4bb740
 \t<link rel=\"stylesheet\" href=\"{{'assets/css/owl.carousel.min.css'|theme}}\"/>
 \t<link rel=\"stylesheet\" href=\"{{'assets/css/animate.css'|theme}}\"/>
 \t<link rel=\"stylesheet\" href=\"{{'assets/css/slicknav.min.css'|theme}}\"/>
+\t<link rel=\"stylesheet\" href=\"{{'assets/css/flip.css'|theme}}\"/>
 
 \t<!-- Main Stylesheets -->
 \t<link rel=\"stylesheet\" href=\"{{'assets/css/style.css'|theme}}\"/>
@@ -425,9 +427,7 @@ class __TwigTemplate_a86dd9a10fda9b277616edb074aadc887a89e21e66d13b1f8effa4bb740
 \t\t\t\t\t</div>
 \t\t\t\t</div>
 \t\t\t</div>
-\t\t\t<div class=\"copyright\"><a href=\"\"><p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class=\"fa fa-heart\" aria-hidden=\"true\"></i> by <a href=\"https://colorlib.com\" target=\"_blank\">Colorlib</a>
-  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p></div>
+
 \t\t</div>
 \t\t<div class=\"social-links-warp\">
 \t\t\t<div class=\"container\">
@@ -452,7 +452,6 @@ class __TwigTemplate_a86dd9a10fda9b277616edb074aadc887a89e21e66d13b1f8effa4bb740
 \t<script src=\"{{'assets/js/circle-progress.min.js'|theme}}\"></script>
 \t<script src=\"{{'assets/js/jquery.magnific-popup.min.js'|theme}}\"></script>
 \t<script src=\"{{'assets/js/main.js'|theme}}\"></script>
-
 \t</body>
 </html>", "F:\\website\\slgamers/themes/slgamers/layouts/main.htm", "");
     }

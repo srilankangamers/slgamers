@@ -37,9 +37,9 @@ class Game extends Model
         ]
         
     ];
-
     public $attachOne = [
         'poster' => 'System\Models\File'
 
     ];
+    protected $jsonable = ['platform'];
 }

@@ -1,4 +1,4 @@
-1591545212a:1:{s:8:"main.htm";a:6:{s:8:"fileName";s:8:"main.htm";s:7:"content";s:6622:"==
+1591955923a:1:{s:8:"main.htm";a:6:{s:8:"fileName";s:8:"main.htm";s:7:"content";s:6223:"==
 <!DOCTYPE html>
 <html lang="zxx">
 <head>
@@ -21,6 +21,7 @@
 	<link rel="stylesheet" href="{{'assets/css/owl.carousel.min.css'|theme}}"/>
 	<link rel="stylesheet" href="{{'assets/css/animate.css'|theme}}"/>
 	<link rel="stylesheet" href="{{'assets/css/slicknav.min.css'|theme}}"/>
+	<link rel="stylesheet" href="{{'assets/css/flip.css'|theme}}"/>
 
 	<!-- Main Stylesheets -->
 	<link rel="stylesheet" href="{{'assets/css/style.css'|theme}}"/>
@@ -140,9 +141,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="copyright"><a href=""><p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p></div>
+
 		</div>
 		<div class="social-links-warp">
 			<div class="container">
@@ -167,9 +166,8 @@
 	<script src="{{'assets/js/circle-progress.min.js'|theme}}"></script>
 	<script src="{{'assets/js/jquery.magnific-popup.min.js'|theme}}"></script>
 	<script src="{{'assets/js/main.js'|theme}}"></script>
-
 	</body>
-</html>";s:5:"mtime";i:1591519513;s:6:"markup";s:6618:"<!DOCTYPE html>
+</html>";s:5:"mtime";i:1591945910;s:6:"markup";s:6219:"<!DOCTYPE html>
 <html lang="zxx">
 <head>
 	<title>{{this.page.title}}</title>
@@ -191,6 +189,7 @@
 	<link rel="stylesheet" href="{{'assets/css/owl.carousel.min.css'|theme}}"/>
 	<link rel="stylesheet" href="{{'assets/css/animate.css'|theme}}"/>
 	<link rel="stylesheet" href="{{'assets/css/slicknav.min.css'|theme}}"/>
+	<link rel="stylesheet" href="{{'assets/css/flip.css'|theme}}"/>
 
 	<!-- Main Stylesheets -->
 	<link rel="stylesheet" href="{{'assets/css/style.css'|theme}}"/>
@@ -310,9 +309,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="copyright"><a href=""><p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p></div>
+
 		</div>
 		<div class="social-links-warp">
 			<div class="container">
@@ -337,6 +334,5 @@
 	<script src="{{'assets/js/circle-progress.min.js'|theme}}"></script>
 	<script src="{{'assets/js/jquery.magnific-popup.min.js'|theme}}"></script>
 	<script src="{{'assets/js/main.js'|theme}}"></script>
-
 	</body>
 </html>";s:4:"code";N;s:17:"_PARSER_ERROR_INI";s:0:"";}}

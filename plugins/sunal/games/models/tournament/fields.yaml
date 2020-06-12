@@ -33,7 +33,7 @@ fields:
         type: number
     end_date:
         label: Date
-        mode: datetime
+        mode: date
         span: auto
         type: datepicker
     second_place:
