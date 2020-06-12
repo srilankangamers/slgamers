@@ -1,4 +1,4 @@
-1591955923a:1:{s:8:"main.htm";a:6:{s:8:"fileName";s:8:"main.htm";s:7:"content";s:6223:"==
+1591978759a:1:{s:8:"main.htm";a:6:{s:8:"fileName";s:8:"main.htm";s:7:"content";s:6225:"==
 <!DOCTYPE html>
 <html lang="zxx">
 <head>
@@ -40,13 +40,13 @@
 	</div>
 
 	<!-- Header section -->
-	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
   <a class="navbar-brand" href="#"><img src="{{'assets/img/logo.png'|theme}}" alt=""></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-  <div class="collapse navbar-collapse" id="navbarNavDropdown">
-    <ul class="navbar-nav">
+  <div class="collapse navbar-collapse " id="navbarNavDropdown">
+    <ul class="navbar-nav ">
       <li class="nav-item active">
         <a class="nav-link" href="{{'home'|page}}">Home <span class="sr-only">(current)</span></a>
       </li>
@@ -55,8 +55,9 @@
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">Pricing</a>
-      </li>
-    </ul>
+	  </li>
+	  
+	</ul>
   </div>
 </nav>
 	<!-- Header section end -->
@@ -167,7 +168,7 @@
 	<script src="{{'assets/js/jquery.magnific-popup.min.js'|theme}}"></script>
 	<script src="{{'assets/js/main.js'|theme}}"></script>
 	</body>
-</html>";s:5:"mtime";i:1591945910;s:6:"markup";s:6219:"<!DOCTYPE html>
+</html>";s:5:"mtime";i:1591976811;s:6:"markup";s:6221:"<!DOCTYPE html>
 <html lang="zxx">
 <head>
 	<title>{{this.page.title}}</title>
@@ -208,13 +209,13 @@
 	</div>
 
 	<!-- Header section -->
-	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
   <a class="navbar-brand" href="#"><img src="{{'assets/img/logo.png'|theme}}" alt=""></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-  <div class="collapse navbar-collapse" id="navbarNavDropdown">
-    <ul class="navbar-nav">
+  <div class="collapse navbar-collapse " id="navbarNavDropdown">
+    <ul class="navbar-nav ">
       <li class="nav-item active">
         <a class="nav-link" href="{{'home'|page}}">Home <span class="sr-only">(current)</span></a>
       </li>
@@ -223,8 +224,9 @@
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">Pricing</a>
-      </li>
-    </ul>
+	  </li>
+	  
+	</ul>
   </div>
 </nav>
 	<!-- Header section end -->

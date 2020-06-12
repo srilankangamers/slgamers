@@ -48,34 +48,35 @@ class __TwigTemplate_a414e2e408f6160959fe3f1d7b6d9a36343915ef4d13b3acf4f0ef3c3cc
         // line 7
         echo "
 
-";
-        // line 9
+<div class=\"container-fluid\">
+  ";
+        // line 10
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable(($context["records"] ?? null));
         foreach ($context['_seq'] as $context["_key"] => $context["record"]) {
-            // line 10
+            // line 11
             echo "<div class=\"flip-card\">
   <div class=\"flip-card-inner\">
     <div class=\"flip-card-front\">
       <img src=\"";
-            // line 13
-            echo call_user_func_array($this->env->getFilter('resize')->getCallable(), [twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["record"], "poster", [], "any", false, false, false, 13), "path", [], "any", false, false, false, 13), 300, 300, ["mode" => "crop"]]);
+            // line 14
+            echo call_user_func_array($this->env->getFilter('resize')->getCallable(), [twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["record"], "poster", [], "any", false, false, false, 14), "path", [], "any", false, false, false, 14), 300, 300, ["mode" => "crop"]]);
             echo "\" alt=\"Avatar\" style=\"width:300px;height:300px;\">
     </div>
     <div class=\"flip-card-back\">
       <a href=\"/game-single/";
-            // line 16
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["record"], "slug", [], "any", false, false, false, 16), "html", null, true);
+            // line 17
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["record"], "slug", [], "any", false, false, false, 17), "html", null, true);
             echo "\"><h3>";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["record"], "title", [], "any", false, false, false, 16), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["record"], "title", [], "any", false, false, false, 17), "html", null, true);
             echo "</h3></a>
       <p>";
-            // line 17
-            echo call_user_func_array($this->env->getFunction('html_limit')->getCallable(), ["limit", twig_get_attribute($this->env, $this->source, $context["record"], "description", [], "any", false, false, false, 17), 100]);
+            // line 18
+            echo call_user_func_array($this->env->getFunction('html_limit')->getCallable(), ["limit", twig_get_attribute($this->env, $this->source, $context["record"], "description", [], "any", false, false, false, 18), 100]);
             echo "</p>
       <p>";
-            // line 18
-            if ((twig_get_attribute($this->env, $this->source, $context["record"], "status", [], "any", false, false, false, 18) == "1")) {
+            // line 19
+            if ((twig_get_attribute($this->env, $this->source, $context["record"], "status", [], "any", false, false, false, 19) == "1")) {
                 echo "Register Now! ";
             } else {
                 echo " Coming Soon! ";
@@ -84,12 +85,13 @@ class __TwigTemplate_a414e2e408f6160959fe3f1d7b6d9a36343915ef4d13b3acf4f0ef3c3cc
     </div>
   </div>
 </div>
-
 ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['record'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 24
+        echo "</div>";
     }
 
     public function getTemplateName()
@@ -104,7 +106,7 @@ class __TwigTemplate_a414e2e408f6160959fe3f1d7b6d9a36343915ef4d13b3acf4f0ef3c3cc
 
     public function getDebugInfo()
     {
-        return array (  78 => 18,  74 => 17,  68 => 16,  62 => 13,  57 => 10,  53 => 9,  49 => 7,  47 => 6,  45 => 5,  43 => 4,  41 => 3,  39 => 2,  37 => 1,);
+        return array (  94 => 24,  79 => 19,  75 => 18,  69 => 17,  63 => 14,  58 => 11,  54 => 10,  49 => 7,  47 => 6,  45 => 5,  43 => 4,  41 => 3,  39 => 2,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -117,7 +119,8 @@ class __TwigTemplate_a414e2e408f6160959fe3f1d7b6d9a36343915ef4d13b3acf4f0ef3c3cc
 {% set detailsUrlParameter = builderList.detailsUrlParameter %}
 
 
-{% for record in records %}
+<div class=\"container-fluid\">
+  {% for record in records %}
 <div class=\"flip-card\">
   <div class=\"flip-card-inner\">
     <div class=\"flip-card-front\">
@@ -130,7 +133,7 @@ class __TwigTemplate_a414e2e408f6160959fe3f1d7b6d9a36343915ef4d13b3acf4f0ef3c3cc
     </div>
   </div>
 </div>
-
-{% endfor %}", "F:\\website\\slgamers/themes/slgamers/pages/games.htm", "");
+{% endfor %}
+</div>", "F:\\website\\slgamers/themes/slgamers/pages/games.htm", "");
     }
 }

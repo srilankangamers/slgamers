@@ -1,4 +1,4 @@
-1591956063a:1:{s:15:"game-single.htm";a:11:{s:8:"fileName";s:15:"game-single.htm";s:7:"content";s:3305:"title = "Game single"
+1591979189a:1:{s:15:"game-single.htm";a:11:{s:8:"fileName";s:15:"game-single.htm";s:7:"content";s:3305:"title = "Game single"
 url = "/game-single/:slug"
 layout = "main"
 is_hidden = 0
@@ -80,7 +80,7 @@ pageNumber = "{{ :page }}"
 <!-- Blog section end -->
 
     
-{% endfor %}";s:5:"mtime";i:1591955462;s:6:"markup";s:2762:"{% set record = builderDetails.record %}
+{% endfor %}";s:5:"mtime";i:1591962406;s:6:"markup";s:2762:"{% set record = builderDetails.record %}
 {% set displayColumn = builderDetails.displayColumn %}
 {% set notFoundMessage = builderDetails.notFoundMessage %}
 

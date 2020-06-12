@@ -88,4 +88,5 @@
   'toughdeveloper\\imageresizer\\Plugin' => 'plugins\\toughdeveloper\\imageresizer\\Plugin.php',
   'ToughDeveloper\\ImageResizer\\Classes\\Image' => 'plugins\\toughdeveloper\\imageresizer\\classes\\Image.php',
   'ToughDeveloper\\ImageResizer\\Models\\Settings' => 'plugins\\toughdeveloper\\imageresizer\\models\\Settings.php',
+  'backend\\Controllers\\users' => 'modules\\backend\\controllers\\users.php',
 );

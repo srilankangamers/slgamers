@@ -22,7 +22,8 @@ pageNumber = "{{ :page }}"
 {% set detailsUrlParameter = builderList.detailsUrlParameter %}
 
 
-{% for record in records %}
+<div class="container-fluid">
+  {% for record in records %}
 <div class="flip-card">
   <div class="flip-card-inner">
     <div class="flip-card-front">
@@ -35,5 +36,5 @@ pageNumber = "{{ :page }}"
     </div>
   </div>
 </div>
-
 {% endfor %}
+</div>

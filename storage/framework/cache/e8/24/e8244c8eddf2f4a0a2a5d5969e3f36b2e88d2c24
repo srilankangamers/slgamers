@@ -1,4 +1,4 @@
-1591955923a:1:{s:21:"tournament-single.htm";a:10:{s:8:"fileName";s:21:"tournament-single.htm";s:7:"content";s:568:"title = "Tournament single"
+1591979189a:1:{s:21:"tournament-single.htm";a:10:{s:8:"fileName";s:21:"tournament-single.htm";s:7:"content";s:568:"title = "Tournament single"
 url = "/tournament-single/:slug"
 layout = "main"
 is_hidden = 0

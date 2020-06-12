@@ -102,7 +102,7 @@ class __TwigTemplate_a86dd9a10fda9b277616edb074aadc887a89e21e66d13b1f8effa4bb740
 \t</div>
 
 \t<!-- Header section -->
-\t<nav class=\"navbar navbar-expand-lg navbar-dark bg-dark\">
+\t<nav class=\"navbar navbar-expand-lg navbar-dark bg-dark \">
   <a class=\"navbar-brand\" href=\"#\"><img src=\"";
         // line 43
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/img/logo.png");
@@ -110,8 +110,8 @@ class __TwigTemplate_a86dd9a10fda9b277616edb074aadc887a89e21e66d13b1f8effa4bb740
   <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarNavDropdown\" aria-controls=\"navbarNavDropdown\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
     <span class=\"navbar-toggler-icon\"></span>
   </button>
-  <div class=\"collapse navbar-collapse\" id=\"navbarNavDropdown\">
-    <ul class=\"navbar-nav\">
+  <div class=\"collapse navbar-collapse \" id=\"navbarNavDropdown\">
+    <ul class=\"navbar-nav \">
       <li class=\"nav-item active\">
         <a class=\"nav-link\" href=\"";
         // line 50
@@ -126,16 +126,17 @@ class __TwigTemplate_a86dd9a10fda9b277616edb074aadc887a89e21e66d13b1f8effa4bb740
       </li>
       <li class=\"nav-item\">
         <a class=\"nav-link\" href=\"#\">Pricing</a>
-      </li>
-    </ul>
+\t  </li>
+\t  
+\t</ul>
   </div>
 </nav>
 \t<!-- Header section end -->
 
 \t";
-        // line 63
-        echo $this->env->getExtension('Cms\Twig\Extension')->pageFunction();
         // line 64
+        echo $this->env->getExtension('Cms\Twig\Extension')->pageFunction();
+        // line 65
         echo "
 \t<!-- Footer section -->
 \t<div class=\"footer-section\">
@@ -145,7 +146,7 @@ class __TwigTemplate_a86dd9a10fda9b277616edb074aadc887a89e21e66d13b1f8effa4bb740
 \t\t\t\t\t<div class=\"footer-widget\">
 \t\t\t\t\t\t<div class=\"about-widget\">
 \t\t\t\t\t\t\t<img src=\"";
-        // line 72
+        // line 73
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/img/logo.png");
         echo "\" alt=\"\">
 \t\t\t\t\t\t\t<p>Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo. Morbi id dictum quam, ut commodo.</p>
@@ -237,31 +238,31 @@ class __TwigTemplate_a86dd9a10fda9b277616edb074aadc887a89e21e66d13b1f8effa4bb740
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t
 \t<!--====== Javascripts & Jquery ======-->
 \t<script src=\"";
-        // line 161
+        // line 162
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/js/jquery-3.2.1.min.js");
         echo "\"></script>
 \t<script src=\"";
-        // line 162
+        // line 163
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/js/bootstrap.min.js");
         echo "\"></script>
 \t<script src=\"";
-        // line 163
+        // line 164
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/js/jquery.slicknav.js");
         echo "\"></script>
 \t<script src=\"";
-        // line 164
+        // line 165
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/js/owl.carousel.min.js");
         echo "\"></script>
 \t<script src=\"";
-        // line 165
+        // line 166
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/js/circle-progress.min.js");
         echo "\"></script>
 \t<script src=\"";
-        // line 166
+        // line 167
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/js/jquery.magnific-popup.min.js");
         echo "\"></script>
 \t<script src=\"";
-        // line 167
+        // line 168
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/js/main.js");
         echo "\"></script>
 \t</body>
@@ -280,7 +281,7 @@ class __TwigTemplate_a86dd9a10fda9b277616edb074aadc887a89e21e66d13b1f8effa4bb740
 
     public function getDebugInfo()
     {
-        return array (  265 => 167,  261 => 166,  257 => 165,  253 => 164,  249 => 163,  245 => 162,  241 => 161,  149 => 72,  139 => 64,  137 => 63,  124 => 53,  118 => 50,  108 => 43,  88 => 26,  82 => 23,  78 => 22,  74 => 21,  70 => 20,  66 => 19,  62 => 18,  58 => 17,  42 => 4,  37 => 1,);
+        return array (  266 => 168,  262 => 167,  258 => 166,  254 => 165,  250 => 164,  246 => 163,  242 => 162,  150 => 73,  140 => 65,  138 => 64,  124 => 53,  118 => 50,  108 => 43,  88 => 26,  82 => 23,  78 => 22,  74 => 21,  70 => 20,  66 => 19,  62 => 18,  58 => 17,  42 => 4,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -326,13 +327,13 @@ class __TwigTemplate_a86dd9a10fda9b277616edb074aadc887a89e21e66d13b1f8effa4bb740
 \t</div>
 
 \t<!-- Header section -->
-\t<nav class=\"navbar navbar-expand-lg navbar-dark bg-dark\">
+\t<nav class=\"navbar navbar-expand-lg navbar-dark bg-dark \">
   <a class=\"navbar-brand\" href=\"#\"><img src=\"{{'assets/img/logo.png'|theme}}\" alt=\"\"></a>
   <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarNavDropdown\" aria-controls=\"navbarNavDropdown\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
     <span class=\"navbar-toggler-icon\"></span>
   </button>
-  <div class=\"collapse navbar-collapse\" id=\"navbarNavDropdown\">
-    <ul class=\"navbar-nav\">
+  <div class=\"collapse navbar-collapse \" id=\"navbarNavDropdown\">
+    <ul class=\"navbar-nav \">
       <li class=\"nav-item active\">
         <a class=\"nav-link\" href=\"{{'home'|page}}\">Home <span class=\"sr-only\">(current)</span></a>
       </li>
@@ -341,8 +342,9 @@ class __TwigTemplate_a86dd9a10fda9b277616edb074aadc887a89e21e66d13b1f8effa4bb740
       </li>
       <li class=\"nav-item\">
         <a class=\"nav-link\" href=\"#\">Pricing</a>
-      </li>
-    </ul>
+\t  </li>
+\t  
+\t</ul>
   </div>
 </nav>
 \t<!-- Header section end -->
