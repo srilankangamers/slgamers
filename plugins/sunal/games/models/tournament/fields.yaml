@@ -3,9 +3,17 @@ fields:
         label: Title
         span: auto
         type: text
+    platform:
+        label: Platform
+        span: auto
+        options:
+            PC: PC
+            Mobile: Mobile
+            Emulator: Emulator
+        type: checkboxlist
     description:
         label: Description
-        size: ''
+        size: large
         span: auto
         type: richeditor
     slug:
@@ -14,18 +22,6 @@ fields:
         preset:
             field: tournament_title
             type: slug
-        type: text
-    platform:
-        label: Platform
-        span: auto
-        options:
-            PC: PC
-            Mobile: Mobile
-            Emulator: Emulator
-        type: balloon-selector
-    game_title:
-        label: 'Game Title'
-        span: auto
         type: text
     first_place:
         label: 'First Place'
@@ -59,3 +55,7 @@ fields:
         imageWidth: '300'
         imageHeight: '300'
         type: fileupload
+    availability:
+        label: Availability
+        span: auto
+        type: switch

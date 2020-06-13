@@ -47,52 +47,51 @@ class __TwigTemplate_a414e2e408f6160959fe3f1d7b6d9a36343915ef4d13b3acf4f0ef3c3cc
         $context["detailsUrlParameter"] = twig_get_attribute($this->env, $this->source, ($context["builderList"] ?? null), "detailsUrlParameter", [], "any", false, false, false, 6);
         // line 7
         echo "
-
 <div class=\"container-fluid\">
   ";
-        // line 10
+        // line 9
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable(($context["records"] ?? null));
         foreach ($context['_seq'] as $context["_key"] => $context["record"]) {
-            // line 11
+            // line 10
             echo "<div class=\"flip-card\">
   <div class=\"flip-card-inner\">
     ";
-            // line 13
-            if (twig_get_attribute($this->env, $this->source, $context["record"], "poster", [], "any", false, false, false, 13)) {
-                // line 14
+            // line 12
+            if (twig_get_attribute($this->env, $this->source, $context["record"], "poster", [], "any", false, false, false, 12)) {
+                // line 13
                 echo "    <div class=\"flip-card-front\">
       <img src=\"";
-                // line 15
-                echo call_user_func_array($this->env->getFilter('resize')->getCallable(), [twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["record"], "poster", [], "any", false, false, false, 15), "path", [], "any", false, false, false, 15), 300, 300, ["mode" => "crop"]]);
+                // line 14
+                echo call_user_func_array($this->env->getFilter('resize')->getCallable(), [twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["record"], "poster", [], "any", false, false, false, 14), "path", [], "any", false, false, false, 14), 300, 300, ["mode" => "crop"]]);
                 echo "\" alt=\"Avatar\" style=\"width:300px;height:300px;\">
     </div>
     ";
             } else {
-                // line 18
+                // line 17
                 echo "    <div class=\"flip-card-front\">
       <img src=\"";
-                // line 19
+                // line 18
                 echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/img/no image.png");
                 echo "\" alt=\"Avatar\" style=\"width:300px;height:300px;\">
     </div>
     ";
             }
-            // line 22
+            // line 21
             echo "    <div class=\"flip-card-back\">
       <a href=\"/game-single/";
-            // line 23
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["record"], "slug", [], "any", false, false, false, 23), "html", null, true);
+            // line 22
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["record"], "slug", [], "any", false, false, false, 22), "html", null, true);
             echo "\"><h3>";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["record"], "title", [], "any", false, false, false, 23), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["record"], "title", [], "any", false, false, false, 22), "html", null, true);
             echo "</h3></a>
       <p>";
-            // line 24
-            echo call_user_func_array($this->env->getFunction('html_limit')->getCallable(), ["limit", twig_get_attribute($this->env, $this->source, $context["record"], "description", [], "any", false, false, false, 24), 100]);
+            // line 23
+            echo call_user_func_array($this->env->getFunction('html_limit')->getCallable(), ["limit", twig_get_attribute($this->env, $this->source, $context["record"], "description", [], "any", false, false, false, 23), 100]);
             echo "</p>
       <p>";
-            // line 25
-            if ((twig_get_attribute($this->env, $this->source, $context["record"], "status", [], "any", false, false, false, 25) == "1")) {
+            // line 24
+            if ((twig_get_attribute($this->env, $this->source, $context["record"], "status", [], "any", false, false, false, 24) == "1")) {
                 echo "Register Now! ";
             } else {
                 echo " Coming Soon! ";
@@ -106,7 +105,7 @@ class __TwigTemplate_a414e2e408f6160959fe3f1d7b6d9a36343915ef4d13b3acf4f0ef3c3cc
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['record'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 30
+        // line 29
         echo "</div>";
     }
 
@@ -122,7 +121,7 @@ class __TwigTemplate_a414e2e408f6160959fe3f1d7b6d9a36343915ef4d13b3acf4f0ef3c3cc
 
     public function getDebugInfo()
     {
-        return array (  110 => 30,  95 => 25,  91 => 24,  85 => 23,  82 => 22,  76 => 19,  73 => 18,  67 => 15,  64 => 14,  62 => 13,  58 => 11,  54 => 10,  49 => 7,  47 => 6,  45 => 5,  43 => 4,  41 => 3,  39 => 2,  37 => 1,);
+        return array (  109 => 29,  94 => 24,  90 => 23,  84 => 22,  81 => 21,  75 => 18,  72 => 17,  66 => 14,  63 => 13,  61 => 12,  57 => 10,  53 => 9,  49 => 7,  47 => 6,  45 => 5,  43 => 4,  41 => 3,  39 => 2,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -133,7 +132,6 @@ class __TwigTemplate_a414e2e408f6160959fe3f1d7b6d9a36343915ef4d13b3acf4f0ef3c3cc
 {% set detailsPage = builderList.detailsPage %}
 {% set detailsKeyColumn = builderList.detailsKeyColumn %}
 {% set detailsUrlParameter = builderList.detailsUrlParameter %}
-
 
 <div class=\"container-fluid\">
   {% for record in records %}

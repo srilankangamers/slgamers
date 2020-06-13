@@ -39,3 +39,9 @@
 1.0.14:
     - 'Updated table sunal_games_tournaments'
     - builder_table_update_sunal_games_tournaments_7.php
+1.0.15:
+    - 'Updated table sunal_games_tournaments'
+    - builder_table_update_sunal_games_tournaments_8.php
+1.0.16:
+    - 'Updated table sunal_games_tournaments'
+    - builder_table_update_sunal_games_tournaments_9.php

@@ -136,8 +136,16 @@ class __TwigTemplate_a86dd9a10fda9b277616edb074aadc887a89e21e66d13b1f8effa4bb740
         echo $this->extensions['Cms\Twig\Extension']->pageFilter("games");
         echo "\">Games</a>
 \t\t\t\t</li>
-\t\t\t\t<li class=\"nav-item\">
-\t\t\t\t  <a class=\"nav-link\" href=\"#\">Pricing</a>
+\t\t\t\t<li class=\"nav-item nav-item ";
+        // line 57
+        if ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["this"] ?? null), "page", [], "any", false, false, false, 57), "id", [], "any", false, false, false, 57) == "tournament")) {
+            echo " active font-weight-bolder ";
+        }
+        echo "\">
+\t\t\t\t  <a class=\"nav-link\" href=\"";
+        // line 58
+        echo $this->extensions['Cms\Twig\Extension']->pageFilter("tournament");
+        echo "\">Tournamets</a>
 \t\t\t\t</li>
 \t\t\t\t
 \t\t\t  </ul>
@@ -145,13 +153,34 @@ class __TwigTemplate_a86dd9a10fda9b277616edb074aadc887a89e21e66d13b1f8effa4bb740
 \t\t  </nav>
 \t</div>
 \t<!-- Header section end -->
-
-\t";
-        // line 67
-        echo $this->env->getExtension('Cms\Twig\Extension')->pageFunction();
-        // line 68
-        echo "
-\t<!-- Footer section -->
+";
+        // line 66
+        if ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["this"] ?? null), "page", [], "any", false, false, false, 66), "id", [], "any", false, false, false, 66) == "home")) {
+            // line 67
+            echo $this->env->getExtension('Cms\Twig\Extension')->pageFunction();
+        } else {
+            // line 69
+            echo "<div style=\"background: url(";
+            echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/img/banner-bg.jpg");
+            echo ");\" class=\"jumbotron jumbotron-fluid\">
+\t<div class=\"container\">
+\t\t<h1 class=\"display-3\">";
+            // line 71
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["this"] ?? null), "page", [], "any", false, false, false, 71), "title", [], "any", false, false, false, 71), "html", null, true);
+            echo "</h1>
+\t\t<p class=\"lead\">";
+            // line 72
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["this"] ?? null), "page", [], "any", false, false, false, 72), "description", [], "any", false, false, false, 72), "html", null, true);
+            echo "</p>
+\t\t
+\t</div>
+</div>
+";
+            // line 76
+            echo $this->env->getExtension('Cms\Twig\Extension')->pageFunction();
+        }
+        // line 78
+        echo "\t<!-- Footer section -->
 \t<div class=\"footer-section\">
 \t\t<div class=\"container\">
 \t\t\t<div class=\"row\">
@@ -159,7 +188,7 @@ class __TwigTemplate_a86dd9a10fda9b277616edb074aadc887a89e21e66d13b1f8effa4bb740
 \t\t\t\t\t<div class=\"footer-widget\">
 \t\t\t\t\t\t<div class=\"about-widget\">
 \t\t\t\t\t\t\t<img src=\"";
-        // line 76
+        // line 85
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/img/logo.png");
         echo "\" alt=\"\">
 \t\t\t\t\t\t\t<p>Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo. Morbi id dictum quam, ut commodo.</p>
@@ -251,31 +280,31 @@ class __TwigTemplate_a86dd9a10fda9b277616edb074aadc887a89e21e66d13b1f8effa4bb740
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t
 \t<!--====== Javascripts & Jquery ======-->
 \t<script src=\"";
-        // line 165
+        // line 174
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/js/jquery-3.2.1.min.js");
         echo "\"></script>
 \t<script src=\"";
-        // line 166
+        // line 175
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/js/bootstrap.min.js");
         echo "\"></script>
 \t<script src=\"";
-        // line 167
+        // line 176
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/js/jquery.slicknav.js");
         echo "\"></script>
 \t<script src=\"";
-        // line 168
+        // line 177
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/js/owl.carousel.min.js");
         echo "\"></script>
 \t<script src=\"";
-        // line 169
+        // line 178
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/js/circle-progress.min.js");
         echo "\"></script>
 \t<script src=\"";
-        // line 170
+        // line 179
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/js/jquery.magnific-popup.min.js");
         echo "\"></script>
 \t<script src=\"";
-        // line 171
+        // line 180
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/js/main.js");
         echo "\"></script>
 \t</body>
@@ -294,7 +323,7 @@ class __TwigTemplate_a86dd9a10fda9b277616edb074aadc887a89e21e66d13b1f8effa4bb740
 
     public function getDebugInfo()
     {
-        return array (  279 => 171,  275 => 170,  271 => 169,  267 => 168,  263 => 167,  259 => 166,  255 => 165,  163 => 76,  153 => 68,  151 => 67,  136 => 55,  130 => 54,  125 => 52,  118 => 50,  109 => 44,  88 => 26,  82 => 23,  78 => 22,  74 => 21,  70 => 20,  66 => 19,  62 => 18,  58 => 17,  42 => 4,  37 => 1,);
+        return array (  308 => 180,  304 => 179,  300 => 178,  296 => 177,  292 => 176,  288 => 175,  284 => 174,  192 => 85,  183 => 78,  180 => 76,  173 => 72,  169 => 71,  163 => 69,  160 => 67,  158 => 66,  147 => 58,  141 => 57,  136 => 55,  130 => 54,  125 => 52,  118 => 50,  109 => 44,  88 => 26,  82 => 23,  78 => 22,  74 => 21,  70 => 20,  66 => 19,  62 => 18,  58 => 17,  42 => 4,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -355,8 +384,8 @@ class __TwigTemplate_a86dd9a10fda9b277616edb074aadc887a89e21e66d13b1f8effa4bb740
 \t\t\t\t<li class=\"nav-item {% if this.page.id == 'games' %} active font-weight-bolder {% endif %}\">
 \t\t\t\t  <a class=\"nav-link\" href=\"{{'games'|page}}\">Games</a>
 \t\t\t\t</li>
-\t\t\t\t<li class=\"nav-item\">
-\t\t\t\t  <a class=\"nav-link\" href=\"#\">Pricing</a>
+\t\t\t\t<li class=\"nav-item nav-item {% if this.page.id == 'tournament' %} active font-weight-bolder {% endif %}\">
+\t\t\t\t  <a class=\"nav-link\" href=\"{{'tournament'|page}}\">Tournamets</a>
 \t\t\t\t</li>
 \t\t\t\t
 \t\t\t  </ul>
@@ -364,9 +393,18 @@ class __TwigTemplate_a86dd9a10fda9b277616edb074aadc887a89e21e66d13b1f8effa4bb740
 \t\t  </nav>
 \t</div>
 \t<!-- Header section end -->
-
-\t{% page %}
-
+{% if this.page.id == 'home' %}
+{% page %}
+{% else %}
+<div style=\"background: url({{'assets/img/banner-bg.jpg'|theme}});\" class=\"jumbotron jumbotron-fluid\">
+\t<div class=\"container\">
+\t\t<h1 class=\"display-3\">{{this.page.title}}</h1>
+\t\t<p class=\"lead\">{{this.page.description}}</p>
+\t\t
+\t</div>
+</div>
+{% page %}
+{% endif %}
 \t<!-- Footer section -->
 \t<div class=\"footer-section\">
 \t\t<div class=\"container\">

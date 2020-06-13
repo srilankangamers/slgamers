@@ -31,4 +31,6 @@ class Tournament extends Model
         'poster' => 'System\Models\File'
 
     ];
+    
+    protected $jsonable = ['platform'];
 }

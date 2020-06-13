@@ -55,8 +55,8 @@
 				<li class="nav-item {% if this.page.id == 'games' %} active font-weight-bolder {% endif %}">
 				  <a class="nav-link" href="{{'games'|page}}">Games</a>
 				</li>
-				<li class="nav-item">
-				  <a class="nav-link" href="#">Pricing</a>
+				<li class="nav-item nav-item {% if this.page.id == 'tournament' %} active font-weight-bolder {% endif %}">
+				  <a class="nav-link" href="{{'tournament'|page}}">Tournamets</a>
 				</li>
 				
 			  </ul>
@@ -64,9 +64,18 @@
 		  </nav>
 	</div>
 	<!-- Header section end -->
-
-	{% page %}
-
+{% if this.page.id == 'home' %}
+{% page %}
+{% else %}
+<div style="background: url({{'assets/img/banner-bg.jpg'|theme}});" class="jumbotron jumbotron-fluid">
+	<div class="container">
+		<h1 class="display-3">{{this.page.title}}</h1>
+		<p class="lead">{{this.page.description}}</p>
+		
+	</div>
+</div>
+{% page %}
+{% endif %}
 	<!-- Footer section -->
 	<div class="footer-section">
 		<div class="container">
