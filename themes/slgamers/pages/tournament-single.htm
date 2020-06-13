@@ -1,12 +1,12 @@
 title = "Tournament single"
-url = "/tournament-single/:slug"
+url = "/tournament-single"
 layout = "main"
 is_hidden = 0
 
 [builderDetails]
 modelClass = "Sunal\Games\Models\Tournament"
-identifierValue = "{{ :slug }}"
-modelKeyColumn = "slug"
+identifierValue = "{{ :id }}"
+modelKeyColumn = "tournament_title"
 displayColumn = "tournament_title"
 notFoundMessage = "Record not found"
 ==

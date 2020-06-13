@@ -102,41 +102,54 @@ class __TwigTemplate_a86dd9a10fda9b277616edb074aadc887a89e21e66d13b1f8effa4bb740
 \t</div>
 
 \t<!-- Header section -->
-\t<nav class=\"navbar navbar-expand-lg navbar-dark bg-dark \">
-  <a class=\"navbar-brand\" href=\"#\"><img src=\"";
-        // line 43
-        echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/img/logo.png");
+\t<div class=\"clearfix\">
+\t\t<nav class=\"navbar navbar-expand-lg navbar-dark bg-dark float\">
+\t\t\t<a class=\"navbar-brand\" href=\"#\"><img src=\"";
+        // line 44
+        echo call_user_func_array($this->env->getFilter('resize')->getCallable(), [$this->extensions['Cms\Twig\Extension']->themeFilter("assets/img/logo.jpg"), 60, 60]);
         echo "\" alt=\"\"></a>
-  <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarNavDropdown\" aria-controls=\"navbarNavDropdown\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
-    <span class=\"navbar-toggler-icon\"></span>
-  </button>
-  <div class=\"collapse navbar-collapse \" id=\"navbarNavDropdown\">
-    <ul class=\"navbar-nav \">
-      <li class=\"nav-item active\">
-        <a class=\"nav-link\" href=\"";
+\t\t\t<button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarNavDropdown\" aria-controls=\"navbarNavDropdown\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
+\t\t\t  <span class=\"navbar-toggler-icon\"></span>
+\t\t\t</button>
+\t\t\t<div class=\"collapse navbar-collapse \" id=\"navbarNavDropdown\">
+\t\t\t  <ul class=\"navbar-nav \">
+\t\t\t\t<li class=\"nav-item ";
         // line 50
+        if ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["this"] ?? null), "page", [], "any", false, false, false, 50), "id", [], "any", false, false, false, 50) == "home")) {
+            echo " active font-weight-bolder ";
+        }
+        echo "\">
+\t\t\t\t
+\t\t\t\t  <a class=\"nav-link\" href=\"";
+        // line 52
         echo $this->extensions['Cms\Twig\Extension']->pageFilter("home");
         echo "\">Home <span class=\"sr-only\">(current)</span></a>
-      </li>
-      <li class=\"nav-item\">
-        <a class=\"nav-link\" href=\"";
-        // line 53
+\t\t\t\t</li>
+\t\t\t\t<li class=\"nav-item ";
+        // line 54
+        if ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["this"] ?? null), "page", [], "any", false, false, false, 54), "id", [], "any", false, false, false, 54) == "games")) {
+            echo " active font-weight-bolder ";
+        }
+        echo "\">
+\t\t\t\t  <a class=\"nav-link\" href=\"";
+        // line 55
         echo $this->extensions['Cms\Twig\Extension']->pageFilter("games");
         echo "\">Games</a>
-      </li>
-      <li class=\"nav-item\">
-        <a class=\"nav-link\" href=\"#\">Pricing</a>
-\t  </li>
-\t  
-\t</ul>
-  </div>
-</nav>
+\t\t\t\t</li>
+\t\t\t\t<li class=\"nav-item\">
+\t\t\t\t  <a class=\"nav-link\" href=\"#\">Pricing</a>
+\t\t\t\t</li>
+\t\t\t\t
+\t\t\t  </ul>
+\t\t\t</div>
+\t\t  </nav>
+\t</div>
 \t<!-- Header section end -->
 
 \t";
-        // line 64
+        // line 67
         echo $this->env->getExtension('Cms\Twig\Extension')->pageFunction();
-        // line 65
+        // line 68
         echo "
 \t<!-- Footer section -->
 \t<div class=\"footer-section\">
@@ -146,7 +159,7 @@ class __TwigTemplate_a86dd9a10fda9b277616edb074aadc887a89e21e66d13b1f8effa4bb740
 \t\t\t\t\t<div class=\"footer-widget\">
 \t\t\t\t\t\t<div class=\"about-widget\">
 \t\t\t\t\t\t\t<img src=\"";
-        // line 73
+        // line 76
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/img/logo.png");
         echo "\" alt=\"\">
 \t\t\t\t\t\t\t<p>Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo. Morbi id dictum quam, ut commodo.</p>
@@ -238,31 +251,31 @@ class __TwigTemplate_a86dd9a10fda9b277616edb074aadc887a89e21e66d13b1f8effa4bb740
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t
 \t<!--====== Javascripts & Jquery ======-->
 \t<script src=\"";
-        // line 162
+        // line 165
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/js/jquery-3.2.1.min.js");
         echo "\"></script>
 \t<script src=\"";
-        // line 163
+        // line 166
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/js/bootstrap.min.js");
         echo "\"></script>
 \t<script src=\"";
-        // line 164
+        // line 167
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/js/jquery.slicknav.js");
         echo "\"></script>
 \t<script src=\"";
-        // line 165
+        // line 168
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/js/owl.carousel.min.js");
         echo "\"></script>
 \t<script src=\"";
-        // line 166
+        // line 169
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/js/circle-progress.min.js");
         echo "\"></script>
 \t<script src=\"";
-        // line 167
+        // line 170
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/js/jquery.magnific-popup.min.js");
         echo "\"></script>
 \t<script src=\"";
-        // line 168
+        // line 171
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/js/main.js");
         echo "\"></script>
 \t</body>
@@ -281,7 +294,7 @@ class __TwigTemplate_a86dd9a10fda9b277616edb074aadc887a89e21e66d13b1f8effa4bb740
 
     public function getDebugInfo()
     {
-        return array (  266 => 168,  262 => 167,  258 => 166,  254 => 165,  250 => 164,  246 => 163,  242 => 162,  150 => 73,  140 => 65,  138 => 64,  124 => 53,  118 => 50,  108 => 43,  88 => 26,  82 => 23,  78 => 22,  74 => 21,  70 => 20,  66 => 19,  62 => 18,  58 => 17,  42 => 4,  37 => 1,);
+        return array (  279 => 171,  275 => 170,  271 => 169,  267 => 168,  263 => 167,  259 => 166,  255 => 165,  163 => 76,  153 => 68,  151 => 67,  136 => 55,  130 => 54,  125 => 52,  118 => 50,  109 => 44,  88 => 26,  82 => 23,  78 => 22,  74 => 21,  70 => 20,  66 => 19,  62 => 18,  58 => 17,  42 => 4,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -327,26 +340,29 @@ class __TwigTemplate_a86dd9a10fda9b277616edb074aadc887a89e21e66d13b1f8effa4bb740
 \t</div>
 
 \t<!-- Header section -->
-\t<nav class=\"navbar navbar-expand-lg navbar-dark bg-dark \">
-  <a class=\"navbar-brand\" href=\"#\"><img src=\"{{'assets/img/logo.png'|theme}}\" alt=\"\"></a>
-  <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarNavDropdown\" aria-controls=\"navbarNavDropdown\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
-    <span class=\"navbar-toggler-icon\"></span>
-  </button>
-  <div class=\"collapse navbar-collapse \" id=\"navbarNavDropdown\">
-    <ul class=\"navbar-nav \">
-      <li class=\"nav-item active\">
-        <a class=\"nav-link\" href=\"{{'home'|page}}\">Home <span class=\"sr-only\">(current)</span></a>
-      </li>
-      <li class=\"nav-item\">
-        <a class=\"nav-link\" href=\"{{'games'|page}}\">Games</a>
-      </li>
-      <li class=\"nav-item\">
-        <a class=\"nav-link\" href=\"#\">Pricing</a>
-\t  </li>
-\t  
-\t</ul>
-  </div>
-</nav>
+\t<div class=\"clearfix\">
+\t\t<nav class=\"navbar navbar-expand-lg navbar-dark bg-dark float\">
+\t\t\t<a class=\"navbar-brand\" href=\"#\"><img src=\"{{'assets/img/logo.jpg'|theme|resize(60,60)}}\" alt=\"\"></a>
+\t\t\t<button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarNavDropdown\" aria-controls=\"navbarNavDropdown\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
+\t\t\t  <span class=\"navbar-toggler-icon\"></span>
+\t\t\t</button>
+\t\t\t<div class=\"collapse navbar-collapse \" id=\"navbarNavDropdown\">
+\t\t\t  <ul class=\"navbar-nav \">
+\t\t\t\t<li class=\"nav-item {% if this.page.id == 'home' %} active font-weight-bolder {% endif %}\">
+\t\t\t\t
+\t\t\t\t  <a class=\"nav-link\" href=\"{{'home'|page}}\">Home <span class=\"sr-only\">(current)</span></a>
+\t\t\t\t</li>
+\t\t\t\t<li class=\"nav-item {% if this.page.id == 'games' %} active font-weight-bolder {% endif %}\">
+\t\t\t\t  <a class=\"nav-link\" href=\"{{'games'|page}}\">Games</a>
+\t\t\t\t</li>
+\t\t\t\t<li class=\"nav-item\">
+\t\t\t\t  <a class=\"nav-link\" href=\"#\">Pricing</a>
+\t\t\t\t</li>
+\t\t\t\t
+\t\t\t  </ul>
+\t\t\t</div>
+\t\t  </nav>
+\t</div>
 \t<!-- Header section end -->
 
 \t{% page %}
