@@ -1,4 +1,4 @@
-1592044842a:1:{s:15:"game-single.htm";a:11:{s:8:"fileName";s:15:"game-single.htm";s:7:"content";s:3305:"title = "Game single"
+1592141322a:1:{s:15:"game-single.htm";a:12:{s:8:"fileName";s:15:"game-single.htm";s:7:"content";s:3302:"title = "Game single"
 url = "/game-single/:slug"
 layout = "main"
 is_hidden = 0
@@ -20,6 +20,8 @@ detailsPage = "game-single"
 detailsKeyColumn = "slug"
 detailsUrlParameter = "slug"
 pageNumber = "{{ :page }}"
+
+[registerform]
 ==
 {% set record = builderDetails.record %}
 {% set displayColumn = builderDetails.displayColumn %}
@@ -46,15 +48,14 @@ pageNumber = "{{ :page }}"
           <img src="img/blog/1.jpg" alt="">
           <h3>{{tmnt.tournament_title}}</h3>
           <p style="display: inline-block; margin-right: 10px;">Tournament Date</p><div class="post-date">{{tmnt.end_date}}</div>
-          {{tmnt.description|raw}}
+          <div class="text-white">{{tmnt.description|raw}}</div>
+          <div class="jumbotron">
+            {% component 'registerform' %}
+          </div>
         </div>
+        
       </div>
       <div class="col-lg-4 sidebar">
-        <div class="sb-widget">
-          <form class="sb-search">
-            <input type="text" placeholder="Search">
-          </form>
-        </div>
         <div class="sb-widget">
           <h2 class="sb-title text-uppercase"><i class="fa fa-gamepad" aria-hidden="true"></i> Other Games</h2>
           <ul class="sb-cata-list list-group">
@@ -80,7 +81,7 @@ pageNumber = "{{ :page }}"
 <!-- Blog section end -->
 
     
-{% endfor %}";s:5:"mtime";i:1591962406;s:6:"markup";s:2762:"{% set record = builderDetails.record %}
+{% endfor %}";s:5:"mtime";i:1592140720;s:6:"markup";s:2741:"{% set record = builderDetails.record %}
 {% set displayColumn = builderDetails.displayColumn %}
 {% set notFoundMessage = builderDetails.notFoundMessage %}
 
@@ -105,15 +106,14 @@ pageNumber = "{{ :page }}"
           <img src="img/blog/1.jpg" alt="">
           <h3>{{tmnt.tournament_title}}</h3>
           <p style="display: inline-block; margin-right: 10px;">Tournament Date</p><div class="post-date">{{tmnt.end_date}}</div>
-          {{tmnt.description|raw}}
+          <div class="text-white">{{tmnt.description|raw}}</div>
+          <div class="jumbotron">
+            {% component 'registerform' %}
+          </div>
         </div>
+        
       </div>
       <div class="col-lg-4 sidebar">
-        <div class="sb-widget">
-          <form class="sb-search">
-            <input type="text" placeholder="Search">
-          </form>
-        </div>
         <div class="sb-widget">
           <h2 class="sb-title text-uppercase"><i class="fa fa-gamepad" aria-hidden="true"></i> Other Games</h2>
           <ul class="sb-cata-list list-group">
@@ -139,4 +139,4 @@ pageNumber = "{{ :page }}"
 <!-- Blog section end -->
 
     
-{% endfor %}";s:4:"code";N;s:5:"title";s:11:"Game single";s:3:"url";s:18:"/game-single/:slug";s:6:"layout";s:4:"main";s:9:"is_hidden";s:1:"0";s:14:"builderDetails";a:5:{s:10:"modelClass";s:23:"Sunal\Games\Models\Game";s:15:"identifierValue";s:11:"{{ :slug }}";s:14:"modelKeyColumn";s:4:"slug";s:13:"displayColumn";s:5:"title";s:15:"notFoundMessage";s:16:"Record not found";}s:11:"builderList";a:9:{s:10:"modelClass";s:23:"Sunal\Games\Models\Game";s:5:"scope";s:1:"-";s:10:"scopeValue";s:11:"{{ :slug }}";s:13:"displayColumn";s:4:"slug";s:16:"noRecordsMessage";s:16:"No records found";s:11:"detailsPage";s:11:"game-single";s:16:"detailsKeyColumn";s:4:"slug";s:19:"detailsUrlParameter";s:4:"slug";s:10:"pageNumber";s:11:"{{ :page }}";}}}
+{% endfor %}";s:4:"code";N;s:5:"title";s:11:"Game single";s:3:"url";s:18:"/game-single/:slug";s:6:"layout";s:4:"main";s:9:"is_hidden";s:1:"0";s:14:"builderDetails";a:5:{s:10:"modelClass";s:23:"Sunal\Games\Models\Game";s:15:"identifierValue";s:11:"{{ :slug }}";s:14:"modelKeyColumn";s:4:"slug";s:13:"displayColumn";s:5:"title";s:15:"notFoundMessage";s:16:"Record not found";}s:11:"builderList";a:9:{s:10:"modelClass";s:23:"Sunal\Games\Models\Game";s:5:"scope";s:1:"-";s:10:"scopeValue";s:11:"{{ :slug }}";s:13:"displayColumn";s:4:"slug";s:16:"noRecordsMessage";s:16:"No records found";s:11:"detailsPage";s:11:"game-single";s:16:"detailsKeyColumn";s:4:"slug";s:19:"detailsUrlParameter";s:4:"slug";s:10:"pageNumber";s:11:"{{ :page }}";}s:12:"registerform";a:0:{}}}

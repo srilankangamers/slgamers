@@ -1,0 +1,10 @@
+name: Registrations
+form: $/sunal/games/models/register/fields.yaml
+modelClass: Sunal\Games\Models\Register
+defaultRedirect: sunal/games/registrations
+create:
+    redirect: 'sunal/games/registrations/update/:id'
+    redirectClose: sunal/games/registrations
+update:
+    redirect: sunal/games/registrations
+    redirectClose: sunal/games/registrations

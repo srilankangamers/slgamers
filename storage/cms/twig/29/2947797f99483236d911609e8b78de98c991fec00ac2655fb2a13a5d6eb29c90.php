@@ -77,26 +77,28 @@ class __TwigTemplate_7ead6ca2711a2184b75e64cf83870926286660caea5647ca4096162b434
                 echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/img/register.png");
                 echo "\" alt=\"\">";
             }
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["record"], "tournament_title", [], "any", false, false, false, 14), "html", null, true);
+            // line 15
+            echo "                    ";
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["record"], "tournament_title", [], "any", false, false, false, 15), "html", null, true);
             echo "
                   </button>
                 </h2>
               </div> 
           
               <div id=\"collapse";
-            // line 19
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["record"], "id", [], "any", false, false, false, 19), "html", null, true);
+            // line 20
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["record"], "id", [], "any", false, false, false, 20), "html", null, true);
             echo "\" class=\"collapse hide\" aria-labelledby=\"heading";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["record"], "id", [], "any", false, false, false, 19), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["record"], "id", [], "any", false, false, false, 20), "html", null, true);
             echo "\" data-parent=\"#accordionExample\">
                 <div class=\"card-body\">
                    <div class=\"float-left\"><img style=\"width: 300px; height: 300px; margin-right: 10px;\" src=\"";
-            // line 21
-            echo call_user_func_array($this->env->getFilter('resize')->getCallable(), [twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["record"], "poster", [], "any", false, false, false, 21), "path", [], "any", false, false, false, 21), 300, 300, ["mode" => "crop"]]);
+            // line 22
+            echo call_user_func_array($this->env->getFilter('resize')->getCallable(), [twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["record"], "poster", [], "any", false, false, false, 22), "path", [], "any", false, false, false, 22), 300, 300, ["mode" => "crop"]]);
             echo "\" alt=\"\"></div> 
                    <div>";
-            // line 22
-            echo call_user_func_array($this->env->getFunction('html_limit')->getCallable(), ["limit", twig_get_attribute($this->env, $this->source, $context["record"], "description", [], "any", false, false, false, 22), 1000]);
+            // line 23
+            echo call_user_func_array($this->env->getFunction('html_limit')->getCallable(), ["limit", twig_get_attribute($this->env, $this->source, $context["record"], "description", [], "any", false, false, false, 23), 1000]);
             echo "</div> 
                 </div>
               </div>
@@ -106,38 +108,38 @@ class __TwigTemplate_7ead6ca2711a2184b75e64cf83870926286660caea5647ca4096162b434
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['record'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 27
+        // line 28
         echo "        
         </div>
 </div>
 ";
-        // line 30
-        if ((twig_get_attribute($this->env, $this->source, ($context["records"] ?? null), "lastPage", [], "any", false, false, false, 30) > 1)) {
-            // line 31
+        // line 31
+        if ((twig_get_attribute($this->env, $this->source, ($context["records"] ?? null), "lastPage", [], "any", false, false, false, 31) > 1)) {
+            // line 32
             echo "    <ul class=\"pagination\">
         ";
-            // line 32
-            if ((twig_get_attribute($this->env, $this->source, ($context["records"] ?? null), "currentPage", [], "any", false, false, false, 32) > 1)) {
-                // line 33
+            // line 33
+            if ((twig_get_attribute($this->env, $this->source, ($context["records"] ?? null), "currentPage", [], "any", false, false, false, 33) > 1)) {
+                // line 34
                 echo "            <li><a href=\"";
-                echo $this->extensions['Cms\Twig\Extension']->pageFilter(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["this"] ?? null), "page", [], "any", false, false, false, 33), "baseFileName", [], "any", false, false, false, 33), [($context["pageParam"] ?? null) => (twig_get_attribute($this->env, $this->source, ($context["records"] ?? null), "currentPage", [], "any", false, false, false, 33) - 1)]);
+                echo $this->extensions['Cms\Twig\Extension']->pageFilter(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["this"] ?? null), "page", [], "any", false, false, false, 34), "baseFileName", [], "any", false, false, false, 34), [($context["pageParam"] ?? null) => (twig_get_attribute($this->env, $this->source, ($context["records"] ?? null), "currentPage", [], "any", false, false, false, 34) - 1)]);
                 echo "\">&larr; Prev</a></li>
         ";
             }
-            // line 35
+            // line 36
             echo "
         ";
-            // line 36
+            // line 37
             $context['_parent'] = $context;
-            $context['_seq'] = twig_ensure_traversable(range(1, twig_get_attribute($this->env, $this->source, ($context["records"] ?? null), "lastPage", [], "any", false, false, false, 36)));
+            $context['_seq'] = twig_ensure_traversable(range(1, twig_get_attribute($this->env, $this->source, ($context["records"] ?? null), "lastPage", [], "any", false, false, false, 37)));
             foreach ($context['_seq'] as $context["_key"] => $context["page"]) {
-                // line 37
+                // line 38
                 echo "            <li class=\"";
-                echo (((twig_get_attribute($this->env, $this->source, ($context["records"] ?? null), "currentPage", [], "any", false, false, false, 37) == $context["page"])) ? ("active") : (null));
+                echo (((twig_get_attribute($this->env, $this->source, ($context["records"] ?? null), "currentPage", [], "any", false, false, false, 38) == $context["page"])) ? ("active") : (null));
                 echo "\">
                 <a href=\"";
-                // line 38
-                echo $this->extensions['Cms\Twig\Extension']->pageFilter(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["this"] ?? null), "page", [], "any", false, false, false, 38), "baseFileName", [], "any", false, false, false, 38), [($context["pageParam"] ?? null) => $context["page"]]);
+                // line 39
+                echo $this->extensions['Cms\Twig\Extension']->pageFilter(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["this"] ?? null), "page", [], "any", false, false, false, 39), "baseFileName", [], "any", false, false, false, 39), [($context["pageParam"] ?? null) => $context["page"]]);
                 echo "\">";
                 echo twig_escape_filter($this->env, $context["page"], "html", null, true);
                 echo "</a>
@@ -147,18 +149,18 @@ class __TwigTemplate_7ead6ca2711a2184b75e64cf83870926286660caea5647ca4096162b434
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_iterated'], $context['_key'], $context['page'], $context['_parent'], $context['loop']);
             $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 41
+            // line 42
             echo "
         ";
-            // line 42
-            if ((twig_get_attribute($this->env, $this->source, ($context["records"] ?? null), "lastPage", [], "any", false, false, false, 42) > twig_get_attribute($this->env, $this->source, ($context["records"] ?? null), "currentPage", [], "any", false, false, false, 42))) {
-                // line 43
+            // line 43
+            if ((twig_get_attribute($this->env, $this->source, ($context["records"] ?? null), "lastPage", [], "any", false, false, false, 43) > twig_get_attribute($this->env, $this->source, ($context["records"] ?? null), "currentPage", [], "any", false, false, false, 43))) {
+                // line 44
                 echo "            <li><a href=\"";
-                echo $this->extensions['Cms\Twig\Extension']->pageFilter(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["this"] ?? null), "page", [], "any", false, false, false, 43), "baseFileName", [], "any", false, false, false, 43), [($context["pageParam"] ?? null) => (twig_get_attribute($this->env, $this->source, ($context["records"] ?? null), "currentPage", [], "any", false, false, false, 43) + 1)]);
+                echo $this->extensions['Cms\Twig\Extension']->pageFilter(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["this"] ?? null), "page", [], "any", false, false, false, 44), "baseFileName", [], "any", false, false, false, 44), [($context["pageParam"] ?? null) => (twig_get_attribute($this->env, $this->source, ($context["records"] ?? null), "currentPage", [], "any", false, false, false, 44) + 1)]);
                 echo "\">Next &rarr;</a></li>
         ";
             }
-            // line 45
+            // line 46
             echo "    </ul>
 ";
         }
@@ -176,7 +178,7 @@ class __TwigTemplate_7ead6ca2711a2184b75e64cf83870926286660caea5647ca4096162b434
 
     public function getDebugInfo()
     {
-        return array (  162 => 45,  156 => 43,  154 => 42,  151 => 41,  140 => 38,  135 => 37,  131 => 36,  128 => 35,  122 => 33,  120 => 32,  117 => 31,  115 => 30,  110 => 27,  99 => 22,  95 => 21,  88 => 19,  71 => 14,  65 => 13,  60 => 11,  57 => 10,  53 => 9,  49 => 7,  47 => 6,  45 => 5,  43 => 4,  41 => 3,  39 => 2,  37 => 1,);
+        return array (  164 => 46,  158 => 44,  156 => 43,  153 => 42,  142 => 39,  137 => 38,  133 => 37,  130 => 36,  124 => 34,  122 => 33,  119 => 32,  117 => 31,  112 => 28,  101 => 23,  97 => 22,  90 => 20,  81 => 15,  71 => 14,  65 => 13,  60 => 11,  57 => 10,  53 => 9,  49 => 7,  47 => 6,  45 => 5,  43 => 4,  41 => 3,  39 => 2,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -194,7 +196,8 @@ class __TwigTemplate_7ead6ca2711a2184b75e64cf83870926286660caea5647ca4096162b434
               <div class=\"card-header\" id=\"heading{{record.id}}\">
                 <h2 class=\"mb-0\">
                   <button class=\"btn btn-link btn-block text-left\" type=\"button\" data-toggle=\"collapse\" data-target=\"#collapse{{record.id}}\" aria-expanded=\"true\" aria-controls=\"collapse{{record.id}}\">
-                    {% if record.availability == 0 %}<img style=\"width: 50px; height: 54px;\" src=\"{{'assets/img/soon.png'|theme}}\" alt=\"\">{% else %}<img style=\"width: 50px; height: 54px;\" src=\"{{'assets/img/register.png'|theme}}\" alt=\"\">{% endif %}{{record.tournament_title}}
+                    {% if record.availability == 0 %}<img style=\"width: 50px; height: 54px;\" src=\"{{'assets/img/soon.png'|theme}}\" alt=\"\">{% else %}<img style=\"width: 50px; height: 54px;\" src=\"{{'assets/img/register.png'|theme}}\" alt=\"\">{% endif %}
+                    {{record.tournament_title}}
                   </button>
                 </h2>
               </div> 

@@ -1,0 +1,35 @@
+
+    
+
+<form data-request="onSave" data-request-files data-request-flash>
+  <input type="hidden" name="_handler" value="onSave">
+  {{ form_token() }}
+  {{ form_sessionkey() }}
+  <h2>Register Now</h2>
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label> Player Name</label>
+        <input type="text" class="form-control" name="name">
+      </div>
+      <div class="form-group col-md-6">
+        <label> Contact Number (Whatsapp)</label>
+        <input type="text" class="form-control" name="contact">
+      </div>
+      <div class="form-group col-md-6">
+        <label>Player IGN</label>
+        <input type="text" class="form-control" name="ign">
+    </div>
+    <div class="form-group col-md-6">
+        <label>Game Account ID</label>
+        <input type="text" class="form-control" name="game_id">
+    </div>
+    <div class="form-group col-md-6">
+      <label>Upload Bank Slip</label>
+      <input type="file" class="form-control" name="bankslip" accept="image/*" data-request="onUpload" data-request-files data-request-flash >
+      <br>
+      <div style="width: 150px; height: 150px;" id="imageresult">No Image to Preview</div>
+      <br>
+    </div>
+    </div>
+    <button type="submit" class="btn btn-primary">Register</button>
+  </form>

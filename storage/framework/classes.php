@@ -89,4 +89,7 @@
   'ToughDeveloper\\ImageResizer\\Classes\\Image' => 'plugins\\toughdeveloper\\imageresizer\\classes\\Image.php',
   'ToughDeveloper\\ImageResizer\\Models\\Settings' => 'plugins\\toughdeveloper\\imageresizer\\models\\Settings.php',
   'backend\\Controllers\\users' => 'modules\\backend\\controllers\\users.php',
+  'Sunal\\Games\\Components\\RegisterForm' => 'plugins\\sunal\\games\\components\\RegisterForm.php',
+  'sunal\\games\\Controllers\\registrations' => 'plugins\\sunal\\games\\controllers\\registrations.php',
+  'Sunal\\Games\\Models\\Register' => 'plugins\\sunal\\games\\models\\Register.php',
 );

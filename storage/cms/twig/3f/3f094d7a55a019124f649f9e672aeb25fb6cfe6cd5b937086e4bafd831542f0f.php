@@ -79,41 +79,45 @@ class __TwigTemplate_9d63581f666f33e7436a128b8877289ae65986daa0d4dc9ca4a48ec10df
             // line 25
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["tmnt"], "end_date", [], "any", false, false, false, 25), "html", null, true);
             echo "</div>
-          ";
+          <div class=\"text-white\">";
             // line 26
             echo twig_get_attribute($this->env, $this->source, $context["tmnt"], "description", [], "any", false, false, false, 26);
-            echo "
+            echo "</div>
+          <div class=\"jumbotron\">
+            ";
+            // line 28
+            $context['__cms_component_params'] = [];
+            echo $this->env->getExtension('Cms\Twig\Extension')->componentFunction("registerform"            , $context['__cms_component_params']            );
+            unset($context['__cms_component_params']);
+            // line 29
+            echo "          </div>
         </div>
+        
       </div>
       <div class=\"col-lg-4 sidebar\">
-        <div class=\"sb-widget\">
-          <form class=\"sb-search\">
-            <input type=\"text\" placeholder=\"Search\">
-          </form>
-        </div>
         <div class=\"sb-widget\">
           <h2 class=\"sb-title text-uppercase\"><i class=\"fa fa-gamepad\" aria-hidden=\"true\"></i> Other Games</h2>
           <ul class=\"sb-cata-list list-group\">
             ";
-            // line 38
+            // line 37
             $context['_parent'] = $context;
             $context['_seq'] = twig_ensure_traversable(($context["records"] ?? null));
             foreach ($context['_seq'] as $context["_key"] => $context["record"]) {
-                // line 39
+                // line 38
                 echo "            <li class=\"list-group-item ";
-                if ((twig_get_attribute($this->env, $this->source, $context["record"], "slug", [], "any", false, false, false, 39) == (($__internal_f607aeef2c31a95a7bf963452dff024ffaeb6aafbe4603f9ca3bec57be8633f4 = twig_get_attribute($this->env, $this->source, ($context["this"] ?? null), "param", [], "any", false, false, false, 39)) && is_array($__internal_f607aeef2c31a95a7bf963452dff024ffaeb6aafbe4603f9ca3bec57be8633f4) || $__internal_f607aeef2c31a95a7bf963452dff024ffaeb6aafbe4603f9ca3bec57be8633f4 instanceof ArrayAccess ? ($__internal_f607aeef2c31a95a7bf963452dff024ffaeb6aafbe4603f9ca3bec57be8633f4["slug"] ?? null) : null))) {
+                if ((twig_get_attribute($this->env, $this->source, $context["record"], "slug", [], "any", false, false, false, 38) == (($__internal_f607aeef2c31a95a7bf963452dff024ffaeb6aafbe4603f9ca3bec57be8633f4 = twig_get_attribute($this->env, $this->source, ($context["this"] ?? null), "param", [], "any", false, false, false, 38)) && is_array($__internal_f607aeef2c31a95a7bf963452dff024ffaeb6aafbe4603f9ca3bec57be8633f4) || $__internal_f607aeef2c31a95a7bf963452dff024ffaeb6aafbe4603f9ca3bec57be8633f4 instanceof ArrayAccess ? ($__internal_f607aeef2c31a95a7bf963452dff024ffaeb6aafbe4603f9ca3bec57be8633f4["slug"] ?? null) : null))) {
                     echo " list-group-item-action active ";
                 }
                 echo "\"><a style=\"color: black;\" href=\"/game-single/";
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["record"], "slug", [], "any", false, false, false, 39), "html", null, true);
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["record"], "slug", [], "any", false, false, false, 38), "html", null, true);
                 echo "\">";
-                if ((twig_get_attribute($this->env, $this->source, $context["record"], "slug", [], "any", false, false, false, 39) == (($__internal_62824350bc4502ee19dbc2e99fc6bdd3bd90e7d8dd6e72f42c35efd048542144 = twig_get_attribute($this->env, $this->source, ($context["this"] ?? null), "param", [], "any", false, false, false, 39)) && is_array($__internal_62824350bc4502ee19dbc2e99fc6bdd3bd90e7d8dd6e72f42c35efd048542144) || $__internal_62824350bc4502ee19dbc2e99fc6bdd3bd90e7d8dd6e72f42c35efd048542144 instanceof ArrayAccess ? ($__internal_62824350bc4502ee19dbc2e99fc6bdd3bd90e7d8dd6e72f42c35efd048542144["slug"] ?? null) : null))) {
+                if ((twig_get_attribute($this->env, $this->source, $context["record"], "slug", [], "any", false, false, false, 38) == (($__internal_62824350bc4502ee19dbc2e99fc6bdd3bd90e7d8dd6e72f42c35efd048542144 = twig_get_attribute($this->env, $this->source, ($context["this"] ?? null), "param", [], "any", false, false, false, 38)) && is_array($__internal_62824350bc4502ee19dbc2e99fc6bdd3bd90e7d8dd6e72f42c35efd048542144) || $__internal_62824350bc4502ee19dbc2e99fc6bdd3bd90e7d8dd6e72f42c35efd048542144 instanceof ArrayAccess ? ($__internal_62824350bc4502ee19dbc2e99fc6bdd3bd90e7d8dd6e72f42c35efd048542144["slug"] ?? null) : null))) {
                     echo " <i class=\"fa fa-arrow-right\"></i> ";
-                    echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["record"], "title", [], "any", false, false, false, 39), "html", null, true);
+                    echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["record"], "title", [], "any", false, false, false, 38), "html", null, true);
                     echo "</a> ";
                 } else {
                     echo " ";
-                    echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["record"], "title", [], "any", false, false, false, 39), "html", null, true);
+                    echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["record"], "title", [], "any", false, false, false, 38), "html", null, true);
                     echo "</a> ";
                 }
                 echo "</li>
@@ -122,27 +126,27 @@ class __TwigTemplate_9d63581f666f33e7436a128b8877289ae65986daa0d4dc9ca4a48ec10df
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_iterated'], $context['_key'], $context['record'], $context['_parent'], $context['loop']);
             $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 41
+            // line 40
             echo "          </ul>
         </div>
         <div class=\"sb-widget\">
           <h2 class=\"sb-title text-uppercase\"><i class=\"fa fa-money\" aria-hidden=\"true\"></i> Cash Prizes</h2>
           <ul class=\"list-group\">
             <li class=\"text-uppercase font-weight-bold list-group-item bg-warning\"><i class=\"fa fa-trophy\" aria-hidden=\"true\"></i> 1st place Rs ";
-            // line 46
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["tmnt"], "first_place", [], "any", false, false, false, 46), "html", null, true);
+            // line 45
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["tmnt"], "first_place", [], "any", false, false, false, 45), "html", null, true);
             echo "</li>
             <li class=\"text-uppercase list-group-item font-weight-bold bg-success\"><i class=\"fa fa-trophy\" aria-hidden=\"true\"></i> 2nd place Rs ";
-            // line 47
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["tmnt"], "second_place", [], "any", false, false, false, 47), "html", null, true);
+            // line 46
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["tmnt"], "second_place", [], "any", false, false, false, 46), "html", null, true);
             echo "</li>
             <li class=\"text-uppercase list-group-item font-weight-bold bg-info\"><i class=\"fa fa-trophy\" aria-hidden=\"true\"></i> 3rd place Rs ";
-            // line 48
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["tmnt"], "third_place", [], "any", false, false, false, 48), "html", null, true);
+            // line 47
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["tmnt"], "third_place", [], "any", false, false, false, 47), "html", null, true);
             echo "</li>
             <li class=\"text-uppercase list-group-item font-weight-bold bg-light\"><i class=\"fa fa-trophy\" aria-hidden=\"true\"></i> 4th to 10th place Rs ";
-            // line 49
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["tmnt"], "four_to_ten", [], "any", false, false, false, 49), "html", null, true);
+            // line 48
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["tmnt"], "four_to_ten", [], "any", false, false, false, 48), "html", null, true);
             echo "</li>
           </ul>
         </div>
@@ -173,7 +177,7 @@ class __TwigTemplate_9d63581f666f33e7436a128b8877289ae65986daa0d4dc9ca4a48ec10df
 
     public function getDebugInfo()
     {
-        return array (  145 => 49,  141 => 48,  137 => 47,  133 => 46,  126 => 41,  103 => 39,  99 => 38,  84 => 26,  80 => 25,  76 => 24,  61 => 12,  56 => 10,  52 => 8,  48 => 7,  43 => 4,  41 => 3,  39 => 2,  37 => 1,);
+        return array (  149 => 48,  145 => 47,  141 => 46,  137 => 45,  130 => 40,  107 => 38,  103 => 37,  93 => 29,  89 => 28,  84 => 26,  80 => 25,  76 => 24,  61 => 12,  56 => 10,  52 => 8,  48 => 7,  43 => 4,  41 => 3,  39 => 2,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -203,15 +207,14 @@ class __TwigTemplate_9d63581f666f33e7436a128b8877289ae65986daa0d4dc9ca4a48ec10df
           <img src=\"img/blog/1.jpg\" alt=\"\">
           <h3>{{tmnt.tournament_title}}</h3>
           <p style=\"display: inline-block; margin-right: 10px;\">Tournament Date</p><div class=\"post-date\">{{tmnt.end_date}}</div>
-          {{tmnt.description|raw}}
+          <div class=\"text-white\">{{tmnt.description|raw}}</div>
+          <div class=\"jumbotron\">
+            {% component 'registerform' %}
+          </div>
         </div>
+        
       </div>
       <div class=\"col-lg-4 sidebar\">
-        <div class=\"sb-widget\">
-          <form class=\"sb-search\">
-            <input type=\"text\" placeholder=\"Search\">
-          </form>
-        </div>
         <div class=\"sb-widget\">
           <h2 class=\"sb-title text-uppercase\"><i class=\"fa fa-gamepad\" aria-hidden=\"true\"></i> Other Games</h2>
           <ul class=\"sb-cata-list list-group\">

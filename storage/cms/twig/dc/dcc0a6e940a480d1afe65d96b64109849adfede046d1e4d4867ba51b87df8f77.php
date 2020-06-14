@@ -81,10 +81,18 @@ class __TwigTemplate_a86dd9a10fda9b277616edb074aadc887a89e21e66d13b1f8effa4bb740
         // line 23
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/css/flip.css");
         echo "\"/>
+\t<link rel=\"stylesheet\" href=\"";
+        // line 24
+        echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/css/basic.css");
+        echo "\"/>
+\t<link rel=\"stylesheet\" href=\"";
+        // line 25
+        echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/css/dropzone.css");
+        echo "\"/>
 
 \t<!-- Main Stylesheets -->
 \t<link rel=\"stylesheet\" href=\"";
-        // line 26
+        // line 28
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/css/style.css");
         echo "\"/>
 
@@ -98,12 +106,10 @@ class __TwigTemplate_a86dd9a10fda9b277616edb074aadc887a89e21e66d13b1f8effa4bb740
 <body>
 \t<!-- Page Preloder -->
 \t<div id=\"preloder\">
-\t\t<div class=\"loader\"></div>
+\t\t<div class=\"loader text-warning\"></div>
 \t</div>
-
 \t<!-- Header section -->
-\t<div class=\"clearfix\">
-\t\t<nav class=\"navbar navbar-expand-lg navbar-dark bg-dark float\">
+\t\t<nav class=\"navbar navbar-expand-lg sticky-top navbar-dark bg-dark\">
 \t\t\t<a class=\"navbar-brand\" href=\"#\"><img src=\"";
         // line 44
         echo call_user_func_array($this->env->getFilter('resize')->getCallable(), [$this->extensions['Cms\Twig\Extension']->themeFilter("assets/img/logo.jpg"), 60, 60]);
@@ -112,7 +118,7 @@ class __TwigTemplate_a86dd9a10fda9b277616edb074aadc887a89e21e66d13b1f8effa4bb740
 \t\t\t  <span class=\"navbar-toggler-icon\"></span>
 \t\t\t</button>
 \t\t\t<div class=\"collapse navbar-collapse \" id=\"navbarNavDropdown\">
-\t\t\t  <ul class=\"navbar-nav \">
+\t\t\t  <ul class=\"navbar-nav  \">
 \t\t\t\t<li class=\"nav-item ";
         // line 50
         if ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["this"] ?? null), "page", [], "any", false, false, false, 50), "id", [], "any", false, false, false, 50) == "home")) {
@@ -145,41 +151,45 @@ class __TwigTemplate_a86dd9a10fda9b277616edb074aadc887a89e21e66d13b1f8effa4bb740
 \t\t\t\t  <a class=\"nav-link\" href=\"";
         // line 58
         echo $this->extensions['Cms\Twig\Extension']->pageFilter("tournament");
-        echo "\">Tournamets</a>
+        echo "\">Tournaments</a>
 \t\t\t\t</li>
 \t\t\t\t
 \t\t\t  </ul>
 \t\t\t</div>
-\t\t  </nav>
-\t</div>
+\t\t</nav>
 \t<!-- Header section end -->
 ";
-        // line 66
-        if ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["this"] ?? null), "page", [], "any", false, false, false, 66), "id", [], "any", false, false, false, 66) == "home")) {
-            // line 67
+        // line 65
+        if ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["this"] ?? null), "page", [], "any", false, false, false, 65), "id", [], "any", false, false, false, 65) == "home")) {
+            // line 66
             echo $this->env->getExtension('Cms\Twig\Extension')->pageFunction();
         } else {
-            // line 69
-            echo "<div style=\"background: url(";
+            // line 68
+            echo "<div style=\" margin-bottom: 0px; background: url(";
             echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/img/banner-bg.jpg");
             echo ");\" class=\"jumbotron jumbotron-fluid\">
 \t<div class=\"container\">
-\t\t<h1 class=\"display-3\">";
-            // line 71
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["this"] ?? null), "page", [], "any", false, false, false, 71), "title", [], "any", false, false, false, 71), "html", null, true);
+\t\t<h1 style=\"text-shadow: black 2px 0px 2px;\" class=\"display-3 text-light font-weight-bolder\">";
+            // line 70
+            if (twig_get_attribute($this->env, $this->source, ($context["record"] ?? null), "title", [], "any", false, false, false, 70)) {
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["record"] ?? null), "title", [], "any", false, false, false, 70), "html", null, true);
+                echo " ";
+            } else {
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["this"] ?? null), "page", [], "any", false, false, false, 70), "title", [], "any", false, false, false, 70), "html", null, true);
+            }
             echo "</h1>
-\t\t<p class=\"lead\">";
-            // line 72
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["this"] ?? null), "page", [], "any", false, false, false, 72), "description", [], "any", false, false, false, 72), "html", null, true);
+\t\t<p style=\"text-shadow: black 2px 0px 2px;\" class=\"lead text-light font-weight-bolder\">";
+            // line 71
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["this"] ?? null), "page", [], "any", false, false, false, 71), "description", [], "any", false, false, false, 71), "html", null, true);
             echo "</p>
 \t\t
 \t</div>
 </div>
 ";
-            // line 76
+            // line 75
             echo $this->env->getExtension('Cms\Twig\Extension')->pageFunction();
         }
-        // line 78
+        // line 77
         echo "\t<!-- Footer section -->
 \t<div class=\"footer-section\">
 \t\t<div class=\"container\">
@@ -188,7 +198,7 @@ class __TwigTemplate_a86dd9a10fda9b277616edb074aadc887a89e21e66d13b1f8effa4bb740
 \t\t\t\t\t<div class=\"footer-widget\">
 \t\t\t\t\t\t<div class=\"about-widget\">
 \t\t\t\t\t\t\t<img src=\"";
-        // line 85
+        // line 84
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/img/logo.png");
         echo "\" alt=\"\">
 \t\t\t\t\t\t\t<p>Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo. Morbi id dictum quam, ut commodo.</p>
@@ -280,34 +290,55 @@ class __TwigTemplate_a86dd9a10fda9b277616edb074aadc887a89e21e66d13b1f8effa4bb740
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t
 \t<!--====== Javascripts & Jquery ======-->
 \t<script src=\"";
-        // line 174
+        // line 173
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/js/jquery-3.2.1.min.js");
         echo "\"></script>
 \t<script src=\"";
-        // line 175
+        // line 174
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/js/bootstrap.min.js");
         echo "\"></script>
 \t<script src=\"";
-        // line 176
+        // line 175
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/js/jquery.slicknav.js");
         echo "\"></script>
 \t<script src=\"";
-        // line 177
+        // line 176
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/js/owl.carousel.min.js");
         echo "\"></script>
 \t<script src=\"";
-        // line 178
+        // line 177
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/js/circle-progress.min.js");
         echo "\"></script>
 \t<script src=\"";
-        // line 179
+        // line 178
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/js/jquery.magnific-popup.min.js");
         echo "\"></script>
 \t<script src=\"";
-        // line 180
+        // line 179
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/js/main.js");
         echo "\"></script>
-\t</body>
+\t<script src=\"";
+        // line 180
+        echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/js/dropzone.js");
+        echo "\"></script>
+\t";
+        // line 181
+        $_minify = System\Classes\CombineAssets::instance()->useMinify;
+        if ($_minify) {
+            echo '<script src="' . Request::getBasePath() . '/modules/system/assets/js/framework.combined-min.js"></script>'.PHP_EOL;
+        }
+        else {
+            echo '<script src="' . Request::getBasePath() . '/modules/system/assets/js/framework.js"></script>'.PHP_EOL;
+            echo '<script src="' . Request::getBasePath() . '/modules/system/assets/js/framework.extras.js"></script>'.PHP_EOL;
+        }
+        echo '<link rel="stylesheet" property="stylesheet" href="' . Request::getBasePath() .'/modules/system/assets/css/framework.extras'.($_minify ? '-min' : '').'.css">'.PHP_EOL;
+        unset($_minify);
+        // line 182
+        echo "    ";
+        echo $this->env->getExtension('Cms\Twig\Extension')->assetsFunction('js');
+        echo $this->env->getExtension('Cms\Twig\Extension')->displayBlock('scripts');
+        // line 183
+        echo "\t</body>
 </html>";
     }
 
@@ -323,7 +354,7 @@ class __TwigTemplate_a86dd9a10fda9b277616edb074aadc887a89e21e66d13b1f8effa4bb740
 
     public function getDebugInfo()
     {
-        return array (  308 => 180,  304 => 179,  300 => 178,  296 => 177,  292 => 176,  288 => 175,  284 => 174,  192 => 85,  183 => 78,  180 => 76,  173 => 72,  169 => 71,  163 => 69,  160 => 67,  158 => 66,  147 => 58,  141 => 57,  136 => 55,  130 => 54,  125 => 52,  118 => 50,  109 => 44,  88 => 26,  82 => 23,  78 => 22,  74 => 21,  70 => 20,  66 => 19,  62 => 18,  58 => 17,  42 => 4,  37 => 1,);
+        return array (  341 => 183,  337 => 182,  326 => 181,  322 => 180,  318 => 179,  314 => 178,  310 => 177,  306 => 176,  302 => 175,  298 => 174,  294 => 173,  202 => 84,  193 => 77,  190 => 75,  183 => 71,  174 => 70,  168 => 68,  165 => 66,  163 => 65,  153 => 58,  147 => 57,  142 => 55,  136 => 54,  131 => 52,  124 => 50,  115 => 44,  96 => 28,  90 => 25,  86 => 24,  82 => 23,  78 => 22,  74 => 21,  70 => 20,  66 => 19,  62 => 18,  58 => 17,  42 => 4,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -351,6 +382,8 @@ class __TwigTemplate_a86dd9a10fda9b277616edb074aadc887a89e21e66d13b1f8effa4bb740
 \t<link rel=\"stylesheet\" href=\"{{'assets/css/animate.css'|theme}}\"/>
 \t<link rel=\"stylesheet\" href=\"{{'assets/css/slicknav.min.css'|theme}}\"/>
 \t<link rel=\"stylesheet\" href=\"{{'assets/css/flip.css'|theme}}\"/>
+\t<link rel=\"stylesheet\" href=\"{{'assets/css/basic.css'|theme}}\"/>
+\t<link rel=\"stylesheet\" href=\"{{'assets/css/dropzone.css'|theme}}\"/>
 
 \t<!-- Main Stylesheets -->
 \t<link rel=\"stylesheet\" href=\"{{'assets/css/style.css'|theme}}\"/>
@@ -365,18 +398,16 @@ class __TwigTemplate_a86dd9a10fda9b277616edb074aadc887a89e21e66d13b1f8effa4bb740
 <body>
 \t<!-- Page Preloder -->
 \t<div id=\"preloder\">
-\t\t<div class=\"loader\"></div>
+\t\t<div class=\"loader text-warning\"></div>
 \t</div>
-
 \t<!-- Header section -->
-\t<div class=\"clearfix\">
-\t\t<nav class=\"navbar navbar-expand-lg navbar-dark bg-dark float\">
+\t\t<nav class=\"navbar navbar-expand-lg sticky-top navbar-dark bg-dark\">
 \t\t\t<a class=\"navbar-brand\" href=\"#\"><img src=\"{{'assets/img/logo.jpg'|theme|resize(60,60)}}\" alt=\"\"></a>
 \t\t\t<button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarNavDropdown\" aria-controls=\"navbarNavDropdown\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
 \t\t\t  <span class=\"navbar-toggler-icon\"></span>
 \t\t\t</button>
 \t\t\t<div class=\"collapse navbar-collapse \" id=\"navbarNavDropdown\">
-\t\t\t  <ul class=\"navbar-nav \">
+\t\t\t  <ul class=\"navbar-nav  \">
 \t\t\t\t<li class=\"nav-item {% if this.page.id == 'home' %} active font-weight-bolder {% endif %}\">
 \t\t\t\t
 \t\t\t\t  <a class=\"nav-link\" href=\"{{'home'|page}}\">Home <span class=\"sr-only\">(current)</span></a>
@@ -385,21 +416,20 @@ class __TwigTemplate_a86dd9a10fda9b277616edb074aadc887a89e21e66d13b1f8effa4bb740
 \t\t\t\t  <a class=\"nav-link\" href=\"{{'games'|page}}\">Games</a>
 \t\t\t\t</li>
 \t\t\t\t<li class=\"nav-item nav-item {% if this.page.id == 'tournament' %} active font-weight-bolder {% endif %}\">
-\t\t\t\t  <a class=\"nav-link\" href=\"{{'tournament'|page}}\">Tournamets</a>
+\t\t\t\t  <a class=\"nav-link\" href=\"{{'tournament'|page}}\">Tournaments</a>
 \t\t\t\t</li>
 \t\t\t\t
 \t\t\t  </ul>
 \t\t\t</div>
-\t\t  </nav>
-\t</div>
+\t\t</nav>
 \t<!-- Header section end -->
 {% if this.page.id == 'home' %}
 {% page %}
 {% else %}
-<div style=\"background: url({{'assets/img/banner-bg.jpg'|theme}});\" class=\"jumbotron jumbotron-fluid\">
+<div style=\" margin-bottom: 0px; background: url({{'assets/img/banner-bg.jpg'|theme}});\" class=\"jumbotron jumbotron-fluid\">
 \t<div class=\"container\">
-\t\t<h1 class=\"display-3\">{{this.page.title}}</h1>
-\t\t<p class=\"lead\">{{this.page.description}}</p>
+\t\t<h1 style=\"text-shadow: black 2px 0px 2px;\" class=\"display-3 text-light font-weight-bolder\">{%if record.title %}{{record.title}} {%else%}{{this.page.title}}{% endif %}</h1>
+\t\t<p style=\"text-shadow: black 2px 0px 2px;\" class=\"lead text-light font-weight-bolder\">{{this.page.description}}</p>
 \t\t
 \t</div>
 </div>
@@ -508,6 +538,9 @@ class __TwigTemplate_a86dd9a10fda9b277616edb074aadc887a89e21e66d13b1f8effa4bb740
 \t<script src=\"{{'assets/js/circle-progress.min.js'|theme}}\"></script>
 \t<script src=\"{{'assets/js/jquery.magnific-popup.min.js'|theme}}\"></script>
 \t<script src=\"{{'assets/js/main.js'|theme}}\"></script>
+\t<script src=\"{{'assets/js/dropzone.js'|theme}}\"></script>
+\t{% framework extras %}
+    {% scripts %}
 \t</body>
 </html>", "F:\\website\\slgamers/themes/slgamers/layouts/main.htm", "");
     }

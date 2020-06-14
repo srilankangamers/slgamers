@@ -14,3 +14,7 @@ navigation:
                 label: Tournaments
                 url: sunal/games/tournaments
                 icon: icon-list
+    main-menu-item2:
+        label: Registrations
+        url: sunal/games/registrations
+        icon: icon-life-ring

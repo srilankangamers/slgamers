@@ -1,0 +1,16 @@
+columns:
+    name:
+        label: Name
+        type: text
+        searchable: true
+        sortable: true
+    ign:
+        label: IGN
+        type: text
+        searchable: true
+        sortable: true
+    contact:
+        label: Contact
+        type: text
+        searchable: true
+        sortable: true

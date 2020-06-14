@@ -1,0 +1,30 @@
+1592141248a:1:{s:12:"register.htm";a:10:{s:8:"fileName";s:12:"register.htm";s:7:"content";s:386:"title = "Register"
+url = "/register"
+layout = "main"
+is_hidden = 0
+
+[registerform]
+==
+<div class="jumbotron jumbotron-fluid">
+   <div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-6">
+            {% component 'registerform' %}
+        </div>
+        <div class="col-lg-6">
+            <h3>Rules</h3>
+        </div>
+    </div>
+ </div>
+</div>";s:5:"mtime";i:1592134857;s:6:"markup";s:293:"<div class="jumbotron jumbotron-fluid">
+   <div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-6">
+            {% component 'registerform' %}
+        </div>
+        <div class="col-lg-6">
+            <h3>Rules</h3>
+        </div>
+    </div>
+ </div>
+</div>";s:4:"code";N;s:5:"title";s:8:"Register";s:3:"url";s:9:"/register";s:6:"layout";s:4:"main";s:9:"is_hidden";s:1:"0";s:12:"registerform";a:0:{}}}

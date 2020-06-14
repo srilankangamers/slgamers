@@ -1,0 +1,28 @@
+fields:
+    name:
+        label: Name
+        span: auto
+        type: text
+    contact:
+        label: 'Contact Number'
+        span: auto
+        type: number
+    ign:
+        label: 'Player IGN'
+        span: auto
+        type: text
+    game_id:
+        label: 'Game Account ID'
+        span: auto
+        type: text
+    bankslip:
+        label: 'Upload Bank Slip'
+        span: auto
+        mode: image
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        imageWidth: '100'
+        imageHeight: '100'
+        type: fileupload
