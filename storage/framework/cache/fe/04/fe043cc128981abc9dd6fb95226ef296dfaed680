@@ -1,4 +1,4 @@
-1592141248a:1:{s:14:"tournament.htm";a:11:{s:8:"fileName";s:14:"tournament.htm";s:7:"content";s:2880:"title = "Tournaments"
+1592482560a:1:{s:14:"tournament.htm";a:11:{s:8:"fileName";s:14:"tournament.htm";s:7:"content";s:2879:"title = "Tournaments"
 url = "/tournaments"
 layout = "main"
 description = "You can find All of our ongoing tournaments and coming soon tournaments"
@@ -36,7 +36,7 @@ pageNumber = "{{ :page }}"
               <div id="collapse{{record.id}}" class="collapse hide" aria-labelledby="heading{{record.id}}" data-parent="#accordionExample">
                 <div class="card-body">
                    <div class="float-left"><img style="width: 300px; height: 300px; margin-right: 10px;" src="{{record.poster.path|resize(300,300,{mode:'crop'})}}" alt=""></div> 
-                   <div>{{ html_limit(record.description,1000)|raw}}</div> 
+                   <div>{{ html_limit(record.description,800)|raw}}</div> 
                 </div>
               </div>
             </div>
@@ -60,7 +60,7 @@ pageNumber = "{{ :page }}"
             <li><a href="{{ this.page.baseFileName|page({ (pageParam): (records.currentPage+1) }) }}">Next &rarr;</a></li>
         {% endif %}
     </ul>
-{% endif %}";s:5:"mtime";i:1592060184;s:6:"markup";s:2458:"{% set records = builderList.records %}
+{% endif %}";s:5:"mtime";i:1592202282;s:6:"markup";s:2457:"{% set records = builderList.records %}
 {% set displayColumn = builderList.displayColumn %}
 {% set noRecordsMessage = builderList.noRecordsMessage %}
 {% set detailsPage = builderList.detailsPage %}
@@ -82,7 +82,7 @@ pageNumber = "{{ :page }}"
               <div id="collapse{{record.id}}" class="collapse hide" aria-labelledby="heading{{record.id}}" data-parent="#accordionExample">
                 <div class="card-body">
                    <div class="float-left"><img style="width: 300px; height: 300px; margin-right: 10px;" src="{{record.poster.path|resize(300,300,{mode:'crop'})}}" alt=""></div> 
-                   <div>{{ html_limit(record.description,1000)|raw}}</div> 
+                   <div>{{ html_limit(record.description,800)|raw}}</div> 
                 </div>
               </div>
             </div>

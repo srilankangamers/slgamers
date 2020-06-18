@@ -1,0 +1,4 @@
+title: Rules
+modelClass: Sunal\Games\Models\Rule
+toolbar:
+    buttons: reorder_toolbar

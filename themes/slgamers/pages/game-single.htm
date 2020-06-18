@@ -23,10 +23,19 @@ pageNumber = "{{ :page }}"
 
 [registerform]
 ==
+<?
+  use Sunal\Games\Models\Rule;
+  
+  function onStart(){
+    $this['rules'] = Rule::get();
+
+  }
+
+?>
+==
 {% set record = builderDetails.record %}
 {% set displayColumn = builderDetails.displayColumn %}
 {% set notFoundMessage = builderDetails.notFoundMessage %}
-
 
 
 {% for tmnt in record.tournaments %}
@@ -49,11 +58,7 @@ pageNumber = "{{ :page }}"
           <h3>{{tmnt.tournament_title}}</h3>
           <p style="display: inline-block; margin-right: 10px;">Tournament Date</p><div class="post-date">{{tmnt.end_date}}</div>
           <div class="text-white">{{tmnt.description|raw}}</div>
-          <div class="jumbotron">
-            {% component 'registerform' %}
-          </div>
         </div>
-        
       </div>
       <div class="col-lg-4 sidebar">
         <div class="sb-widget">
@@ -79,6 +84,60 @@ pageNumber = "{{ :page }}"
   </div>
 </section>
 <!-- Blog section end -->
+<div class="jumbotron">
+  <div class="row">
+    <div class="col-lg-6">
+      <form data-request="onSave" data-request-files data-request-flash>
+        <input type="hidden" name="_handler" value="onSave">
+        {{ form_token() }}
+        {{ form_sessionkey() }}
+        <h2>Register Now</h2>
+        <br>
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label> Player Name</label>
+              <input type="text" class="form-control" name="name">
+            </div>
+            <div class="form-group col-md-6">
+              <label> Contact Number (Whatsapp)</label>
+              <input type="text" class="form-control" name="contact">
+            </div>
+            <div class="form-group col-md-6">
+              <label>Player IGN</label>
+              <input type="text" class="form-control" name="ign">
+          </div>
+          <div class="form-group col-md-6">
+              <label>Game Account ID</label>
+              <input type="text" class="form-control" name="game_id">
+          </div>
+          <div class="form-group col-md-6">
+            <label>Upload Bank Slip</label>
+            <input type="file" class="form-control" name="bankslip" accept="image/*" data-request="onUpload" data-request-files data-request-flash >
+            <br>
+            <div style="width: 150px; height: 150px;" id="imageresult">No Image to Preview</div>
+            <br>
+          </div>
+          </div>
+          <button type="submit" class="btn btn-primary">Register</button>
+        </form>
+    </div>
+    <div class="col-lg-6" style="overflow-y: scroll; height: 600px;">
+      <h2>RULES</h2>
+      <br>
+      {% for rule in rules %}
+        {{rule.gen_rules|raw}}
+        <br>
+        {{rule.game_rules|raw}}
+        <br>
+        {{rule.tec|raw}}
+        <br>
+        {{rule.bans|raw}}
+        <br>
+        {{rule.bank|raw}}
+      {% endfor %}
+    </div>
+  </div>
+  </div>
 
     
 {% endfor %}

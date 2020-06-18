@@ -108,10 +108,35 @@ class __TwigTemplate_a86dd9a10fda9b277616edb074aadc887a89e21e66d13b1f8effa4bb740
 \t<div id=\"preloder\">
 \t\t<div class=\"loader text-warning\"></div>
 \t</div>
+\t<!-- Load Facebook SDK for JavaScript -->
+\t<div id=\"fb-root\"></div>
+\t<script>
+\t  window.fbAsyncInit = function() {
+\t\tFB.init({
+\t\t  xfbml            : true,
+\t\t  version          : 'v7.0'
+\t\t});
+\t  };
+
+\t  (function(d, s, id) {
+\t  var js, fjs = d.getElementsByTagName(s)[0];
+\t  if (d.getElementById(id)) return;
+\t  js = d.createElement(s); js.id = id;
+\t  js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+\t  fjs.parentNode.insertBefore(js, fjs);
+\t}(document, 'script', 'facebook-jssdk'));</script>
+
+\t<!-- Your Chat Plugin code -->
+\t<div class=\"fb-customerchat\"
+\t  attribution=setup_tool
+\t  page_id=\"159724108289019\"
+logged_in_greeting=\"Hi! How can we help you? \"
+logged_out_greeting=\"Hi! How can we help you? \">
+\t</div>
 \t<!-- Header section -->
 \t\t<nav class=\"navbar navbar-expand-lg sticky-top navbar-dark bg-dark\">
 \t\t\t<a class=\"navbar-brand\" href=\"#\"><img src=\"";
-        // line 44
+        // line 69
         echo call_user_func_array($this->env->getFilter('resize')->getCallable(), [$this->extensions['Cms\Twig\Extension']->themeFilter("assets/img/logo.jpg"), 60, 60]);
         echo "\" alt=\"\"></a>
 \t\t\t<button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarNavDropdown\" aria-controls=\"navbarNavDropdown\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
@@ -120,36 +145,36 @@ class __TwigTemplate_a86dd9a10fda9b277616edb074aadc887a89e21e66d13b1f8effa4bb740
 \t\t\t<div class=\"collapse navbar-collapse \" id=\"navbarNavDropdown\">
 \t\t\t  <ul class=\"navbar-nav  \">
 \t\t\t\t<li class=\"nav-item ";
-        // line 50
-        if ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["this"] ?? null), "page", [], "any", false, false, false, 50), "id", [], "any", false, false, false, 50) == "home")) {
+        // line 75
+        if ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["this"] ?? null), "page", [], "any", false, false, false, 75), "id", [], "any", false, false, false, 75) == "home")) {
             echo " active font-weight-bolder ";
         }
         echo "\">
 \t\t\t\t
 \t\t\t\t  <a class=\"nav-link\" href=\"";
-        // line 52
+        // line 77
         echo $this->extensions['Cms\Twig\Extension']->pageFilter("home");
         echo "\">Home <span class=\"sr-only\">(current)</span></a>
 \t\t\t\t</li>
 \t\t\t\t<li class=\"nav-item ";
-        // line 54
-        if ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["this"] ?? null), "page", [], "any", false, false, false, 54), "id", [], "any", false, false, false, 54) == "games")) {
+        // line 79
+        if ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["this"] ?? null), "page", [], "any", false, false, false, 79), "id", [], "any", false, false, false, 79) == "games")) {
             echo " active font-weight-bolder ";
         }
         echo "\">
 \t\t\t\t  <a class=\"nav-link\" href=\"";
-        // line 55
+        // line 80
         echo $this->extensions['Cms\Twig\Extension']->pageFilter("games");
         echo "\">Games</a>
 \t\t\t\t</li>
 \t\t\t\t<li class=\"nav-item nav-item ";
-        // line 57
-        if ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["this"] ?? null), "page", [], "any", false, false, false, 57), "id", [], "any", false, false, false, 57) == "tournament")) {
+        // line 82
+        if ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["this"] ?? null), "page", [], "any", false, false, false, 82), "id", [], "any", false, false, false, 82) == "tournament")) {
             echo " active font-weight-bolder ";
         }
         echo "\">
 \t\t\t\t  <a class=\"nav-link\" href=\"";
-        // line 58
+        // line 83
         echo $this->extensions['Cms\Twig\Extension']->pageFilter("tournament");
         echo "\">Tournaments</a>
 \t\t\t\t</li>
@@ -159,37 +184,37 @@ class __TwigTemplate_a86dd9a10fda9b277616edb074aadc887a89e21e66d13b1f8effa4bb740
 \t\t</nav>
 \t<!-- Header section end -->
 ";
-        // line 65
-        if ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["this"] ?? null), "page", [], "any", false, false, false, 65), "id", [], "any", false, false, false, 65) == "home")) {
-            // line 66
+        // line 90
+        if ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["this"] ?? null), "page", [], "any", false, false, false, 90), "id", [], "any", false, false, false, 90) == "home")) {
+            // line 91
             echo $this->env->getExtension('Cms\Twig\Extension')->pageFunction();
         } else {
-            // line 68
+            // line 93
             echo "<div style=\" margin-bottom: 0px; background: url(";
             echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/img/banner-bg.jpg");
             echo ");\" class=\"jumbotron jumbotron-fluid\">
 \t<div class=\"container\">
 \t\t<h1 style=\"text-shadow: black 2px 0px 2px;\" class=\"display-3 text-light font-weight-bolder\">";
-            // line 70
-            if (twig_get_attribute($this->env, $this->source, ($context["record"] ?? null), "title", [], "any", false, false, false, 70)) {
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["record"] ?? null), "title", [], "any", false, false, false, 70), "html", null, true);
+            // line 95
+            if (twig_get_attribute($this->env, $this->source, ($context["record"] ?? null), "title", [], "any", false, false, false, 95)) {
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["record"] ?? null), "title", [], "any", false, false, false, 95), "html", null, true);
                 echo " ";
             } else {
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["this"] ?? null), "page", [], "any", false, false, false, 70), "title", [], "any", false, false, false, 70), "html", null, true);
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["this"] ?? null), "page", [], "any", false, false, false, 95), "title", [], "any", false, false, false, 95), "html", null, true);
             }
             echo "</h1>
 \t\t<p style=\"text-shadow: black 2px 0px 2px;\" class=\"lead text-light font-weight-bolder\">";
-            // line 71
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["this"] ?? null), "page", [], "any", false, false, false, 71), "description", [], "any", false, false, false, 71), "html", null, true);
+            // line 96
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["this"] ?? null), "page", [], "any", false, false, false, 96), "description", [], "any", false, false, false, 96), "html", null, true);
             echo "</p>
 \t\t
 \t</div>
 </div>
 ";
-            // line 75
+            // line 100
             echo $this->env->getExtension('Cms\Twig\Extension')->pageFunction();
         }
-        // line 77
+        // line 102
         echo "\t<!-- Footer section -->
 \t<div class=\"footer-section\">
 \t\t<div class=\"container\">
@@ -198,7 +223,7 @@ class __TwigTemplate_a86dd9a10fda9b277616edb074aadc887a89e21e66d13b1f8effa4bb740
 \t\t\t\t\t<div class=\"footer-widget\">
 \t\t\t\t\t\t<div class=\"about-widget\">
 \t\t\t\t\t\t\t<img src=\"";
-        // line 84
+        // line 109
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/img/logo.png");
         echo "\" alt=\"\">
 \t\t\t\t\t\t\t<p>Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo. Morbi id dictum quam, ut commodo.</p>
@@ -290,39 +315,39 @@ class __TwigTemplate_a86dd9a10fda9b277616edb074aadc887a89e21e66d13b1f8effa4bb740
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t
 \t<!--====== Javascripts & Jquery ======-->
 \t<script src=\"";
-        // line 173
+        // line 198
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/js/jquery-3.2.1.min.js");
         echo "\"></script>
 \t<script src=\"";
-        // line 174
+        // line 199
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/js/bootstrap.min.js");
         echo "\"></script>
 \t<script src=\"";
-        // line 175
+        // line 200
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/js/jquery.slicknav.js");
         echo "\"></script>
 \t<script src=\"";
-        // line 176
+        // line 201
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/js/owl.carousel.min.js");
         echo "\"></script>
 \t<script src=\"";
-        // line 177
+        // line 202
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/js/circle-progress.min.js");
         echo "\"></script>
 \t<script src=\"";
-        // line 178
+        // line 203
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/js/jquery.magnific-popup.min.js");
         echo "\"></script>
 \t<script src=\"";
-        // line 179
+        // line 204
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/js/main.js");
         echo "\"></script>
 \t<script src=\"";
-        // line 180
+        // line 205
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/js/dropzone.js");
         echo "\"></script>
 \t";
-        // line 181
+        // line 206
         $_minify = System\Classes\CombineAssets::instance()->useMinify;
         if ($_minify) {
             echo '<script src="' . Request::getBasePath() . '/modules/system/assets/js/framework.combined-min.js"></script>'.PHP_EOL;
@@ -333,11 +358,11 @@ class __TwigTemplate_a86dd9a10fda9b277616edb074aadc887a89e21e66d13b1f8effa4bb740
         }
         echo '<link rel="stylesheet" property="stylesheet" href="' . Request::getBasePath() .'/modules/system/assets/css/framework.extras'.($_minify ? '-min' : '').'.css">'.PHP_EOL;
         unset($_minify);
-        // line 182
+        // line 207
         echo "    ";
         echo $this->env->getExtension('Cms\Twig\Extension')->assetsFunction('js');
         echo $this->env->getExtension('Cms\Twig\Extension')->displayBlock('scripts');
-        // line 183
+        // line 208
         echo "\t</body>
 </html>";
     }
@@ -354,7 +379,7 @@ class __TwigTemplate_a86dd9a10fda9b277616edb074aadc887a89e21e66d13b1f8effa4bb740
 
     public function getDebugInfo()
     {
-        return array (  341 => 183,  337 => 182,  326 => 181,  322 => 180,  318 => 179,  314 => 178,  310 => 177,  306 => 176,  302 => 175,  298 => 174,  294 => 173,  202 => 84,  193 => 77,  190 => 75,  183 => 71,  174 => 70,  168 => 68,  165 => 66,  163 => 65,  153 => 58,  147 => 57,  142 => 55,  136 => 54,  131 => 52,  124 => 50,  115 => 44,  96 => 28,  90 => 25,  86 => 24,  82 => 23,  78 => 22,  74 => 21,  70 => 20,  66 => 19,  62 => 18,  58 => 17,  42 => 4,  37 => 1,);
+        return array (  366 => 208,  362 => 207,  351 => 206,  347 => 205,  343 => 204,  339 => 203,  335 => 202,  331 => 201,  327 => 200,  323 => 199,  319 => 198,  227 => 109,  218 => 102,  215 => 100,  208 => 96,  199 => 95,  193 => 93,  190 => 91,  188 => 90,  178 => 83,  172 => 82,  167 => 80,  161 => 79,  156 => 77,  149 => 75,  140 => 69,  96 => 28,  90 => 25,  86 => 24,  82 => 23,  78 => 22,  74 => 21,  70 => 20,  66 => 19,  62 => 18,  58 => 17,  42 => 4,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -399,6 +424,31 @@ class __TwigTemplate_a86dd9a10fda9b277616edb074aadc887a89e21e66d13b1f8effa4bb740
 \t<!-- Page Preloder -->
 \t<div id=\"preloder\">
 \t\t<div class=\"loader text-warning\"></div>
+\t</div>
+\t<!-- Load Facebook SDK for JavaScript -->
+\t<div id=\"fb-root\"></div>
+\t<script>
+\t  window.fbAsyncInit = function() {
+\t\tFB.init({
+\t\t  xfbml            : true,
+\t\t  version          : 'v7.0'
+\t\t});
+\t  };
+
+\t  (function(d, s, id) {
+\t  var js, fjs = d.getElementsByTagName(s)[0];
+\t  if (d.getElementById(id)) return;
+\t  js = d.createElement(s); js.id = id;
+\t  js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+\t  fjs.parentNode.insertBefore(js, fjs);
+\t}(document, 'script', 'facebook-jssdk'));</script>
+
+\t<!-- Your Chat Plugin code -->
+\t<div class=\"fb-customerchat\"
+\t  attribution=setup_tool
+\t  page_id=\"159724108289019\"
+logged_in_greeting=\"Hi! How can we help you? \"
+logged_out_greeting=\"Hi! How can we help you? \">
 \t</div>
 \t<!-- Header section -->
 \t\t<nav class=\"navbar navbar-expand-lg sticky-top navbar-dark bg-dark\">

@@ -92,4 +92,6 @@
   'Sunal\\Games\\Components\\RegisterForm' => 'plugins\\sunal\\games\\components\\RegisterForm.php',
   'sunal\\games\\Controllers\\registrations' => 'plugins\\sunal\\games\\controllers\\registrations.php',
   'Sunal\\Games\\Models\\Register' => 'plugins\\sunal\\games\\models\\Register.php',
+  'sunal\\games\\Controllers\\rules' => 'plugins\\sunal\\games\\controllers\\rules.php',
+  'Sunal\\Games\\Models\\Rule' => 'plugins\\sunal\\games\\models\\Rule.php',
 );

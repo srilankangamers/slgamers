@@ -1,0 +1,6 @@
+columns:
+    gen_rules:
+        label: 'General Rules'
+        type: text
+        searchable: true
+        sortable: true

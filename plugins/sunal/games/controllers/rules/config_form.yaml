@@ -1,0 +1,10 @@
+name: Rules
+form: $/sunal/games/models/rule/fields.yaml
+modelClass: Sunal\Games\Models\Rule
+defaultRedirect: sunal/games/rules
+create:
+    redirect: 'sunal/games/rules/update/:id'
+    redirectClose: sunal/games/rules
+update:
+    redirect: sunal/games/rules
+    redirectClose: sunal/games/rules

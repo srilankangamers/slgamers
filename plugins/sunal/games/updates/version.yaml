@@ -54,3 +54,9 @@
 1.0.19:
     - 'Updated table sunal_games_registration'
     - builder_table_update_sunal_games_registration_2.php
+1.0.20:
+    - 'Created table sunal_games_rules'
+    - builder_table_create_sunal_games_rules.php
+1.0.21:
+    - 'Updated table sunal_games_rules'
+    - builder_table_update_sunal_games_rules.php

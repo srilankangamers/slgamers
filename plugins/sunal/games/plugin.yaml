@@ -17,4 +17,9 @@ navigation:
     main-menu-item2:
         label: Registrations
         url: sunal/games/registrations
-        icon: icon-life-ring
+        icon: icon-pencil-square-o
+        sideMenu:
+            side-menu-item:
+                label: Rules
+                url: sunal/games/rules
+                icon: icon-times

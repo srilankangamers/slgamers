@@ -36,7 +36,7 @@ pageNumber = "{{ :page }}"
               <div id="collapse{{record.id}}" class="collapse hide" aria-labelledby="heading{{record.id}}" data-parent="#accordionExample">
                 <div class="card-body">
                    <div class="float-left"><img style="width: 300px; height: 300px; margin-right: 10px;" src="{{record.poster.path|resize(300,300,{mode:'crop'})}}" alt=""></div> 
-                   <div>{{ html_limit(record.description,1000)|raw}}</div> 
+                   <div>{{ html_limit(record.description,800)|raw}}</div> 
                 </div>
               </div>
             </div>

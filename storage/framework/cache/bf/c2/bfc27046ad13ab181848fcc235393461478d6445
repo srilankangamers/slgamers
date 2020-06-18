@@ -1,4 +1,4 @@
-1592141322a:1:{s:15:"game-single.htm";a:12:{s:8:"fileName";s:15:"game-single.htm";s:7:"content";s:3302:"title = "Game single"
+1592482560a:1:{s:15:"game-single.htm";a:12:{s:8:"fileName";s:15:"game-single.htm";s:7:"content";s:5287:"title = "Game single"
 url = "/game-single/:slug"
 layout = "main"
 is_hidden = 0
@@ -23,12 +23,21 @@ pageNumber = "{{ :page }}"
 
 [registerform]
 ==
+<?
+  use Sunal\Games\Models\Rule;
+  
+  function onStart(){
+    $this['rules'] = Rule::get();
+
+  }
+
+?>
+==
 {% set record = builderDetails.record %}
 {% set displayColumn = builderDetails.displayColumn %}
 {% set notFoundMessage = builderDetails.notFoundMessage %}
 
 
-
 {% for tmnt in record.tournaments %}
 
 <!-- Page top section -->
@@ -49,11 +58,7 @@ pageNumber = "{{ :page }}"
           <h3>{{tmnt.tournament_title}}</h3>
           <p style="display: inline-block; margin-right: 10px;">Tournament Date</p><div class="post-date">{{tmnt.end_date}}</div>
           <div class="text-white">{{tmnt.description|raw}}</div>
-          <div class="jumbotron">
-            {% component 'registerform' %}
-          </div>
         </div>
-        
       </div>
       <div class="col-lg-4 sidebar">
         <div class="sb-widget">
@@ -79,14 +84,67 @@ pageNumber = "{{ :page }}"
   </div>
 </section>
 <!-- Blog section end -->
+<div class="jumbotron">
+  <div class="row">
+    <div class="col-lg-6">
+      <form data-request="onSave" data-request-files data-request-flash>
+        <input type="hidden" name="_handler" value="onSave">
+        {{ form_token() }}
+        {{ form_sessionkey() }}
+        <h2>Register Now</h2>
+        <br>
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label> Player Name</label>
+              <input type="text" class="form-control" name="name">
+            </div>
+            <div class="form-group col-md-6">
+              <label> Contact Number (Whatsapp)</label>
+              <input type="text" class="form-control" name="contact">
+            </div>
+            <div class="form-group col-md-6">
+              <label>Player IGN</label>
+              <input type="text" class="form-control" name="ign">
+          </div>
+          <div class="form-group col-md-6">
+              <label>Game Account ID</label>
+              <input type="text" class="form-control" name="game_id">
+          </div>
+          <div class="form-group col-md-6">
+            <label>Upload Bank Slip</label>
+            <input type="file" class="form-control" name="bankslip" accept="image/*" data-request="onUpload" data-request-files data-request-flash >
+            <br>
+            <div style="width: 150px; height: 150px;" id="imageresult">No Image to Preview</div>
+            <br>
+          </div>
+          </div>
+          <button type="submit" class="btn btn-primary">Register</button>
+        </form>
+    </div>
+    <div class="col-lg-6" style="overflow-y: scroll; height: 600px;">
+      <h2>RULES</h2>
+      <br>
+      {% for rule in rules %}
+        {{rule.gen_rules|raw}}
+        <br>
+        {{rule.game_rules|raw}}
+        <br>
+        {{rule.tec|raw}}
+        <br>
+        {{rule.bans|raw}}
+        <br>
+        {{rule.bank|raw}}
+      {% endfor %}
+    </div>
+  </div>
+  </div>
 
     
-{% endfor %}";s:5:"mtime";i:1592140720;s:6:"markup";s:2741:"{% set record = builderDetails.record %}
+{% endfor %}";s:5:"mtime";i:1592204766;s:6:"markup";s:4611:"{% set record = builderDetails.record %}
 {% set displayColumn = builderDetails.displayColumn %}
 {% set notFoundMessage = builderDetails.notFoundMessage %}
 
 
-
 {% for tmnt in record.tournaments %}
 
 <!-- Page top section -->
@@ -107,11 +165,7 @@ pageNumber = "{{ :page }}"
           <h3>{{tmnt.tournament_title}}</h3>
           <p style="display: inline-block; margin-right: 10px;">Tournament Date</p><div class="post-date">{{tmnt.end_date}}</div>
           <div class="text-white">{{tmnt.description|raw}}</div>
-          <div class="jumbotron">
-            {% component 'registerform' %}
-          </div>
         </div>
-        
       </div>
       <div class="col-lg-4 sidebar">
         <div class="sb-widget">
@@ -137,6 +191,65 @@ pageNumber = "{{ :page }}"
   </div>
 </section>
 <!-- Blog section end -->
+<div class="jumbotron">
+  <div class="row">
+    <div class="col-lg-6">
+      <form data-request="onSave" data-request-files data-request-flash>
+        <input type="hidden" name="_handler" value="onSave">
+        {{ form_token() }}
+        {{ form_sessionkey() }}
+        <h2>Register Now</h2>
+        <br>
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label> Player Name</label>
+              <input type="text" class="form-control" name="name">
+            </div>
+            <div class="form-group col-md-6">
+              <label> Contact Number (Whatsapp)</label>
+              <input type="text" class="form-control" name="contact">
+            </div>
+            <div class="form-group col-md-6">
+              <label>Player IGN</label>
+              <input type="text" class="form-control" name="ign">
+          </div>
+          <div class="form-group col-md-6">
+              <label>Game Account ID</label>
+              <input type="text" class="form-control" name="game_id">
+          </div>
+          <div class="form-group col-md-6">
+            <label>Upload Bank Slip</label>
+            <input type="file" class="form-control" name="bankslip" accept="image/*" data-request="onUpload" data-request-files data-request-flash >
+            <br>
+            <div style="width: 150px; height: 150px;" id="imageresult">No Image to Preview</div>
+            <br>
+          </div>
+          </div>
+          <button type="submit" class="btn btn-primary">Register</button>
+        </form>
+    </div>
+    <div class="col-lg-6" style="overflow-y: scroll; height: 600px;">
+      <h2>RULES</h2>
+      <br>
+      {% for rule in rules %}
+        {{rule.gen_rules|raw}}
+        <br>
+        {{rule.game_rules|raw}}
+        <br>
+        {{rule.tec|raw}}
+        <br>
+        {{rule.bans|raw}}
+        <br>
+        {{rule.bank|raw}}
+      {% endfor %}
+    </div>
+  </div>
+  </div>
 
     
-{% endfor %}";s:4:"code";N;s:5:"title";s:11:"Game single";s:3:"url";s:18:"/game-single/:slug";s:6:"layout";s:4:"main";s:9:"is_hidden";s:1:"0";s:14:"builderDetails";a:5:{s:10:"modelClass";s:23:"Sunal\Games\Models\Game";s:15:"identifierValue";s:11:"{{ :slug }}";s:14:"modelKeyColumn";s:4:"slug";s:13:"displayColumn";s:5:"title";s:15:"notFoundMessage";s:16:"Record not found";}s:11:"builderList";a:9:{s:10:"modelClass";s:23:"Sunal\Games\Models\Game";s:5:"scope";s:1:"-";s:10:"scopeValue";s:11:"{{ :slug }}";s:13:"displayColumn";s:4:"slug";s:16:"noRecordsMessage";s:16:"No records found";s:11:"detailsPage";s:11:"game-single";s:16:"detailsKeyColumn";s:4:"slug";s:19:"detailsUrlParameter";s:4:"slug";s:10:"pageNumber";s:11:"{{ :page }}";}s:12:"registerform";a:0:{}}}
+{% endfor %}";s:4:"code";s:99:"  use Sunal\Games\Models\Rule;
+  
+  function onStart(){
+    $this['rules'] = Rule::get();
+
+  }";s:5:"title";s:11:"Game single";s:3:"url";s:18:"/game-single/:slug";s:6:"layout";s:4:"main";s:9:"is_hidden";s:1:"0";s:14:"builderDetails";a:5:{s:10:"modelClass";s:23:"Sunal\Games\Models\Game";s:15:"identifierValue";s:11:"{{ :slug }}";s:14:"modelKeyColumn";s:4:"slug";s:13:"displayColumn";s:5:"title";s:15:"notFoundMessage";s:16:"Record not found";}s:11:"builderList";a:9:{s:10:"modelClass";s:23:"Sunal\Games\Models\Game";s:5:"scope";s:1:"-";s:10:"scopeValue";s:11:"{{ :slug }}";s:13:"displayColumn";s:4:"slug";s:16:"noRecordsMessage";s:16:"No records found";s:11:"detailsPage";s:11:"game-single";s:16:"detailsKeyColumn";s:4:"slug";s:19:"detailsUrlParameter";s:4:"slug";s:10:"pageNumber";s:11:"{{ :page }}";}s:12:"registerform";a:0:{}}}

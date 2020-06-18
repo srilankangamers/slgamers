@@ -1,0 +1,26 @@
+fields:
+    game_rules:
+        label: 'Game Rules'
+        size: large
+        span: auto
+        type: richeditor
+    gen_rules:
+        label: 'General Rules'
+        size: large
+        span: auto
+        type: richeditor
+    bans:
+        label: Bans/Disqualifications
+        size: large
+        span: auto
+        type: richeditor
+    bank:
+        label: 'Bank Details'
+        span: auto
+        size: large
+        type: richeditor
+    tec:
+        label: 'Technical Problems'
+        span: auto
+        size: large
+        type: richeditor
