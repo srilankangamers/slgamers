@@ -1,0 +1,36 @@
+<style type="text/css">
+	.select2-container{
+
+		width: 100% !important;
+		height: 100% !important;
+		
+	}
+	.select2-search__field{
+
+		width: 100% !important;
+	}
+
+	.select2-selection{
+
+		height: 40px;
+	}
+</style>
+
+<select class="s2" name="<?php echo $name ?>" multiple>
+	<?php foreach($categories as $key => $value): ?>
+		<option value="<?php echo $key ?>" <?php echo in_array($key, $selectedValues) ? 'selected="selected"' : ''; ?>><?php echo $value ?></option>
+	<?php endforeach; ?>
+</select>
+
+
+<script type="text/javascript">
+	$(document).on('render', function(){
+
+		$('.s2').select2({
+			placeholder: 'Add Categories',
+			tags: true
+		})
+	});	
+
+
+</script>

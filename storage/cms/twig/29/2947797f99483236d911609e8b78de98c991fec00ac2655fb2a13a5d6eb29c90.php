@@ -98,7 +98,7 @@ class __TwigTemplate_7ead6ca2711a2184b75e64cf83870926286660caea5647ca4096162b434
             echo "\" alt=\"\"></div> 
                    <div>";
             // line 23
-            echo call_user_func_array($this->env->getFunction('html_limit')->getCallable(), ["limit", twig_get_attribute($this->env, $this->source, $context["record"], "description", [], "any", false, false, false, 23), 1000]);
+            echo call_user_func_array($this->env->getFunction('html_limit')->getCallable(), ["limit", twig_get_attribute($this->env, $this->source, $context["record"], "description", [], "any", false, false, false, 23), 800]);
             echo "</div> 
                 </div>
               </div>
@@ -205,7 +205,7 @@ class __TwigTemplate_7ead6ca2711a2184b75e64cf83870926286660caea5647ca4096162b434
               <div id=\"collapse{{record.id}}\" class=\"collapse hide\" aria-labelledby=\"heading{{record.id}}\" data-parent=\"#accordionExample\">
                 <div class=\"card-body\">
                    <div class=\"float-left\"><img style=\"width: 300px; height: 300px; margin-right: 10px;\" src=\"{{record.poster.path|resize(300,300,{mode:'crop'})}}\" alt=\"\"></div> 
-                   <div>{{ html_limit(record.description,1000)|raw}}</div> 
+                   <div>{{ html_limit(record.description,800)|raw}}</div> 
                 </div>
               </div>
             </div>

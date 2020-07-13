@@ -1,5 +1,5 @@
 <?php 
-use Sunal\Games\Models\Rule;class Cms5ee71ddfe41c1696074421_7a91fb831fbc95ca6fab1a0490510b0eClass extends Cms\Classes\PageCode
+use Sunal\Games\Models\Rule;class Cms5f09bb62e3767119453283_a88185fe39e04533091cdd33979bf02bClass extends Cms\Classes\PageCode
 {
   
 public function onStart(){

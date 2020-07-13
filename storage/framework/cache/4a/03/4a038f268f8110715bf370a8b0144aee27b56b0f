@@ -1,0 +1,153 @@
+1594641187a:1:{s:17:"video-gallery.htm";a:10:{s:8:"fileName";s:17:"video-gallery.htm";s:7:"content";s:3013:"title = "Video Gallery"
+url = "/video-gallery/:page?"
+layout = "main"
+is_hidden = 0
+
+[builderList]
+modelClass = "Sunal\Games\Models\Youtube"
+scope = "-"
+scopeValue = "{{ :scope }}"
+displayColumn = "title"
+noRecordsMessage = "No records found"
+detailsPage = "-"
+detailsUrlParameter = "id"
+recordsPerPage = 3
+pageNumber = "{{ :page }}"
+==
+<?php
+use Sunal\Games\Models\Category;
+
+function onStart(){
+	$this['cc'] = Category::get();
+
+}
+?>
+==
+{% set records = builderList.records %}
+{% set displayColumn = builderList.displayColumn %}
+{% set noRecordsMessage = builderList.noRecordsMessage %}
+{% set detailsPage = builderList.detailsPage %}
+{% set detailsKeyColumn = builderList.detailsKeyColumn %}
+{% set detailsUrlParameter = builderList.detailsUrlParameter %}
+<div class="container-fluid">
+	<br>
+	<div class="container-fluid">
+		<div class="filter">
+			<div class="btn-group" role="group" aria-label="Basic example">
+				<button type="button" data-name="*"  class="bg-primary btn btn-secondary">All</button>
+				{% for cat in cc %}
+
+				<button type="button" data-name=".{{cat.category|lowercase}}"  class="bg-primary btn btn-secondary">{{cat.category|ucfirst}}</button>
+
+				{% endfor %}
+
+			</div>
+		</div>
+	</div>
+	<hr class="mt-2 mb-5">
+
+	<div class="row play text-center text-lg-left">
+		{% for yt in records %}
+		<div class="item col-lg-3 col-md-4 col-6 cont {% for cat in yt.categories %}{{cat.category|lowercase}} {% endfor %}">
+			<div class="card-img-overlay text-white"><p style="text-shadow: 10px 0px 10px black; font-size: 1.5vw;">{{html_limit(yt.title,50)}}</p></div>
+			<img src="https://img.youtube.com/vi/{{yt.path|replace({'https://youtu.be/':''})}}/hqdefault.jpg" alt="Avatar" class="image" style="width:100%">
+			<div class="middle">
+				<a class="venobox" data-autoplay="true" data-vbtype="video" href="{{yt.path}}">
+					<div class="text"><i class="fa fa-play" aria-hidden="true"></i></div>
+				</a>
+			</div>
+			
+		</div>
+		{% endfor %}
+		
+
+
+	</div>
+	<nav aria-label="Page navigation example">
+		{% if records.lastPage > 1 %}
+		<ul style="justify-content: center" class="pagination">
+			{% if records.currentPage > 1 %}
+			<li class="page-item"><a class="page-link" href="{{ this.page.baseFileName|page({ (pageParam): (records.currentPage-1) }) }}"><i class="fas fa-chevron-circle-left hvr-backward"></i></a></li>
+			{% endif %}
+
+			{% for page in 1..records.lastPage %}
+			<li class=" page-item {{ records.currentPage == page ? 'active' : null }}">
+				<a class="page-link hvr-pop" href="{{ this.page.baseFileName|page({ (pageParam): page }) }}">{{ page }}</a>
+			</li>
+			{% endfor %}
+
+			{% if records.lastPage > records.currentPage %}
+			<li class="page-item"><a class="page-link" href="{{ this.page.baseFileName|page({ (pageParam): (records.currentPage+1) }) }}"><i class="fas fa-chevron-circle-right hvr-forward"></i></a></li>
+			{% endif %}
+		</ul>
+		{% endif %}
+	</nav>
+</div>
+
+<!-- /.container -->";s:5:"mtime";i:1594640586;s:6:"markup";s:2550:"{% set records = builderList.records %}
+{% set displayColumn = builderList.displayColumn %}
+{% set noRecordsMessage = builderList.noRecordsMessage %}
+{% set detailsPage = builderList.detailsPage %}
+{% set detailsKeyColumn = builderList.detailsKeyColumn %}
+{% set detailsUrlParameter = builderList.detailsUrlParameter %}
+<div class="container-fluid">
+	<br>
+	<div class="container-fluid">
+		<div class="filter">
+			<div class="btn-group" role="group" aria-label="Basic example">
+				<button type="button" data-name="*"  class="bg-primary btn btn-secondary">All</button>
+				{% for cat in cc %}
+
+				<button type="button" data-name=".{{cat.category|lowercase}}"  class="bg-primary btn btn-secondary">{{cat.category|ucfirst}}</button>
+
+				{% endfor %}
+
+			</div>
+		</div>
+	</div>
+	<hr class="mt-2 mb-5">
+
+	<div class="row play text-center text-lg-left">
+		{% for yt in records %}
+		<div class="item col-lg-3 col-md-4 col-6 cont {% for cat in yt.categories %}{{cat.category|lowercase}} {% endfor %}">
+			<div class="card-img-overlay text-white"><p style="text-shadow: 10px 0px 10px black; font-size: 1.5vw;">{{html_limit(yt.title,50)}}</p></div>
+			<img src="https://img.youtube.com/vi/{{yt.path|replace({'https://youtu.be/':''})}}/hqdefault.jpg" alt="Avatar" class="image" style="width:100%">
+			<div class="middle">
+				<a class="venobox" data-autoplay="true" data-vbtype="video" href="{{yt.path}}">
+					<div class="text"><i class="fa fa-play" aria-hidden="true"></i></div>
+				</a>
+			</div>
+			
+		</div>
+		{% endfor %}
+		
+
+
+	</div>
+	<nav aria-label="Page navigation example">
+		{% if records.lastPage > 1 %}
+		<ul style="justify-content: center" class="pagination">
+			{% if records.currentPage > 1 %}
+			<li class="page-item"><a class="page-link" href="{{ this.page.baseFileName|page({ (pageParam): (records.currentPage-1) }) }}"><i class="fas fa-chevron-circle-left hvr-backward"></i></a></li>
+			{% endif %}
+
+			{% for page in 1..records.lastPage %}
+			<li class=" page-item {{ records.currentPage == page ? 'active' : null }}">
+				<a class="page-link hvr-pop" href="{{ this.page.baseFileName|page({ (pageParam): page }) }}">{{ page }}</a>
+			</li>
+			{% endfor %}
+
+			{% if records.lastPage > records.currentPage %}
+			<li class="page-item"><a class="page-link" href="{{ this.page.baseFileName|page({ (pageParam): (records.currentPage+1) }) }}"><i class="fas fa-chevron-circle-right hvr-forward"></i></a></li>
+			{% endif %}
+		</ul>
+		{% endif %}
+	</nav>
+</div>
+
+<!-- /.container -->";s:4:"code";s:93:"use Sunal\Games\Models\Category;
+
+function onStart(){
+	$this['cc'] = Category::get();
+
+}";s:5:"title";s:13:"Video Gallery";s:3:"url";s:21:"/video-gallery/:page?";s:6:"layout";s:4:"main";s:9:"is_hidden";s:1:"0";s:11:"builderList";a:9:{s:10:"modelClass";s:26:"Sunal\Games\Models\Youtube";s:5:"scope";s:1:"-";s:10:"scopeValue";s:12:"{{ :scope }}";s:13:"displayColumn";s:5:"title";s:16:"noRecordsMessage";s:16:"No records found";s:11:"detailsPage";s:1:"-";s:19:"detailsUrlParameter";s:2:"id";s:14:"recordsPerPage";s:1:"3";s:10:"pageNumber";s:11:"{{ :page }}";}}}

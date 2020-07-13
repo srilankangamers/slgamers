@@ -1,0 +1,13 @@
+fields:
+    path:
+        label: 'Video Path'
+        span: auto
+        type: text
+    title:
+        label: 'Video Title'
+        span: auto
+        type: text
+    categories:
+        label: Categories
+        span: left
+        type: categorybox

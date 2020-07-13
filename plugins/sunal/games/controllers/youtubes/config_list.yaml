@@ -1,0 +1,12 @@
+list: $/sunal/games/models/youtube/columns.yaml
+modelClass: Sunal\Games\Models\Youtube
+title: Youtubes
+noRecordsMessage: 'backend::lang.list.no_records'
+showSetup: true
+showCheckboxes: true
+recordsPerPage: 20
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: 'backend::lang.list.search_prompt'
+recordUrl: 'sunal/games/youtubes/update/:id'

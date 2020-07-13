@@ -34,11 +34,23 @@ class __TwigTemplate_717307e7cb9c6311f7ad100de71705a49dcc03c5a772c699fa9e6403a81
     {
         $macros = $this->macros;
         // line 1
+        $context["records"] = twig_get_attribute($this->env, $this->source, ($context["builderList"] ?? null), "records", [], "any", false, false, false, 1);
+        // line 2
+        $context["displayColumn"] = twig_get_attribute($this->env, $this->source, ($context["builderList"] ?? null), "displayColumn", [], "any", false, false, false, 2);
+        // line 3
+        $context["noRecordsMessage"] = twig_get_attribute($this->env, $this->source, ($context["builderList"] ?? null), "noRecordsMessage", [], "any", false, false, false, 3);
+        // line 4
+        $context["detailsPage"] = twig_get_attribute($this->env, $this->source, ($context["builderList"] ?? null), "detailsPage", [], "any", false, false, false, 4);
+        // line 5
+        $context["detailsKeyColumn"] = twig_get_attribute($this->env, $this->source, ($context["builderList"] ?? null), "detailsKeyColumn", [], "any", false, false, false, 5);
+        // line 6
+        $context["detailsUrlParameter"] = twig_get_attribute($this->env, $this->source, ($context["builderList"] ?? null), "detailsUrlParameter", [], "any", false, false, false, 6);
+        // line 7
         echo "<!-- Hero section -->
 \t<section class=\"hero-section\">
 \t\t<div class=\"hero-slider owl-carousel\">
 \t\t\t<div class=\"hero-item set-bg\" data-setbg=\"";
-        // line 4
+        // line 10
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/img/slider/1.jpg");
         echo "\">
 \t\t\t\t<div class=\"container\">
@@ -52,7 +64,7 @@ class __TwigTemplate_717307e7cb9c6311f7ad100de71705a49dcc03c5a772c699fa9e6403a81
 \t\t\t\t</div>
 \t\t\t</div>
 \t\t\t<div class=\"hero-item set-bg\" data-setbg=\"";
-        // line 15
+        // line 21
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/img/slider/2.jpg");
         echo "\">
 \t\t\t\t<div class=\"container\">
@@ -75,22 +87,15 @@ class __TwigTemplate_717307e7cb9c6311f7ad100de71705a49dcc03c5a772c699fa9e6403a81
 \t\t\t<div class=\"row\">
 \t\t\t\t<div class=\"col-lg-8 blog-posts\">
 \t\t\t\t\t<div class=\"blog-post featured-post\">
-\t\t\t\t\t\t<img src=\"img/blog/1.jpg\" alt=\"\">
 \t\t\t\t\t\t<div class=\"post-date\">April 1, 2019</div>
-\t\t\t\t\t\t<h3>The best games of 2019</h3>
-\t\t\t\t\t\t<div class=\"post-metas\">
-\t\t\t\t\t\t\t<div class=\"post-meta\">By Admin</div>
-\t\t\t\t\t\t\t<div class=\"post-meta\">in <a href=\"#\">Games</a></div>
-\t\t\t\t\t\t\t<div class=\"post-meta\">3 Comments</div>
-\t\t\t\t\t\t</div>
-\t\t\t\t\t\t<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Fusce urna quam, euismod sit amet mollis quis, vestibulum quis velit. Morbi id dictum quam, ut commodo lorem. In at nisi nec arcu porttitor aliquet vitae at dui. </p>
-\t\t\t\t\t\t<a href=\"#\" class=\"site-btn\">Read More</a>
-\t\t\t\t\t</div>
+\t\t\t\t\t\t<h3>Sri lankan gamers Live Stream</h3>
+\t\t\t\t\t\t\t\t\t
+\t\t\t\t</div>
 \t\t\t\t\t<div class=\"row\">
 \t\t\t\t\t\t<div class=\"col-md-6\">
 \t\t\t\t\t\t\t<div class=\"blog-post\">
 \t\t\t\t\t\t\t\t<img src=\"";
-        // line 50
+        // line 49
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/img/blog/2.jpg");
         echo "\" alt=\"\">
 \t\t\t\t\t\t\t\t<div class=\"post-date\">April 1,2019</div>
@@ -107,7 +112,7 @@ class __TwigTemplate_717307e7cb9c6311f7ad100de71705a49dcc03c5a772c699fa9e6403a81
 \t\t\t\t\t\t<div class=\"col-md-6\">
 \t\t\t\t\t\t\t<div class=\"blog-post\">
 \t\t\t\t\t\t\t\t<img src=\"";
-        // line 64
+        // line 63
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/img/blog/3.jpg");
         echo "\" alt=\"\">
 \t\t\t\t\t\t\t\t<div class=\"post-date\">April 1,2019</div>
@@ -124,7 +129,7 @@ class __TwigTemplate_717307e7cb9c6311f7ad100de71705a49dcc03c5a772c699fa9e6403a81
 \t\t\t\t\t\t<div class=\"col-md-6\">
 \t\t\t\t\t\t\t<div class=\"blog-post\">
 \t\t\t\t\t\t\t\t<img src=\"";
-        // line 78
+        // line 77
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/img/blog/4.jpg");
         echo "\" alt=\"\">
 \t\t\t\t\t\t\t\t<div class=\"post-date\">April 1,2019</div>
@@ -141,7 +146,7 @@ class __TwigTemplate_717307e7cb9c6311f7ad100de71705a49dcc03c5a772c699fa9e6403a81
 \t\t\t\t\t\t<div class=\"col-md-6\">
 \t\t\t\t\t\t\t<div class=\"blog-post\">
 \t\t\t\t\t\t\t\t<img src=\"";
-        // line 92
+        // line 91
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/img/blog/5.jpg");
         echo "\" alt=\"\">
 \t\t\t\t\t\t\t\t<div class=\"post-date\">April 1,2019</div>
@@ -179,7 +184,7 @@ class __TwigTemplate_717307e7cb9c6311f7ad100de71705a49dcc03c5a772c699fa9e6403a81
 \t\t\t\t\t\t<div class=\"latest-news-widget\">
 \t\t\t\t\t\t\t<div class=\"ln-item\">
 \t\t\t\t\t\t\t\t<img src=\"";
-        // line 127
+        // line 126
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/img/blog-thumbs/1.jpg");
         echo "\" alt=\"\">
 \t\t\t\t\t\t\t\t<div class=\"ln-text\">
@@ -194,7 +199,7 @@ class __TwigTemplate_717307e7cb9c6311f7ad100de71705a49dcc03c5a772c699fa9e6403a81
 \t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t<div class=\"ln-item\">
 \t\t\t\t\t\t\t\t<img src=\"";
-        // line 139
+        // line 138
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/img/blog-thumbs/2.jpg");
         echo "\" alt=\"\">
 \t\t\t\t\t\t\t\t<div class=\"ln-text\">
@@ -209,7 +214,7 @@ class __TwigTemplate_717307e7cb9c6311f7ad100de71705a49dcc03c5a772c699fa9e6403a81
 \t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t<div class=\"ln-item\">
 \t\t\t\t\t\t\t\t<img src=\"";
-        // line 151
+        // line 150
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/img/blog-thumbs/3.jpg");
         echo "\" alt=\"\">
 \t\t\t\t\t\t\t\t<div class=\"ln-text\">
@@ -224,7 +229,7 @@ class __TwigTemplate_717307e7cb9c6311f7ad100de71705a49dcc03c5a772c699fa9e6403a81
 \t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t<div class=\"ln-item\">
 \t\t\t\t\t\t\t\t<img src=\"";
-        // line 163
+        // line 162
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/img/blog-thumbs/4.jpg");
         echo "\" alt=\"\">
 \t\t\t\t\t\t\t\t<div class=\"ln-text\">
@@ -242,7 +247,7 @@ class __TwigTemplate_717307e7cb9c6311f7ad100de71705a49dcc03c5a772c699fa9e6403a81
 \t\t\t\t\t<div class=\"sb-widget\">
 \t\t\t\t\t\t<a href=\"#\" class=\"add\">
 \t\t\t\t\t\t\t<img src=\"";
-        // line 178
+        // line 177
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/img/add-2.jpg");
         echo "\" alt=\"\">
 \t\t\t\t\t\t</a>
@@ -252,7 +257,7 @@ class __TwigTemplate_717307e7cb9c6311f7ad100de71705a49dcc03c5a772c699fa9e6403a81
 \t\t\t\t\t\t<div class=\"latest-comments-widget\">
 \t\t\t\t\t\t\t<div class=\"lc-item\">
 \t\t\t\t\t\t\t\t<img src=\"";
-        // line 185
+        // line 184
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/img/author-thumbs/1.jpg");
         echo "\" alt=\"\">
 \t\t\t\t\t\t\t\t<div class=\"lc-text\">
@@ -262,7 +267,7 @@ class __TwigTemplate_717307e7cb9c6311f7ad100de71705a49dcc03c5a772c699fa9e6403a81
 \t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t<div class=\"lc-item\">
 \t\t\t\t\t\t\t\t<img src=\"";
-        // line 192
+        // line 191
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/img/author-thumbs/2.jpg");
         echo "\" alt=\"\">
 \t\t\t\t\t\t\t\t<div class=\"lc-text\">
@@ -272,7 +277,7 @@ class __TwigTemplate_717307e7cb9c6311f7ad100de71705a49dcc03c5a772c699fa9e6403a81
 \t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t<div class=\"lc-item\">
 \t\t\t\t\t\t\t\t<img src=\"";
-        // line 199
+        // line 198
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/img/author-thumbs/3.jpg");
         echo "\" alt=\"\">
 \t\t\t\t\t\t\t\t<div class=\"lc-text\">
@@ -282,7 +287,7 @@ class __TwigTemplate_717307e7cb9c6311f7ad100de71705a49dcc03c5a772c699fa9e6403a81
 \t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t<div class=\"lc-item\">
 \t\t\t\t\t\t\t\t<img src=\"";
-        // line 206
+        // line 205
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/img/author-thumbs/4.jpg");
         echo "\" alt=\"\">
 \t\t\t\t\t\t\t\t<div class=\"lc-text\">
@@ -292,7 +297,7 @@ class __TwigTemplate_717307e7cb9c6311f7ad100de71705a49dcc03c5a772c699fa9e6403a81
 \t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t<div class=\"lc-item\">
 \t\t\t\t\t\t\t\t<img src=\"";
-        // line 213
+        // line 212
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/img/author-thumbs/1.jpg");
         echo "\" alt=\"\">
 \t\t\t\t\t\t\t\t<div class=\"lc-text\">
@@ -316,7 +321,7 @@ class __TwigTemplate_717307e7cb9c6311f7ad100de71705a49dcc03c5a772c699fa9e6403a81
 \t\t\t\t\t<div class=\"small-blog-list\">
 \t\t\t\t\t\t<div class=\"sb-item\">
 \t\t\t\t\t\t\t<img src=\"";
-        // line 234
+        // line 233
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/img/blog-thumbs/6.jpg");
         echo "\" alt=\"\">
 \t\t\t\t\t\t\t<div class=\"sb-text\">
@@ -332,7 +337,7 @@ class __TwigTemplate_717307e7cb9c6311f7ad100de71705a49dcc03c5a772c699fa9e6403a81
 \t\t\t\t\t\t</div>
 \t\t\t\t\t\t<div class=\"sb-item\">
 \t\t\t\t\t\t\t<img src=\"";
-        // line 247
+        // line 246
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/img/blog-thumbs/7.jpg");
         echo "\" alt=\"\">
 \t\t\t\t\t\t\t<div class=\"sb-text\">
@@ -348,7 +353,7 @@ class __TwigTemplate_717307e7cb9c6311f7ad100de71705a49dcc03c5a772c699fa9e6403a81
 \t\t\t\t\t\t</div>
 \t\t\t\t\t\t<div class=\"sb-item\">
 \t\t\t\t\t\t\t<img src=\"";
-        // line 260
+        // line 259
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/img/blog-thumbs/8.jpg");
         echo "\" alt=\"\">
 \t\t\t\t\t\t\t<div class=\"sb-text\">
@@ -364,7 +369,7 @@ class __TwigTemplate_717307e7cb9c6311f7ad100de71705a49dcc03c5a772c699fa9e6403a81
 \t\t\t\t\t\t</div>
 \t\t\t\t\t\t<div class=\"sb-item\">
 \t\t\t\t\t\t\t<img src=\"";
-        // line 273
+        // line 272
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/img/blog-thumbs/9.jpg");
         echo "\" alt=\"\">
 \t\t\t\t\t\t\t<div class=\"sb-text\">
@@ -387,7 +392,7 @@ class __TwigTemplate_717307e7cb9c6311f7ad100de71705a49dcc03c5a772c699fa9e6403a81
 \t\t\t\t\t\t\t<div class=\"ln-item\">
 \t\t\t\t\t\t\t\t<div class=\"ln-index\">01</div>
 \t\t\t\t\t\t\t\t<img src=\"";
-        // line 293
+        // line 292
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/img/blog-thumbs/1.jpg");
         echo "\" alt=\"\">
 \t\t\t\t\t\t\t\t<div class=\"ln-text\">
@@ -403,7 +408,7 @@ class __TwigTemplate_717307e7cb9c6311f7ad100de71705a49dcc03c5a772c699fa9e6403a81
 \t\t\t\t\t\t\t<div class=\"ln-item\">
 \t\t\t\t\t\t\t\t<div class=\"ln-index\">02</div>
 \t\t\t\t\t\t\t\t<img src=\"";
-        // line 306
+        // line 305
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/img/blog-thumbs/2.jpg");
         echo "\" alt=\"\">
 \t\t\t\t\t\t\t\t<div class=\"ln-text\">
@@ -419,7 +424,7 @@ class __TwigTemplate_717307e7cb9c6311f7ad100de71705a49dcc03c5a772c699fa9e6403a81
 \t\t\t\t\t\t\t<div class=\"ln-item\">
 \t\t\t\t\t\t\t\t<div class=\"ln-index\">03</div>
 \t\t\t\t\t\t\t\t<img src=\"";
-        // line 319
+        // line 318
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/img/blog-thumbs/3.jpg");
         echo "\" alt=\"\">
 \t\t\t\t\t\t\t\t<div class=\"ln-text\">
@@ -435,7 +440,7 @@ class __TwigTemplate_717307e7cb9c6311f7ad100de71705a49dcc03c5a772c699fa9e6403a81
 \t\t\t\t\t\t\t<div class=\"ln-item\">
 \t\t\t\t\t\t\t\t<div class=\"ln-index\">04</div>
 \t\t\t\t\t\t\t\t<img src=\"";
-        // line 332
+        // line 331
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/img/blog-thumbs/4.jpg");
         echo "\" alt=\"\">
 \t\t\t\t\t\t\t\t<div class=\"ln-text\">
@@ -451,7 +456,7 @@ class __TwigTemplate_717307e7cb9c6311f7ad100de71705a49dcc03c5a772c699fa9e6403a81
 \t\t\t\t\t\t\t<div class=\"ln-item\">
 \t\t\t\t\t\t\t\t<div class=\"ln-index\">05</div>
 \t\t\t\t\t\t\t\t<img src=\"";
-        // line 345
+        // line 344
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/img/blog-thumbs/5.jpg");
         echo "\" alt=\"\">
 \t\t\t\t\t\t\t\t<div class=\"ln-text\">
@@ -477,14 +482,14 @@ class __TwigTemplate_717307e7cb9c6311f7ad100de71705a49dcc03c5a772c699fa9e6403a81
 \t\t<div class=\"container\">
 \t\t\t<div class=\"video-logo\">
 \t\t\t\t<img src=\"";
-        // line 368
+        // line 367
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/img/logo-2.png");
         echo "\" alt=\"\">
 \t\t\t\t<p>2018’s Best Game</p>
 \t\t\t</div>
 \t\t\t<div class=\"video-popup-warp\">
 \t\t\t\t<img src=\"";
-        // line 372
+        // line 371
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/img/video-bg.jpg");
         echo "\" alt=\"\">
 \t\t\t\t<a href=\"https://www.youtube.com/watch?v=xzCEdSKMkdU\" class=\"video-play\"><i class=\"fa fa-play\"></i></a>
@@ -506,12 +511,18 @@ class __TwigTemplate_717307e7cb9c6311f7ad100de71705a49dcc03c5a772c699fa9e6403a81
 
     public function getDebugInfo()
     {
-        return array (  488 => 372,  481 => 368,  455 => 345,  439 => 332,  423 => 319,  407 => 306,  391 => 293,  368 => 273,  352 => 260,  336 => 247,  320 => 234,  296 => 213,  286 => 206,  276 => 199,  266 => 192,  256 => 185,  246 => 178,  228 => 163,  213 => 151,  198 => 139,  183 => 127,  145 => 92,  128 => 78,  111 => 64,  94 => 50,  56 => 15,  42 => 4,  37 => 1,);
+        return array (  493 => 371,  486 => 367,  460 => 344,  444 => 331,  428 => 318,  412 => 305,  396 => 292,  373 => 272,  357 => 259,  341 => 246,  325 => 233,  301 => 212,  291 => 205,  281 => 198,  271 => 191,  261 => 184,  251 => 177,  233 => 162,  218 => 150,  203 => 138,  188 => 126,  150 => 91,  133 => 77,  116 => 63,  99 => 49,  68 => 21,  54 => 10,  49 => 7,  47 => 6,  45 => 5,  43 => 4,  41 => 3,  39 => 2,  37 => 1,);
     }
 
     public function getSourceContext()
     {
-        return new Source("<!-- Hero section -->
+        return new Source("{% set records = builderList.records %}
+{% set displayColumn = builderList.displayColumn %}
+{% set noRecordsMessage = builderList.noRecordsMessage %}
+{% set detailsPage = builderList.detailsPage %}
+{% set detailsKeyColumn = builderList.detailsKeyColumn %}
+{% set detailsUrlParameter = builderList.detailsUrlParameter %}
+<!-- Hero section -->
 \t<section class=\"hero-section\">
 \t\t<div class=\"hero-slider owl-carousel\">
 \t\t\t<div class=\"hero-item set-bg\" data-setbg=\"{{'assets/img/slider/1.jpg'|theme}}\">
@@ -546,17 +557,10 @@ class __TwigTemplate_717307e7cb9c6311f7ad100de71705a49dcc03c5a772c699fa9e6403a81
 \t\t\t<div class=\"row\">
 \t\t\t\t<div class=\"col-lg-8 blog-posts\">
 \t\t\t\t\t<div class=\"blog-post featured-post\">
-\t\t\t\t\t\t<img src=\"img/blog/1.jpg\" alt=\"\">
 \t\t\t\t\t\t<div class=\"post-date\">April 1, 2019</div>
-\t\t\t\t\t\t<h3>The best games of 2019</h3>
-\t\t\t\t\t\t<div class=\"post-metas\">
-\t\t\t\t\t\t\t<div class=\"post-meta\">By Admin</div>
-\t\t\t\t\t\t\t<div class=\"post-meta\">in <a href=\"#\">Games</a></div>
-\t\t\t\t\t\t\t<div class=\"post-meta\">3 Comments</div>
-\t\t\t\t\t\t</div>
-\t\t\t\t\t\t<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Fusce urna quam, euismod sit amet mollis quis, vestibulum quis velit. Morbi id dictum quam, ut commodo lorem. In at nisi nec arcu porttitor aliquet vitae at dui. </p>
-\t\t\t\t\t\t<a href=\"#\" class=\"site-btn\">Read More</a>
-\t\t\t\t\t</div>
+\t\t\t\t\t\t<h3>Sri lankan gamers Live Stream</h3>
+\t\t\t\t\t\t\t\t\t
+\t\t\t\t</div>
 \t\t\t\t\t<div class=\"row\">
 \t\t\t\t\t\t<div class=\"col-md-6\">
 \t\t\t\t\t\t\t<div class=\"blog-post\">

@@ -14,4 +14,16 @@ class Plugin extends PluginBase
     public function registerSettings()
     {
     }
+
+    public function registerformWidgets()
+    {
+
+        return [
+            'Sunal\Games\FormWidgets\Categorybox' => [
+             'label' => 'Categorybox field',
+             'code' => 'categorybox'
+         ]
+
+     ];
+ }
 }

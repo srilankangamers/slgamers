@@ -37,13 +37,12 @@ pageNumber = "{{ :page }}"
 {% set displayColumn = builderDetails.displayColumn %}
 {% set notFoundMessage = builderDetails.notFoundMessage %}
 
-
+{{dump(record)}}
 {% for tmnt in record.tournaments %}
-
 <!-- Page top section -->
 <section class="page-top-section set-bg" data-setbg="{{tmnt.poster.path}}">
   <div style="margin-top: -150px;" class="container">
-    <h2>{{tmnt.tournament_title}}</h2>
+    <h2>Register Now!</h2>
   </div>
 </section>
 <!-- Page top section end -->
@@ -69,6 +68,7 @@ pageNumber = "{{ :page }}"
               {% endfor %}
           </ul>
         </div>
+        {% if tmnt.type == 'Paid'%}
         <div class="sb-widget">
           <h2 class="sb-title text-uppercase"><i class="fa fa-money" aria-hidden="true"></i> Cash Prizes</h2>
           <ul class="list-group">
@@ -77,6 +77,17 @@ pageNumber = "{{ :page }}"
             <li class="text-uppercase list-group-item font-weight-bold bg-info"><i class="fa fa-trophy" aria-hidden="true"></i> 3rd place Rs {{tmnt.third_place}}</li>
             <li class="text-uppercase list-group-item font-weight-bold bg-light"><i class="fa fa-trophy" aria-hidden="true"></i> 4th to 10th place Rs {{tmnt.four_to_ten}}</li>
           </ul>
+        </div>
+        {% endif %}
+        <div class="sb-widget">
+          <h2 class="sb-title text-uppercase"><i class="fa fa-money" aria-hidden="true"></i> Winners </h2>
+            {% for w in tmnt.winners %}           
+            <ul class="list-group list-group-horizontal">
+              <li class="list-group-item flex-fill">{{w.placement}}</li>
+              <li class="list-group-item flex-fill">{{w.player_name}}</li>
+              <li class="list-group-item flex-fill">{{w.prize}}</li>
+             </ul> 
+            {% endfor %}    
         </div>
         
       </div>
@@ -110,6 +121,9 @@ pageNumber = "{{ :page }}"
               <label>Game Account ID</label>
               <input type="text" class="form-control" name="game_id">
           </div>
+          {% for t in record.tournaments %}
+          
+          {% if t.type == 'Paid' %}
           <div class="form-group col-md-6">
             <label>Upload Bank Slip</label>
             <input type="file" class="form-control" name="bankslip" accept="image/*" data-request="onUpload" data-request-files data-request-flash >
@@ -117,6 +131,8 @@ pageNumber = "{{ :page }}"
             <div style="width: 150px; height: 150px;" id="imageresult">No Image to Preview</div>
             <br>
           </div>
+          {% endif %}
+          {% endfor %}
           </div>
           <button type="submit" class="btn btn-primary">Register</button>
         </form>
@@ -133,7 +149,9 @@ pageNumber = "{{ :page }}"
         <br>
         {{rule.bans|raw}}
         <br>
+        {% if tmnt.type == 'Paid' %}
         {{rule.bank|raw}}
+        {% endif%}
       {% endfor %}
     </div>
   </div>

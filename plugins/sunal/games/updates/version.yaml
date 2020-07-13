@@ -60,3 +60,117 @@
 1.0.21:
     - 'Updated table sunal_games_rules'
     - builder_table_update_sunal_games_rules.php
+1.0.22:
+    - 'Updated table sunal_games_tournaments'
+    - builder_table_update_sunal_games_tournaments_10.php
+1.0.23:
+    - 'Updated table sunal_games_tournaments'
+    - builder_table_update_sunal_games_tournaments_11.php
+1.0.24:
+    - 'Created table sunal_games_youtube'
+    - builder_table_create_sunal_games_youtube.php
+1.0.25:
+    - 'Updated table sunal_games_youtube'
+    - builder_table_update_sunal_games_youtube.php
+1.0.26:
+    - 'Updated table sunal_games_youtube'
+    - builder_table_update_sunal_games_youtube_2.php
+1.0.27:
+    - 'Updated table sunal_games_youtube'
+    - builder_table_update_sunal_games_youtube_3.php
+1.0.28:
+    - 'Updated table sunal_games_youtube'
+    - builder_table_update_sunal_games_youtube_4.php
+1.0.29:
+    - 'Created table sunal_games_categories'
+    - builder_table_create_sunal_games_categories.php
+1.0.30:
+    - 'Created table sunal_games_categories_youtube'
+    - builder_table_create_sunal_games_categories_youtube.php
+1.0.31:
+    - 'Updated table sunal_games_youtube'
+    - builder_table_update_sunal_games_youtube_5.php
+1.0.32:
+    - 'Updated table sunal_games_categories'
+    - builder_table_update_sunal_games_categoryboxes.php
+1.0.33:
+    - 'Updated table sunal_games_categories_youtube'
+    - builder_table_update_sunal_games_categoryboxes_youtube.php
+1.0.34:
+    - 'Updated table sunal_games_categoryboxes_youtube'
+    - builder_table_update_sunal_games_categoryboxes_youtube_2.php
+1.0.35:
+    - 'Drop table sunal_games_categoryboxes_youtube'
+    - builder_table_delete_sunal_games_categoryboxes_youtube.php
+1.0.36:
+    - 'Updated table sunal_games_categoryboxes'
+    - builder_table_update_sunal_games_categoryboxes_2.php
+1.0.37:
+    - 'Updated table sunal_games_categoryboxes'
+    - builder_table_update_sunal_games_categoryboxes_3.php
+1.0.38:
+    - 'Updated table sunal_games_categoryboxes_youtube'
+    - builder_table_update_sunal_games_categoryboxes_youtube_3.php
+1.0.39:
+    - 'Drop table sunal_games_categoryboxes_youtube'
+    - builder_table_delete_sunal_games_categoryboxes_youtube_2.php
+1.0.40:
+    - 'Created table sunal_games_categoryboxes_youtube'
+    - builder_table_create_sunal_games_categoryboxes_youtube.php
+1.0.41:
+    - 'Drop table sunal_games_categoryboxes_youtube'
+    - builder_table_delete_sunal_games_categoryboxes_youtube_3.php
+1.0.42:
+    - 'Created table sunal_games_categoryboxes_youtube'
+    - builder_table_create_sunal_games_categoryboxes_youtube_2.php
+1.0.43:
+    - 'Updated table sunal_games_categoryboxes_youtube'
+    - builder_table_update_sunal_games_categoryboxes_youtube_4.php
+1.0.44:
+    - 'Updated table sunal_games_categoryboxes'
+    - builder_table_update_sunal_games_categoryboxes_4.php
+1.0.45:
+    - 'Updated table sunal_games_categoryboxes'
+    - builder_table_update_sunal_games_categoryboxes_5.php
+1.0.46:
+    - 'Updated table sunal_games_youtube'
+    - builder_table_update_sunal_games_youtube_6.php
+1.0.47:
+    - 'Drop table sunal_games_categoryboxes'
+    - builder_table_delete_sunal_games_categoryboxes.php
+1.0.48:
+    - 'Drop table sunal_games_categoryboxes_youtube'
+    - builder_table_delete_sunal_games_categoryboxes_youtube_4.php
+1.0.49:
+    - 'Updated table sunal_games_youtube'
+    - builder_table_update_sunal_games_youtube_7.php
+1.0.50:
+    - 'Updated table sunal_games_youtube'
+    - builder_table_update_sunal_games_youtube_8.php
+1.0.51:
+    - 'Created table sunal_games_categories'
+    - builder_table_create_sunal_games_categories_2.php
+1.0.52:
+    - 'Updated table sunal_games_categories'
+    - builder_table_update_sunal_games_categories.php
+1.0.53:
+    - 'Updated table sunal_games_youtube'
+    - builder_table_update_sunal_games_youtube_9.php
+1.0.54:
+    - 'Created table sunal_games_categories_youtube'
+    - builder_table_create_sunal_games_categories_youtube_2.php
+1.0.55:
+    - 'Drop table sunal_games_youtube'
+    - builder_table_delete_sunal_games_youtube.php
+1.0.56:
+    - 'Created table sunal_games_youtube'
+    - builder_table_create_sunal_games_youtube_2.php
+1.0.57:
+    - 'Updated table sunal_games_youtube'
+    - builder_table_update_sunal_games_youtube_10.php
+1.0.58:
+    - 'Updated table sunal_games_youtube'
+    - builder_table_update_sunal_games_youtube_11.php
+1.0.59:
+    - 'Updated table sunal_games_categories_youtube'
+    - builder_table_update_sunal_games_categories_youtube.php

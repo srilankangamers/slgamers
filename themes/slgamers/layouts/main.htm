@@ -24,6 +24,9 @@
 	<link rel="stylesheet" href="{{'assets/css/flip.css'|theme}}"/>
 	<link rel="stylesheet" href="{{'assets/css/basic.css'|theme}}"/>
 	<link rel="stylesheet" href="{{'assets/css/dropzone.css'|theme}}"/>
+	<link rel="stylesheet" href="{{'assets/css/venobox.min.css'|theme}}"/>
+	<link rel="stylesheet" href="{{'assets/css/hover-min.css'|theme}}"/>
+
 
 	<!-- Main Stylesheets -->
 	<link rel="stylesheet" href="{{'assets/css/style.css'|theme}}"/>
@@ -43,63 +46,66 @@
 	<!-- Load Facebook SDK for JavaScript -->
 	<div id="fb-root"></div>
 	<script>
-	  window.fbAsyncInit = function() {
-		FB.init({
-		  xfbml            : true,
-		  version          : 'v7.0'
-		});
-	  };
+		window.fbAsyncInit = function() {
+			FB.init({
+				xfbml            : true,
+				version          : 'v7.0'
+			});
+		};
 
-	  (function(d, s, id) {
-	  var js, fjs = d.getElementsByTagName(s)[0];
-	  if (d.getElementById(id)) return;
-	  js = d.createElement(s); js.id = id;
-	  js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
-	  fjs.parentNode.insertBefore(js, fjs);
-	}(document, 'script', 'facebook-jssdk'));</script>
+		(function(d, s, id) {
+			var js, fjs = d.getElementsByTagName(s)[0];
+			if (d.getElementById(id)) return;
+			js = d.createElement(s); js.id = id;
+			js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+			fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));</script>
 
-	<!-- Your Chat Plugin code -->
-	<div class="fb-customerchat"
-	  attribution=setup_tool
-	  page_id="159724108289019"
-logged_in_greeting="Hi! How can we help you? "
-logged_out_greeting="Hi! How can we help you? ">
+		<!-- Your Chat Plugin code -->
+		<div class="fb-customerchat"
+		attribution=setup_tool
+		page_id="159724108289019"
+		logged_in_greeting="Hi! How can we help you? "
+		logged_out_greeting="Hi! How can we help you? ">
 	</div>
 	<!-- Header section -->
-		<nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-dark">
-			<a class="navbar-brand" href="#"><img src="{{'assets/img/logo.jpg'|theme|resize(60,60)}}" alt=""></a>
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-			  <span class="navbar-toggler-icon"></span>
-			</button>
-			<div class="collapse navbar-collapse " id="navbarNavDropdown">
-			  <ul class="navbar-nav  ">
+	<nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-dark">
+		<a class="navbar-brand" href="#"><img src="{{'assets/img/logo.png'|theme|resize(60,60)}}" alt=""></a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse " id="navbarNavDropdown">
+			<ul class="navbar-nav  ">
 				<li class="nav-item {% if this.page.id == 'home' %} active font-weight-bolder {% endif %}">
-				
-				  <a class="nav-link" href="{{'home'|page}}">Home <span class="sr-only">(current)</span></a>
+
+					<a class="nav-link" href="{{'home'|page}}">Home <span class="sr-only">(current)</span></a>
 				</li>
 				<li class="nav-item {% if this.page.id == 'games' %} active font-weight-bolder {% endif %}">
-				  <a class="nav-link" href="{{'games'|page}}">Games</a>
+					<a class="nav-link" href="{{'games'|page}}">Games</a>
 				</li>
 				<li class="nav-item nav-item {% if this.page.id == 'tournament' %} active font-weight-bolder {% endif %}">
-				  <a class="nav-link" href="{{'tournament'|page}}">Tournaments</a>
+					<a class="nav-link" href="{{'tournament'|page}}">Tournaments</a>
 				</li>
-				
-			  </ul>
-			</div>
-		</nav>
-	<!-- Header section end -->
-{% if this.page.id == 'home' %}
-{% page %}
-{% else %}
-<div style=" margin-bottom: 0px; background: url({{'assets/img/banner-bg.jpg'|theme}});" class="jumbotron jumbotron-fluid">
-	<div class="container">
-		<h1 style="text-shadow: black 2px 0px 2px;" class="display-3 text-light font-weight-bolder">{%if record.title %}{{record.title}} {%else%}{{this.page.title}}{% endif %}</h1>
-		<p style="text-shadow: black 2px 0px 2px;" class="lead text-light font-weight-bolder">{{this.page.description}}</p>
+				<li class="nav-item nav-item {% if this.page.id == 'video-gallery' %} active font-weight-bolder {% endif %}">
+					<a class="nav-link" href="{{'video-gallery'|page}}">Video Gallery</a>
+				</li>
 		
+			</ul>
+		</div>
+	</nav>
+	<!-- Header section end -->
+	{% if this.page.id == 'home' %}
+	{% page %}
+	{% else %}
+	<div style=" margin-bottom: 0px; background: url({{'assets/img/banner-bg.jpg'|theme}});" class="jumbotron jumbotron-fluid">
+		<div class="container">
+			<h1 style="text-shadow: black 2px 0px 2px;" class="display-3 text-light font-weight-bolder">{%if record.title %}{{record.title}} {%else%}{{this.page.title}}{% endif %}</h1>
+			<p style="text-shadow: black 2px 0px 2px;" class="lead text-light font-weight-bolder">{{this.page.description}}</p>
+
+		</div>
 	</div>
-</div>
-{% page %}
-{% endif %}
+	{% page %}
+	{% endif %}
 	<!-- Footer section -->
 	<div class="footer-section">
 		<div class="container">
@@ -194,7 +200,7 @@ logged_out_greeting="Hi! How can we help you? ">
 		</div>
 	</div>
 	<!-- Footer section end -->
-															
+
 	<!--====== Javascripts & Jquery ======-->
 	<script src="{{'assets/js/jquery-3.2.1.min.js'|theme}}"></script>
 	<script src="{{'assets/js/bootstrap.min.js'|theme}}"></script>
@@ -204,7 +210,33 @@ logged_out_greeting="Hi! How can we help you? ">
 	<script src="{{'assets/js/jquery.magnific-popup.min.js'|theme}}"></script>
 	<script src="{{'assets/js/main.js'|theme}}"></script>
 	<script src="{{'assets/js/dropzone.js'|theme}}"></script>
+	<script src="{{'assets/js/venobox.min.js'|theme}}"></script>
+	<script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+	<script src="https://kit.fontawesome.com/fa52e6fc3b.js" crossorigin="anonymous"></script>
+
+	<script>
+		$(document).ready(function(){
+			$('.venobox').venobox({
+
+			});
+		});
+	</script>
+	<script>
+		var $grid = $('.play').isotope({
+		  // options
+		  itemSelector: '.item',
+		  layoutMode: 'fitRows'
+		  
+		});
+		$('.filter button').on("click", function(){
+			var value = $(this).attr('data-name');
+			//console.log('value',value);
+			$grid.isotope({
+				filter: value
+			});		
+		})
+	</script>
 	{% framework extras %}
-    {% scripts %}
-	</body>
+	{% scripts %}
+</body>
 </html>

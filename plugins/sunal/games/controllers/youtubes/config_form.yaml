@@ -1,0 +1,10 @@
+name: Youtubes
+form: $/sunal/games/models/youtube/fields.yaml
+modelClass: Sunal\Games\Models\Youtube
+defaultRedirect: sunal/games/youtubes
+create:
+    redirect: 'sunal/games/youtubes/update/:id'
+    redirectClose: sunal/games/youtubes
+update:
+    redirect: sunal/games/youtubes
+    redirectClose: sunal/games/youtubes

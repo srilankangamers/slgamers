@@ -16,6 +16,13 @@ fields:
         size: large
         span: auto
         type: richeditor
+    type:
+        label: 'Free or Paid'
+        span: auto
+        options:
+            Paid: Paid
+            Free: Free
+        type: balloon-selector
     slug:
         label: Slug
         span: auto
@@ -59,3 +66,25 @@ fields:
         label: Availability
         span: auto
         type: switch
+tabs:
+    fields:
+        winners:
+            label: Winners
+            prompt: 'Add new item'
+            span: auto
+            type: repeater
+            tab: Winners
+            form:
+                fields:
+                    placement:
+                        label: Placement
+                        span: auto
+                        type: text
+                    player_name:
+                        label: 'Player Name'
+                        span: auto
+                        type: text
+                    prize:
+                        label: Prize
+                        span: auto
+                        type: text

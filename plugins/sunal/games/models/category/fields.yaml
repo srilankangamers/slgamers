@@ -1,0 +1,5 @@
+fields:
+    category:
+        label: 'Add Category'
+        span: auto
+        type: text

@@ -1,0 +1,4 @@
+title: Youtubes
+modelClass: Sunal\Games\Models\Youtube
+toolbar:
+    buttons: reorder_toolbar

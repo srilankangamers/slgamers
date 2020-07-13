@@ -1,0 +1,12 @@
+columns:
+    title:
+        label: Title
+        type: text
+        default: ' '
+        searchable: true
+        sortable: true
+    path:
+        label: Path
+        type: text
+        searchable: true
+        sortable: true

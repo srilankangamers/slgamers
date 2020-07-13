@@ -1,0 +1,4 @@
+title: Categories
+modelClass: Sunal\Games\Models\Category
+toolbar:
+    buttons: reorder_toolbar

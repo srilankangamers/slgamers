@@ -1,0 +1,10 @@
+name: Categories
+form: $/sunal/games/models/category/fields.yaml
+modelClass: Sunal\Games\Models\Category
+defaultRedirect: sunal/games/categories
+create:
+    redirect: 'sunal/games/categories/update/:id'
+    redirectClose: sunal/games/categories
+update:
+    redirect: sunal/games/categories
+    redirectClose: sunal/games/categories

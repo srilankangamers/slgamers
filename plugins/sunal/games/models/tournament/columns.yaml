@@ -9,3 +9,10 @@ columns:
         type: text
         searchable: true
         sortable: true
+    type:
+        label: Type
+        type: text
+        default: ' '
+        searchable: true
+        invisible: false
+        sortable: true

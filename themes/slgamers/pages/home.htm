@@ -2,8 +2,24 @@ title = "Home"
 url = "/"
 layout = "main"
 is_hidden = 0
-==
 
+[builderList]
+modelClass = "Sunal\Games\Models\Youtube"
+scope = "-"
+scopeValue = "{{ :id }}"
+displayColumn = "path"
+noRecordsMessage = "No records found"
+detailsPage = "-"
+detailsUrlParameter = "id"
+recordsPerPage = 4
+pageNumber = "{{ :page }}"
+==
+{% set records = builderList.records %}
+{% set displayColumn = builderList.displayColumn %}
+{% set noRecordsMessage = builderList.noRecordsMessage %}
+{% set detailsPage = builderList.detailsPage %}
+{% set detailsKeyColumn = builderList.detailsKeyColumn %}
+{% set detailsUrlParameter = builderList.detailsUrlParameter %}
 <!-- Hero section -->
 	<section class="hero-section">
 		<div class="hero-slider owl-carousel">
@@ -39,17 +55,10 @@ is_hidden = 0
 			<div class="row">
 				<div class="col-lg-8 blog-posts">
 					<div class="blog-post featured-post">
-						<img src="img/blog/1.jpg" alt="">
 						<div class="post-date">April 1, 2019</div>
-						<h3>The best games of 2019</h3>
-						<div class="post-metas">
-							<div class="post-meta">By Admin</div>
-							<div class="post-meta">in <a href="#">Games</a></div>
-							<div class="post-meta">3 Comments</div>
-						</div>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Fusce urna quam, euismod sit amet mollis quis, vestibulum quis velit. Morbi id dictum quam, ut commodo lorem. In at nisi nec arcu porttitor aliquet vitae at dui. </p>
-						<a href="#" class="site-btn">Read More</a>
-					</div>
+						<h3>Sri lankan gamers Live Stream</h3>
+									
+				</div>
 					<div class="row">
 						<div class="col-md-6">
 							<div class="blog-post">

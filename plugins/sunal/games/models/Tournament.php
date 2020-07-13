@@ -32,5 +32,6 @@ class Tournament extends Model
 
     ];
     
-    protected $jsonable = ['platform'];
+    protected $jsonable = ['platform','winners'];
+
 }

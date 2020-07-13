@@ -23,3 +23,16 @@ navigation:
                 label: Rules
                 url: sunal/games/rules
                 icon: icon-times
+    main-menu-item3:
+        label: YouTube
+        url: sunal/games/youtubes
+        icon: icon-youtube-play
+        sideMenu:
+            side-menu-item:
+                label: Categories
+                url: sunal/games/categories
+                icon: icon-tasks
+            side-menu-item2:
+                label: Youtube
+                url: sunal/games/youtubes
+                icon: icon-youtube-play

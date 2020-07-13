@@ -89,10 +89,19 @@ class __TwigTemplate_a86dd9a10fda9b277616edb074aadc887a89e21e66d13b1f8effa4bb740
         // line 25
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/css/dropzone.css");
         echo "\"/>
+\t<link rel=\"stylesheet\" href=\"";
+        // line 26
+        echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/css/venobox.min.css");
+        echo "\"/>
+\t<link rel=\"stylesheet\" href=\"";
+        // line 27
+        echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/css/hover-min.css");
+        echo "\"/>
+
 
 \t<!-- Main Stylesheets -->
 \t<link rel=\"stylesheet\" href=\"";
-        // line 28
+        // line 31
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/css/style.css");
         echo "\"/>
 
@@ -111,110 +120,126 @@ class __TwigTemplate_a86dd9a10fda9b277616edb074aadc887a89e21e66d13b1f8effa4bb740
 \t<!-- Load Facebook SDK for JavaScript -->
 \t<div id=\"fb-root\"></div>
 \t<script>
-\t  window.fbAsyncInit = function() {
-\t\tFB.init({
-\t\t  xfbml            : true,
-\t\t  version          : 'v7.0'
-\t\t});
-\t  };
+\t\twindow.fbAsyncInit = function() {
+\t\t\tFB.init({
+\t\t\t\txfbml            : true,
+\t\t\t\tversion          : 'v7.0'
+\t\t\t});
+\t\t};
 
-\t  (function(d, s, id) {
-\t  var js, fjs = d.getElementsByTagName(s)[0];
-\t  if (d.getElementById(id)) return;
-\t  js = d.createElement(s); js.id = id;
-\t  js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
-\t  fjs.parentNode.insertBefore(js, fjs);
-\t}(document, 'script', 'facebook-jssdk'));</script>
+\t\t(function(d, s, id) {
+\t\t\tvar js, fjs = d.getElementsByTagName(s)[0];
+\t\t\tif (d.getElementById(id)) return;
+\t\t\tjs = d.createElement(s); js.id = id;
+\t\t\tjs.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+\t\t\tfjs.parentNode.insertBefore(js, fjs);
+\t\t}(document, 'script', 'facebook-jssdk'));</script>
 
-\t<!-- Your Chat Plugin code -->
-\t<div class=\"fb-customerchat\"
-\t  attribution=setup_tool
-\t  page_id=\"159724108289019\"
-logged_in_greeting=\"Hi! How can we help you? \"
-logged_out_greeting=\"Hi! How can we help you? \">
+\t\t<!-- Your Chat Plugin code -->
+\t\t<div class=\"fb-customerchat\"
+\t\tattribution=setup_tool
+\t\tpage_id=\"159724108289019\"
+\t\tlogged_in_greeting=\"Hi! How can we help you? \"
+\t\tlogged_out_greeting=\"Hi! How can we help you? \">
 \t</div>
 \t<!-- Header section -->
-\t\t<nav class=\"navbar navbar-expand-lg sticky-top navbar-dark bg-dark\">
-\t\t\t<a class=\"navbar-brand\" href=\"#\"><img src=\"";
-        // line 69
-        echo call_user_func_array($this->env->getFilter('resize')->getCallable(), [$this->extensions['Cms\Twig\Extension']->themeFilter("assets/img/logo.jpg"), 60, 60]);
+\t<nav class=\"navbar navbar-expand-lg sticky-top navbar-dark bg-dark\">
+\t\t<a class=\"navbar-brand\" href=\"#\"><img src=\"";
+        // line 72
+        echo call_user_func_array($this->env->getFilter('resize')->getCallable(), [$this->extensions['Cms\Twig\Extension']->themeFilter("assets/img/logo.png"), 60, 60]);
         echo "\" alt=\"\"></a>
-\t\t\t<button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarNavDropdown\" aria-controls=\"navbarNavDropdown\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
-\t\t\t  <span class=\"navbar-toggler-icon\"></span>
-\t\t\t</button>
-\t\t\t<div class=\"collapse navbar-collapse \" id=\"navbarNavDropdown\">
-\t\t\t  <ul class=\"navbar-nav  \">
+\t\t<button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarNavDropdown\" aria-controls=\"navbarNavDropdown\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
+\t\t\t<span class=\"navbar-toggler-icon\"></span>
+\t\t</button>
+\t\t<div class=\"collapse navbar-collapse \" id=\"navbarNavDropdown\">
+\t\t\t<ul class=\"navbar-nav  \">
 \t\t\t\t<li class=\"nav-item ";
-        // line 75
-        if ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["this"] ?? null), "page", [], "any", false, false, false, 75), "id", [], "any", false, false, false, 75) == "home")) {
+        // line 78
+        if ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["this"] ?? null), "page", [], "any", false, false, false, 78), "id", [], "any", false, false, false, 78) == "home")) {
             echo " active font-weight-bolder ";
         }
         echo "\">
-\t\t\t\t
-\t\t\t\t  <a class=\"nav-link\" href=\"";
-        // line 77
+
+\t\t\t\t\t<a class=\"nav-link\" href=\"";
+        // line 80
         echo $this->extensions['Cms\Twig\Extension']->pageFilter("home");
         echo "\">Home <span class=\"sr-only\">(current)</span></a>
 \t\t\t\t</li>
 \t\t\t\t<li class=\"nav-item ";
-        // line 79
-        if ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["this"] ?? null), "page", [], "any", false, false, false, 79), "id", [], "any", false, false, false, 79) == "games")) {
+        // line 82
+        if ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["this"] ?? null), "page", [], "any", false, false, false, 82), "id", [], "any", false, false, false, 82) == "games")) {
             echo " active font-weight-bolder ";
         }
         echo "\">
-\t\t\t\t  <a class=\"nav-link\" href=\"";
-        // line 80
+\t\t\t\t\t<a class=\"nav-link\" href=\"";
+        // line 83
         echo $this->extensions['Cms\Twig\Extension']->pageFilter("games");
         echo "\">Games</a>
 \t\t\t\t</li>
 \t\t\t\t<li class=\"nav-item nav-item ";
-        // line 82
-        if ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["this"] ?? null), "page", [], "any", false, false, false, 82), "id", [], "any", false, false, false, 82) == "tournament")) {
+        // line 85
+        if ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["this"] ?? null), "page", [], "any", false, false, false, 85), "id", [], "any", false, false, false, 85) == "tournament")) {
             echo " active font-weight-bolder ";
         }
         echo "\">
-\t\t\t\t  <a class=\"nav-link\" href=\"";
-        // line 83
+\t\t\t\t\t<a class=\"nav-link\" href=\"";
+        // line 86
         echo $this->extensions['Cms\Twig\Extension']->pageFilter("tournament");
         echo "\">Tournaments</a>
 \t\t\t\t</li>
-\t\t\t\t
-\t\t\t  </ul>
-\t\t\t</div>
-\t\t</nav>
+\t\t\t\t<li class=\"nav-item nav-item ";
+        // line 88
+        if ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["this"] ?? null), "page", [], "any", false, false, false, 88), "id", [], "any", false, false, false, 88) == "video-gallery")) {
+            echo " active font-weight-bolder ";
+        }
+        echo "\">
+\t\t\t\t\t<a class=\"nav-link\" href=\"";
+        // line 89
+        echo $this->extensions['Cms\Twig\Extension']->pageFilter("video-gallery");
+        echo "\">Video Gallery</a>
+\t\t\t\t</li>
+\t\t
+\t\t\t</ul>
+\t\t</div>
+\t</nav>
 \t<!-- Header section end -->
-";
-        // line 90
-        if ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["this"] ?? null), "page", [], "any", false, false, false, 90), "id", [], "any", false, false, false, 90) == "home")) {
-            // line 91
+\t";
+        // line 96
+        if ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["this"] ?? null), "page", [], "any", false, false, false, 96), "id", [], "any", false, false, false, 96) == "home")) {
+            // line 97
+            echo "\t";
             echo $this->env->getExtension('Cms\Twig\Extension')->pageFunction();
+            // line 98
+            echo "\t";
         } else {
-            // line 93
-            echo "<div style=\" margin-bottom: 0px; background: url(";
+            // line 99
+            echo "\t<div style=\" margin-bottom: 0px; background: url(";
             echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/img/banner-bg.jpg");
             echo ");\" class=\"jumbotron jumbotron-fluid\">
-\t<div class=\"container\">
-\t\t<h1 style=\"text-shadow: black 2px 0px 2px;\" class=\"display-3 text-light font-weight-bolder\">";
-            // line 95
-            if (twig_get_attribute($this->env, $this->source, ($context["record"] ?? null), "title", [], "any", false, false, false, 95)) {
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["record"] ?? null), "title", [], "any", false, false, false, 95), "html", null, true);
+\t\t<div class=\"container\">
+\t\t\t<h1 style=\"text-shadow: black 2px 0px 2px;\" class=\"display-3 text-light font-weight-bolder\">";
+            // line 101
+            if (twig_get_attribute($this->env, $this->source, ($context["record"] ?? null), "title", [], "any", false, false, false, 101)) {
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["record"] ?? null), "title", [], "any", false, false, false, 101), "html", null, true);
                 echo " ";
             } else {
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["this"] ?? null), "page", [], "any", false, false, false, 95), "title", [], "any", false, false, false, 95), "html", null, true);
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["this"] ?? null), "page", [], "any", false, false, false, 101), "title", [], "any", false, false, false, 101), "html", null, true);
             }
             echo "</h1>
-\t\t<p style=\"text-shadow: black 2px 0px 2px;\" class=\"lead text-light font-weight-bolder\">";
-            // line 96
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["this"] ?? null), "page", [], "any", false, false, false, 96), "description", [], "any", false, false, false, 96), "html", null, true);
+\t\t\t<p style=\"text-shadow: black 2px 0px 2px;\" class=\"lead text-light font-weight-bolder\">";
+            // line 102
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["this"] ?? null), "page", [], "any", false, false, false, 102), "description", [], "any", false, false, false, 102), "html", null, true);
             echo "</p>
-\t\t
+
+\t\t</div>
 \t</div>
-</div>
-";
-            // line 100
+\t";
+            // line 106
             echo $this->env->getExtension('Cms\Twig\Extension')->pageFunction();
+            // line 107
+            echo "\t";
         }
-        // line 102
+        // line 108
         echo "\t<!-- Footer section -->
 \t<div class=\"footer-section\">
 \t\t<div class=\"container\">
@@ -223,7 +248,7 @@ logged_out_greeting=\"Hi! How can we help you? \">
 \t\t\t\t\t<div class=\"footer-widget\">
 \t\t\t\t\t\t<div class=\"about-widget\">
 \t\t\t\t\t\t\t<img src=\"";
-        // line 109
+        // line 115
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/img/logo.png");
         echo "\" alt=\"\">
 \t\t\t\t\t\t\t<p>Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo. Morbi id dictum quam, ut commodo.</p>
@@ -312,42 +337,71 @@ logged_out_greeting=\"Hi! How can we help you? \">
 \t\t</div>
 \t</div>
 \t<!-- Footer section end -->
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t
+
 \t<!--====== Javascripts & Jquery ======-->
 \t<script src=\"";
-        // line 198
+        // line 204
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/js/jquery-3.2.1.min.js");
         echo "\"></script>
 \t<script src=\"";
-        // line 199
+        // line 205
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/js/bootstrap.min.js");
         echo "\"></script>
 \t<script src=\"";
-        // line 200
+        // line 206
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/js/jquery.slicknav.js");
         echo "\"></script>
 \t<script src=\"";
-        // line 201
+        // line 207
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/js/owl.carousel.min.js");
         echo "\"></script>
 \t<script src=\"";
-        // line 202
+        // line 208
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/js/circle-progress.min.js");
         echo "\"></script>
 \t<script src=\"";
-        // line 203
+        // line 209
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/js/jquery.magnific-popup.min.js");
         echo "\"></script>
 \t<script src=\"";
-        // line 204
+        // line 210
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/js/main.js");
         echo "\"></script>
 \t<script src=\"";
-        // line 205
+        // line 211
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/js/dropzone.js");
         echo "\"></script>
+\t<script src=\"";
+        // line 212
+        echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/js/venobox.min.js");
+        echo "\"></script>
+\t<script src=\"https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js\"></script>
+\t<script src=\"https://kit.fontawesome.com/fa52e6fc3b.js\" crossorigin=\"anonymous\"></script>
+
+\t<script>
+\t\t\$(document).ready(function(){
+\t\t\t\$('.venobox').venobox({
+
+\t\t\t});
+\t\t});
+\t</script>
+\t<script>
+\t\tvar \$grid = \$('.play').isotope({
+\t\t  // options
+\t\t  itemSelector: '.item',
+\t\t  layoutMode: 'fitRows'
+\t\t  
+\t\t});
+\t\t\$('.filter button').on(\"click\", function(){
+\t\t\tvar value = \$(this).attr('data-name');
+\t\t\t//console.log('value',value);
+\t\t\t\$grid.isotope({
+\t\t\t\tfilter: value
+\t\t\t});\t\t
+\t\t})
+\t</script>
 \t";
-        // line 206
+        // line 238
         $_minify = System\Classes\CombineAssets::instance()->useMinify;
         if ($_minify) {
             echo '<script src="' . Request::getBasePath() . '/modules/system/assets/js/framework.combined-min.js"></script>'.PHP_EOL;
@@ -358,12 +412,12 @@ logged_out_greeting=\"Hi! How can we help you? \">
         }
         echo '<link rel="stylesheet" property="stylesheet" href="' . Request::getBasePath() .'/modules/system/assets/css/framework.extras'.($_minify ? '-min' : '').'.css">'.PHP_EOL;
         unset($_minify);
-        // line 207
-        echo "    ";
+        // line 239
+        echo "\t";
         echo $this->env->getExtension('Cms\Twig\Extension')->assetsFunction('js');
         echo $this->env->getExtension('Cms\Twig\Extension')->displayBlock('scripts');
-        // line 208
-        echo "\t</body>
+        // line 240
+        echo "</body>
 </html>";
     }
 
@@ -379,7 +433,7 @@ logged_out_greeting=\"Hi! How can we help you? \">
 
     public function getDebugInfo()
     {
-        return array (  366 => 208,  362 => 207,  351 => 206,  347 => 205,  343 => 204,  339 => 203,  335 => 202,  331 => 201,  327 => 200,  323 => 199,  319 => 198,  227 => 109,  218 => 102,  215 => 100,  208 => 96,  199 => 95,  193 => 93,  190 => 91,  188 => 90,  178 => 83,  172 => 82,  167 => 80,  161 => 79,  156 => 77,  149 => 75,  140 => 69,  96 => 28,  90 => 25,  86 => 24,  82 => 23,  78 => 22,  74 => 21,  70 => 20,  66 => 19,  62 => 18,  58 => 17,  42 => 4,  37 => 1,);
+        return array (  420 => 240,  416 => 239,  405 => 238,  376 => 212,  372 => 211,  368 => 210,  364 => 209,  360 => 208,  356 => 207,  352 => 206,  348 => 205,  344 => 204,  252 => 115,  243 => 108,  240 => 107,  238 => 106,  231 => 102,  222 => 101,  216 => 99,  213 => 98,  210 => 97,  208 => 96,  198 => 89,  192 => 88,  187 => 86,  181 => 85,  176 => 83,  170 => 82,  165 => 80,  158 => 78,  149 => 72,  105 => 31,  98 => 27,  94 => 26,  90 => 25,  86 => 24,  82 => 23,  78 => 22,  74 => 21,  70 => 20,  66 => 19,  62 => 18,  58 => 17,  42 => 4,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -409,6 +463,9 @@ logged_out_greeting=\"Hi! How can we help you? \">
 \t<link rel=\"stylesheet\" href=\"{{'assets/css/flip.css'|theme}}\"/>
 \t<link rel=\"stylesheet\" href=\"{{'assets/css/basic.css'|theme}}\"/>
 \t<link rel=\"stylesheet\" href=\"{{'assets/css/dropzone.css'|theme}}\"/>
+\t<link rel=\"stylesheet\" href=\"{{'assets/css/venobox.min.css'|theme}}\"/>
+\t<link rel=\"stylesheet\" href=\"{{'assets/css/hover-min.css'|theme}}\"/>
+
 
 \t<!-- Main Stylesheets -->
 \t<link rel=\"stylesheet\" href=\"{{'assets/css/style.css'|theme}}\"/>
@@ -428,63 +485,66 @@ logged_out_greeting=\"Hi! How can we help you? \">
 \t<!-- Load Facebook SDK for JavaScript -->
 \t<div id=\"fb-root\"></div>
 \t<script>
-\t  window.fbAsyncInit = function() {
-\t\tFB.init({
-\t\t  xfbml            : true,
-\t\t  version          : 'v7.0'
-\t\t});
-\t  };
+\t\twindow.fbAsyncInit = function() {
+\t\t\tFB.init({
+\t\t\t\txfbml            : true,
+\t\t\t\tversion          : 'v7.0'
+\t\t\t});
+\t\t};
 
-\t  (function(d, s, id) {
-\t  var js, fjs = d.getElementsByTagName(s)[0];
-\t  if (d.getElementById(id)) return;
-\t  js = d.createElement(s); js.id = id;
-\t  js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
-\t  fjs.parentNode.insertBefore(js, fjs);
-\t}(document, 'script', 'facebook-jssdk'));</script>
+\t\t(function(d, s, id) {
+\t\t\tvar js, fjs = d.getElementsByTagName(s)[0];
+\t\t\tif (d.getElementById(id)) return;
+\t\t\tjs = d.createElement(s); js.id = id;
+\t\t\tjs.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+\t\t\tfjs.parentNode.insertBefore(js, fjs);
+\t\t}(document, 'script', 'facebook-jssdk'));</script>
 
-\t<!-- Your Chat Plugin code -->
-\t<div class=\"fb-customerchat\"
-\t  attribution=setup_tool
-\t  page_id=\"159724108289019\"
-logged_in_greeting=\"Hi! How can we help you? \"
-logged_out_greeting=\"Hi! How can we help you? \">
+\t\t<!-- Your Chat Plugin code -->
+\t\t<div class=\"fb-customerchat\"
+\t\tattribution=setup_tool
+\t\tpage_id=\"159724108289019\"
+\t\tlogged_in_greeting=\"Hi! How can we help you? \"
+\t\tlogged_out_greeting=\"Hi! How can we help you? \">
 \t</div>
 \t<!-- Header section -->
-\t\t<nav class=\"navbar navbar-expand-lg sticky-top navbar-dark bg-dark\">
-\t\t\t<a class=\"navbar-brand\" href=\"#\"><img src=\"{{'assets/img/logo.jpg'|theme|resize(60,60)}}\" alt=\"\"></a>
-\t\t\t<button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarNavDropdown\" aria-controls=\"navbarNavDropdown\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
-\t\t\t  <span class=\"navbar-toggler-icon\"></span>
-\t\t\t</button>
-\t\t\t<div class=\"collapse navbar-collapse \" id=\"navbarNavDropdown\">
-\t\t\t  <ul class=\"navbar-nav  \">
+\t<nav class=\"navbar navbar-expand-lg sticky-top navbar-dark bg-dark\">
+\t\t<a class=\"navbar-brand\" href=\"#\"><img src=\"{{'assets/img/logo.png'|theme|resize(60,60)}}\" alt=\"\"></a>
+\t\t<button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarNavDropdown\" aria-controls=\"navbarNavDropdown\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
+\t\t\t<span class=\"navbar-toggler-icon\"></span>
+\t\t</button>
+\t\t<div class=\"collapse navbar-collapse \" id=\"navbarNavDropdown\">
+\t\t\t<ul class=\"navbar-nav  \">
 \t\t\t\t<li class=\"nav-item {% if this.page.id == 'home' %} active font-weight-bolder {% endif %}\">
-\t\t\t\t
-\t\t\t\t  <a class=\"nav-link\" href=\"{{'home'|page}}\">Home <span class=\"sr-only\">(current)</span></a>
+
+\t\t\t\t\t<a class=\"nav-link\" href=\"{{'home'|page}}\">Home <span class=\"sr-only\">(current)</span></a>
 \t\t\t\t</li>
 \t\t\t\t<li class=\"nav-item {% if this.page.id == 'games' %} active font-weight-bolder {% endif %}\">
-\t\t\t\t  <a class=\"nav-link\" href=\"{{'games'|page}}\">Games</a>
+\t\t\t\t\t<a class=\"nav-link\" href=\"{{'games'|page}}\">Games</a>
 \t\t\t\t</li>
 \t\t\t\t<li class=\"nav-item nav-item {% if this.page.id == 'tournament' %} active font-weight-bolder {% endif %}\">
-\t\t\t\t  <a class=\"nav-link\" href=\"{{'tournament'|page}}\">Tournaments</a>
+\t\t\t\t\t<a class=\"nav-link\" href=\"{{'tournament'|page}}\">Tournaments</a>
 \t\t\t\t</li>
-\t\t\t\t
-\t\t\t  </ul>
-\t\t\t</div>
-\t\t</nav>
-\t<!-- Header section end -->
-{% if this.page.id == 'home' %}
-{% page %}
-{% else %}
-<div style=\" margin-bottom: 0px; background: url({{'assets/img/banner-bg.jpg'|theme}});\" class=\"jumbotron jumbotron-fluid\">
-\t<div class=\"container\">
-\t\t<h1 style=\"text-shadow: black 2px 0px 2px;\" class=\"display-3 text-light font-weight-bolder\">{%if record.title %}{{record.title}} {%else%}{{this.page.title}}{% endif %}</h1>
-\t\t<p style=\"text-shadow: black 2px 0px 2px;\" class=\"lead text-light font-weight-bolder\">{{this.page.description}}</p>
+\t\t\t\t<li class=\"nav-item nav-item {% if this.page.id == 'video-gallery' %} active font-weight-bolder {% endif %}\">
+\t\t\t\t\t<a class=\"nav-link\" href=\"{{'video-gallery'|page}}\">Video Gallery</a>
+\t\t\t\t</li>
 \t\t
+\t\t\t</ul>
+\t\t</div>
+\t</nav>
+\t<!-- Header section end -->
+\t{% if this.page.id == 'home' %}
+\t{% page %}
+\t{% else %}
+\t<div style=\" margin-bottom: 0px; background: url({{'assets/img/banner-bg.jpg'|theme}});\" class=\"jumbotron jumbotron-fluid\">
+\t\t<div class=\"container\">
+\t\t\t<h1 style=\"text-shadow: black 2px 0px 2px;\" class=\"display-3 text-light font-weight-bolder\">{%if record.title %}{{record.title}} {%else%}{{this.page.title}}{% endif %}</h1>
+\t\t\t<p style=\"text-shadow: black 2px 0px 2px;\" class=\"lead text-light font-weight-bolder\">{{this.page.description}}</p>
+
+\t\t</div>
 \t</div>
-</div>
-{% page %}
-{% endif %}
+\t{% page %}
+\t{% endif %}
 \t<!-- Footer section -->
 \t<div class=\"footer-section\">
 \t\t<div class=\"container\">
@@ -579,7 +639,7 @@ logged_out_greeting=\"Hi! How can we help you? \">
 \t\t</div>
 \t</div>
 \t<!-- Footer section end -->
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t
+
 \t<!--====== Javascripts & Jquery ======-->
 \t<script src=\"{{'assets/js/jquery-3.2.1.min.js'|theme}}\"></script>
 \t<script src=\"{{'assets/js/bootstrap.min.js'|theme}}\"></script>
@@ -589,9 +649,35 @@ logged_out_greeting=\"Hi! How can we help you? \">
 \t<script src=\"{{'assets/js/jquery.magnific-popup.min.js'|theme}}\"></script>
 \t<script src=\"{{'assets/js/main.js'|theme}}\"></script>
 \t<script src=\"{{'assets/js/dropzone.js'|theme}}\"></script>
+\t<script src=\"{{'assets/js/venobox.min.js'|theme}}\"></script>
+\t<script src=\"https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js\"></script>
+\t<script src=\"https://kit.fontawesome.com/fa52e6fc3b.js\" crossorigin=\"anonymous\"></script>
+
+\t<script>
+\t\t\$(document).ready(function(){
+\t\t\t\$('.venobox').venobox({
+
+\t\t\t});
+\t\t});
+\t</script>
+\t<script>
+\t\tvar \$grid = \$('.play').isotope({
+\t\t  // options
+\t\t  itemSelector: '.item',
+\t\t  layoutMode: 'fitRows'
+\t\t  
+\t\t});
+\t\t\$('.filter button').on(\"click\", function(){
+\t\t\tvar value = \$(this).attr('data-name');
+\t\t\t//console.log('value',value);
+\t\t\t\$grid.isotope({
+\t\t\t\tfilter: value
+\t\t\t});\t\t
+\t\t})
+\t</script>
 \t{% framework extras %}
-    {% scripts %}
-\t</body>
+\t{% scripts %}
+</body>
 </html>", "F:\\website\\slgamers/themes/slgamers/layouts/main.htm", "");
     }
 }
