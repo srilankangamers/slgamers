@@ -1,4 +1,4 @@
-1594645606a:1:{s:15:"game-single.htm";a:12:{s:8:"fileName";s:15:"game-single.htm";s:7:"content";s:6085:"title = "Game single"
+1594646551a:1:{s:15:"game-single.htm";a:12:{s:8:"fileName";s:15:"game-single.htm";s:7:"content";s:6085:"title = "Game single"
 url = "/game-single/:slug"
 layout = "main"
 is_hidden = 0
