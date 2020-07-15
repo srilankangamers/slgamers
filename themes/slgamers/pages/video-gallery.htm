@@ -48,10 +48,10 @@ function onStart(){
 
 	<div class="row play text-center text-lg-left">
 		{% for yt in records %}
-		<div class="item col-lg-3 col-md-4 col-6 cont {% for cat in yt.categories %}{{cat.category|lowercase}} {% endfor %}">
-			<div class="card-img-overlay text-white"><p style="text-shadow: 10px 0px 10px black; font-size: 1.5vw;">{{html_limit(yt.title,50)}}</p></div>
-			<img src="https://img.youtube.com/vi/{{yt.path|replace({'https://youtu.be/':''})}}/hqdefault.jpg" alt="Avatar" class="image" style="width:100%">
-			<div class="middle">
+		<div class="item col-lg-3 col-md-4 col-12 cont {% for cat in yt.categories %}{{cat.category|lowercase}} {% endfor %}">
+			<div class="card-img-overlay text-white"><p style="text-shadow: 10px 0px 10px black;">{{html_limit(yt.title,50)}}</p></div>
+			<img src="https://img.youtube.com/vi/{{yt.path|replace({'https://youtu.be/':''})}}/hqdefault.jpg" alt="Avatar" class="image glow" style="width:100%">
+			<div class="middle ">
 				<a class="venobox" data-autoplay="true" data-vbtype="video" href="{{yt.path}}">
 					<div class="text"><i class="fa fa-play" aria-hidden="true"></i></div>
 				</a>

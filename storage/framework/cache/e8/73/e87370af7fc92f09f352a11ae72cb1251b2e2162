@@ -1,4 +1,4 @@
-1594646551a:1:{s:9:"games.htm";a:11:{s:8:"fileName";s:9:"games.htm";s:7:"content";s:1562:"title = "Games"
+1594823544a:1:{s:9:"games.htm";a:11:{s:8:"fileName";s:9:"games.htm";s:7:"content";s:1615:"title = "Games"
 url = "/games"
 layout = "main"
 description = "Our upcoming Games and Currently running Games with tournaments"
@@ -21,54 +21,52 @@ pageNumber = "{{ :page }}"
 {% set detailsPage = builderList.detailsPage %}
 {% set detailsKeyColumn = builderList.detailsKeyColumn %}
 {% set detailsUrlParameter = builderList.detailsUrlParameter %}
-
 <div class="container-fluid">
-  {% for record in records %}
-<div class="flip-card">
-  <div class="flip-card-inner">
-    {% if record.poster %}
-    <div class="flip-card-front">
-      <img src="{{record.poster.path|resize(300,300,{mode : 'crop'})}}" alt="Avatar" style="width:300px;height:300px;">
+  <hr class="mt-2 mb-5">
+  <div class="row text-center text-lg-left">
+    {% for record in records %}
+    <div class="col-lg-3 col-md-4 col-12">
+      <div class="card glow bg-dark" style="margin-bottom: 20px; height: 28rem;">
+        <img class="card-img-top" src="{{record.poster.path|resize(286,180,{'mode':'crop'})}}" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">{{record.title|ucfirst}}</h5>
+          <p class="card-text">{{html_limit(record.description|raw,100)}}</p>
+        </div>
+        <div class="card-body">
+          <a href="/game-single/{{record.slug}}" class="btn btn-primary float-right">Read More <i class="fas fa-angle-double-right hvr-forward"></i></a>
+        </div>
+      </div>
     </div>
-    {% else%}
-    <div class="flip-card-front">
-      <img src="{{'assets/img/no image.png'|theme}}" alt="Avatar" style="width:300px;height:300px;">
-    </div>
-    {% endif %}
-    <div class="flip-card-back">
-      <a href="/game-single/{{record.slug}}"><h3>{{record.title}}</h3></a>
-      <p>{{html_limit(record.description,100)|raw}}</p>
-      <p>{% if record.status == '1' %}Register Now! {% else %} Coming Soon! {% endif %}</p>
-    </div>
+    {% endfor %}
   </div>
+
+
 </div>
-{% endfor %}
-</div>";s:5:"mtime";i:1592044256;s:6:"markup";s:1135:"{% set records = builderList.records %}
+<!-- /.container -->";s:5:"mtime";i:1594804995;s:6:"markup";s:1188:"{% set records = builderList.records %}
 {% set displayColumn = builderList.displayColumn %}
 {% set noRecordsMessage = builderList.noRecordsMessage %}
 {% set detailsPage = builderList.detailsPage %}
 {% set detailsKeyColumn = builderList.detailsKeyColumn %}
 {% set detailsUrlParameter = builderList.detailsUrlParameter %}
-
 <div class="container-fluid">
-  {% for record in records %}
-<div class="flip-card">
-  <div class="flip-card-inner">
-    {% if record.poster %}
-    <div class="flip-card-front">
-      <img src="{{record.poster.path|resize(300,300,{mode : 'crop'})}}" alt="Avatar" style="width:300px;height:300px;">
+  <hr class="mt-2 mb-5">
+  <div class="row text-center text-lg-left">
+    {% for record in records %}
+    <div class="col-lg-3 col-md-4 col-12">
+      <div class="card glow bg-dark" style="margin-bottom: 20px; height: 28rem;">
+        <img class="card-img-top" src="{{record.poster.path|resize(286,180,{'mode':'crop'})}}" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">{{record.title|ucfirst}}</h5>
+          <p class="card-text">{{html_limit(record.description|raw,100)}}</p>
+        </div>
+        <div class="card-body">
+          <a href="/game-single/{{record.slug}}" class="btn btn-primary float-right">Read More <i class="fas fa-angle-double-right hvr-forward"></i></a>
+        </div>
+      </div>
     </div>
-    {% else%}
-    <div class="flip-card-front">
-      <img src="{{'assets/img/no image.png'|theme}}" alt="Avatar" style="width:300px;height:300px;">
-    </div>
-    {% endif %}
-    <div class="flip-card-back">
-      <a href="/game-single/{{record.slug}}"><h3>{{record.title}}</h3></a>
-      <p>{{html_limit(record.description,100)|raw}}</p>
-      <p>{% if record.status == '1' %}Register Now! {% else %} Coming Soon! {% endif %}</p>
-    </div>
+    {% endfor %}
   </div>
+
+
 </div>
-{% endfor %}
-</div>";s:4:"code";N;s:5:"title";s:5:"Games";s:3:"url";s:6:"/games";s:6:"layout";s:4:"main";s:11:"description";s:63:"Our upcoming Games and Currently running Games with tournaments";s:9:"is_hidden";s:1:"0";s:11:"builderList";a:9:{s:10:"modelClass";s:23:"Sunal\Games\Models\Game";s:5:"scope";s:1:"-";s:10:"scopeValue";s:12:"{{ :scope }}";s:13:"displayColumn";s:5:"title";s:16:"noRecordsMessage";s:16:"No records found";s:11:"detailsPage";s:11:"game-single";s:16:"detailsKeyColumn";s:4:"slug";s:19:"detailsUrlParameter";s:4:"slug";s:10:"pageNumber";s:11:"{{ :page }}";}}}
+<!-- /.container -->";s:4:"code";N;s:5:"title";s:5:"Games";s:3:"url";s:6:"/games";s:6:"layout";s:4:"main";s:11:"description";s:63:"Our upcoming Games and Currently running Games with tournaments";s:9:"is_hidden";s:1:"0";s:11:"builderList";a:9:{s:10:"modelClass";s:23:"Sunal\Games\Models\Game";s:5:"scope";s:1:"-";s:10:"scopeValue";s:12:"{{ :scope }}";s:13:"displayColumn";s:5:"title";s:16:"noRecordsMessage";s:16:"No records found";s:11:"detailsPage";s:11:"game-single";s:16:"detailsKeyColumn";s:4:"slug";s:19:"detailsUrlParameter";s:4:"slug";s:10:"pageNumber";s:11:"{{ :page }}";}}}

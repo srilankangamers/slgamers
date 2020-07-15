@@ -14,6 +14,10 @@ navigation:
                 label: Tournaments
                 url: sunal/games/tournaments
                 icon: icon-list
+            side-menu-item2:
+                label: Maps
+                url: sunal/games/maps
+                icon: icon-map-marker
     main-menu-item2:
         label: Registrations
         url: sunal/games/registrations

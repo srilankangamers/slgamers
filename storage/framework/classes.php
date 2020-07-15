@@ -112,4 +112,6 @@
   'sunal\\games\\Controllers\\categoryboxes' => 'plugins\\sunal\\games\\controllers\\categoryboxes.php',
   'Sunal\\Games\\Models\\CategoryBox' => 'plugins\\sunal\\games\\models\\CategoryBox.php',
   'Sunal\\Games\\FormWidgets\\Categorybox' => 'plugins\\sunal\\games\\formwidgets\\Categorybox.php',
+  'sunal\\games\\Controllers\\maps' => 'plugins\\sunal\\games\\controllers\\maps.php',
+  'Sunal\\Games\\Models\\Map' => 'plugins\\sunal\\games\\models\\Map.php',
 );

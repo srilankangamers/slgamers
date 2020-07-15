@@ -1,0 +1,4 @@
+title: Maps
+modelClass: Sunal\Games\Models\Map
+toolbar:
+    buttons: reorder_toolbar

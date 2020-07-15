@@ -20,44 +20,40 @@ pageNumber = "{{ :page }}"
 {% set detailsPage = builderList.detailsPage %}
 {% set detailsKeyColumn = builderList.detailsKeyColumn %}
 {% set detailsUrlParameter = builderList.detailsUrlParameter %}
-<div class="container">
-    <div class="accordion" id="accordionExample">
-        {% for record in records %}
-        <div class="card">
-              <div class="card-header" id="heading{{record.id}}">
-                <h2 class="mb-0">
-                  <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapse{{record.id}}" aria-expanded="true" aria-controls="collapse{{record.id}}">
-                    {% if record.availability == 0 %}<img style="width: 50px; height: 54px;" src="{{'assets/img/soon.png'|theme}}" alt="">{% else %}<img style="width: 50px; height: 54px;" src="{{'assets/img/register.png'|theme}}" alt="">{% endif %}
-                    {{record.tournament_title}}
-                  </button>
-                </h2>
-              </div> 
-          
-              <div id="collapse{{record.id}}" class="collapse hide" aria-labelledby="heading{{record.id}}" data-parent="#accordionExample">
-                <div class="card-body">
-                   <div class="float-left"><img style="width: 300px; height: 300px; margin-right: 10px;" src="{{record.poster.path|resize(300,300,{mode:'crop'})}}" alt=""></div> 
-                   <div>{{ html_limit(record.description,800)|raw}}</div> 
-                </div>
-              </div>
-            </div>
-        {% endfor %}
-        
-        </div>
-{% if records.lastPage > 1 %}
-    <ul class="pagination">
-        {% if records.currentPage > 1 %}
-            <li><a href="{{ this.page.baseFileName|page({ (pageParam): (records.currentPage-1) }) }}">&larr; Prev</a></li>
-        {% endif %}
 
-        {% for page in 1..records.lastPage %}
-            <li class="{{ records.currentPage == page ? 'active' : null }}">
-                <a href="{{ this.page.baseFileName|page({ (pageParam): page }) }}">{{ page }}</a>
-            </li>
+<div class="container-fluid">
+  <hr class="mt-2 mb-5">
+  <div class="row text-center text-lg-left">
+    {% for record in records %}
+    <div class="col-lg-3 col-md-4 col-6=12">
+      <div class="card bg-db glow" style="margin-bottom: 10px;">
+       <img class="card-img-top" src="{{record.poster.path|resize(286,180,{'mode':'crop'})}}" alt="Card image cap">
+       <div class="card-body">
+        <h5 style="height: 3rem;" class="card-title text-white fonttitle">{{record.tournament_title}}</h5>
+        <p class="card-text fontsub">{{html_limit(record.description,50)}}</p>
+      </div>
+      <table class="table table-striped table-dark fontsub">
+        <thead>
+          <tr>
+            <th scope="col">Organized By</th>
+            <th scope="col"><a class="effect-shine text-white" target="_blank" href="https://www.facebook.com/slgamerss/">{{record.organizer}}</a></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            {# second table content #}
+          </tr>
+        </tbody>
+      </table>
+      <div class="card-body">
+        {% for game in record.games %}
+            <a href="/game-single/{{game.slug}}" class="text-white card-link effect-shine fontsub btn float-right btn-outline-primary">Register <i class="fas fa-user-edit"></i></a>
         {% endfor %}
-
-        {% if records.lastPage > records.currentPage %}
-            <li><a href="{{ this.page.baseFileName|page({ (pageParam): (records.currentPage+1) }) }}">Next &rarr;</a></li>
-        {% endif %}
-    </ul>
-{% endif %}
+      </div>
+    </div>    
+  </div>
+  {% endfor %}
 </div>
+</div>
+
+<!-- /.container -->

@@ -21,26 +21,25 @@ pageNumber = "{{ :page }}"
 {% set detailsPage = builderList.detailsPage %}
 {% set detailsKeyColumn = builderList.detailsKeyColumn %}
 {% set detailsUrlParameter = builderList.detailsUrlParameter %}
-
 <div class="container-fluid">
-  {% for record in records %}
-<div class="flip-card">
-  <div class="flip-card-inner">
-    {% if record.poster %}
-    <div class="flip-card-front">
-      <img src="{{record.poster.path|resize(300,300,{mode : 'crop'})}}" alt="Avatar" style="width:300px;height:300px;">
+  <hr class="mt-2 mb-5">
+  <div class="row text-center text-lg-left">
+    {% for record in records %}
+    <div class="col-lg-3 col-md-4 col-12">
+      <div class="card glow bg-dark" style="margin-bottom: 20px; height: 28rem;">
+        <img class="card-img-top" src="{{record.poster.path|resize(286,180,{'mode':'crop'})}}" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">{{record.title|ucfirst}}</h5>
+          <p class="card-text">{{html_limit(record.description|raw,100)}}</p>
+        </div>
+        <div class="card-body">
+          <a href="/game-single/{{record.slug}}" class="btn btn-primary float-right">Read More <i class="fas fa-angle-double-right hvr-forward"></i></a>
+        </div>
+      </div>
     </div>
-    {% else%}
-    <div class="flip-card-front">
-      <img src="{{'assets/img/no image.png'|theme}}" alt="Avatar" style="width:300px;height:300px;">
-    </div>
-    {% endif %}
-    <div class="flip-card-back">
-      <a href="/game-single/{{record.slug}}"><h3>{{record.title}}</h3></a>
-      <p>{{html_limit(record.description,100)|raw}}</p>
-      <p>{% if record.status == '1' %}Register Now! {% else %} Coming Soon! {% endif %}</p>
-    </div>
+    {% endfor %}
   </div>
+
+
 </div>
-{% endfor %}
-</div>
+<!-- /.container -->

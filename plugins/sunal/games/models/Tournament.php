@@ -34,4 +34,19 @@ class Tournament extends Model
     
     protected $jsonable = ['platform','winners'];
 
+    public $belongsToMany = [
+
+     'maps' => [
+      'Sunal\Games\Models\Map',
+       'table' => 'sunal_games_map_tournaments',
+       'order' => 'name'
+     ],
+     'games' => [
+
+            'Sunal\Games\Models\Game',
+            'table' => 'sunal_games_games_tournaments',
+            'order' => 'title'
+        ]
+   ];
+
 }

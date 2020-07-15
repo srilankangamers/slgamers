@@ -24,27 +24,23 @@ pageNumber = "{{ :page }}"
 [registerform]
 ==
 <?
-  use Sunal\Games\Models\Rule;
-  
-  function onStart(){
-    $this['rules'] = Rule::get();
+use Sunal\Games\Models\Rule;
+use Sunal\Games\Models\Tournament;
 
-  }
+function onStart(){
+  $this['rules'] = Rule::get();
+  $this['tournaments'] = Tournament::get();
+
+}
 
 ?>
 ==
 {% set record = builderDetails.record %}
 {% set displayColumn = builderDetails.displayColumn %}
 {% set notFoundMessage = builderDetails.notFoundMessage %}
-
-{{dump(record)}}
 {% for tmnt in record.tournaments %}
 <!-- Page top section -->
-<section class="page-top-section set-bg" data-setbg="{{tmnt.poster.path}}">
-  <div style="margin-top: -150px;" class="container">
-    <h2>Register Now!</h2>
-  </div>
-</section>
+
 <!-- Page top section end -->
 
 <!-- Blog section -->
@@ -54,18 +50,32 @@ pageNumber = "{{ :page }}"
       <div class="col-lg-8">
         <div class="blog-post single-post">
           <img src="img/blog/1.jpg" alt="">
-          <h3>{{tmnt.tournament_title}}</h3>
+          <div>
+            <img style="margin-right: 10px;" src="{{tmnt.poster.path|resize(60,60,{'mode':'crop'})}}" class="rounded float-left">
+            <h3>{{tmnt.tournament_title}}</h3>
+          </div>
           <p style="display: inline-block; margin-right: 10px;">Tournament Date</p><div class="post-date">{{tmnt.end_date}}</div>
+          {% for map in tmnt.maps %}
+          <div>
+            <h3>Playing Map</h3>
+            <div style="width: 200px; height: 200px;" class="card bg-transparent text-white">
+              <img src="{{map.map_img|resize(200,200,{'mode':'crop'})}}" class="rounded" alt="...">
+              <div class="card-img-overlay">
+                <h5 class="card-title text-center">{{map.name}}</h5>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
           <div class="text-white">{{tmnt.description|raw}}</div>
         </div>
       </div>
       <div class="col-lg-4 sidebar">
         <div class="sb-widget">
           <h2 class="sb-title text-uppercase"><i class="fa fa-gamepad" aria-hidden="true"></i> Other Games</h2>
-          <ul class="sb-cata-list list-group">
+          <ul class="sb-cata-list list-group glow">
             {% for record in records %}
-            <li class="list-group-item {% if record.slug == this.param['slug'] %} list-group-item-action active {% endif %}"><a style="color: black;" href="/game-single/{{record.slug}}">{% if record.slug == this.param['slug'] %} <i class="fa fa-arrow-right"></i> {{record.title}}</a> {% else %} {{record.title}}</a> {% endif %}</li>
-              {% endfor %}
+            <li class=" list-group-item bg-transparent {% if record.slug == this.param['slug'] %} list-group-item-action glow {% endif %}"><a class="text-white" style="color: black;" href="/game-single/{{record.slug}}">{% if record.slug == this.param['slug'] %} <i class="fa fa-arrow-right"></i> {{record.title}}</a> {% else %} {{record.title}}</a> {% endif %}</li>
+            {% endfor %}
           </ul>
         </div>
         {% if tmnt.type == 'Paid'%}
@@ -81,13 +91,25 @@ pageNumber = "{{ :page }}"
         {% endif %}
         <div class="sb-widget">
           <h2 class="sb-title text-uppercase"><i class="fa fa-money" aria-hidden="true"></i> Winners </h2>
-            {% for w in tmnt.winners %}           
-            <ul class="list-group list-group-horizontal">
-              <li class="list-group-item flex-fill">{{w.placement}}</li>
-              <li class="list-group-item flex-fill">{{w.player_name}}</li>
-              <li class="list-group-item flex-fill">{{w.prize}}</li>
-             </ul> 
+          <table class="table text-white glow">
+            <thead>
+              <tr>
+                <th scope="col">Placement</th>
+                <th scope="col">Player Name</th>
+                <th scope="col">Price</th>
+              </tr>
+            </thead>
+            {% for w in tmnt.winners %}            
+            <tbody>
+              <tr>
+                <th scope="row">{{w.placement}}</th>
+                <td>{{w.player_name}}</td>
+                <td>{{w.prize}}</td>
+              </tr>
+            </tbody>
+
             {% endfor %}    
+          </table>
         </div>
         
       </div>
@@ -97,29 +119,29 @@ pageNumber = "{{ :page }}"
 <!-- Blog section end -->
 <div class="jumbotron">
   <div class="row">
-    <div class="col-lg-6">
+    <div class="col-lg-6 col-md-4">
       <form data-request="onSave" data-request-files data-request-flash>
         <input type="hidden" name="_handler" value="onSave">
         {{ form_token() }}
         {{ form_sessionkey() }}
         <h2>Register Now</h2>
         <br>
-          <div class="form-row">
-            <div class="form-group col-md-6">
-              <label> Player Name</label>
-              <input type="text" class="form-control" name="name">
-            </div>
-            <div class="form-group col-md-6">
-              <label> Contact Number (Whatsapp)</label>
-              <input type="text" class="form-control" name="contact">
-            </div>
-            <div class="form-group col-md-6">
-              <label>Player IGN</label>
-              <input type="text" class="form-control" name="ign">
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label> Player Name</label>
+            <input type="text" class="form-control" name="name">
           </div>
           <div class="form-group col-md-6">
-              <label>Game Account ID</label>
-              <input type="text" class="form-control" name="game_id">
+            <label> Contact Number (Whatsapp)</label>
+            <input type="text" class="form-control" name="contact">
+          </div>
+          <div class="form-group col-md-6">
+            <label>Player IGN</label>
+            <input type="text" class="form-control" name="ign">
+          </div>
+          <div class="form-group col-md-6">
+            <label>Game Account ID</label>
+            <input type="text" class="form-control" name="game_id">
           </div>
           {% for t in record.tournaments %}
           
@@ -133,29 +155,33 @@ pageNumber = "{{ :page }}"
           </div>
           {% endif %}
           {% endfor %}
-          </div>
-          <button type="submit" class="btn btn-primary">Register</button>
-        </form>
+        </div>
+        <button type="submit" class="btn btn-primary">Register</button>
+      </form>
     </div>
-    <div class="col-lg-6" style="overflow-y: scroll; height: 600px;">
+    <div class="col-lg-6 col-md-4" style="overflow-y: scroll; height: 600px;">
       <h2>RULES</h2>
       <br>
       {% for rule in rules %}
-        {{rule.gen_rules|raw}}
-        <br>
-        {{rule.game_rules|raw}}
-        <br>
-        {{rule.tec|raw}}
-        <br>
-        {{rule.bans|raw}}
-        <br>
-        {% if tmnt.type == 'Paid' %}
-        {{rule.bank|raw}}
-        {% endif%}
+      {{rule.gen_rules|raw}}
+      <br>
+      {{rule.game_rules|raw}}
+      <br>
+      {{rule.tec|raw}}
+      <br>
+      {{rule.bans|raw}}
+      <br>
+      {% if tmnt.type == 'Paid' %}
+      <h2>Bank Details For Payment</h2>
+      <p>Bank Name</p> {{rule.bank_name}}<br>
+      <p>Bank Account Holder Name</p> {{rule.bank_user_name}}<br>
+      <p>Bank Account Number</p> {{rule.bank_user_acc}}<br>
+
+      {% endif%}
       {% endfor %}
     </div>
   </div>
-  </div>
+</div>
 
-    
+
 {% endfor %}

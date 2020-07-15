@@ -174,3 +174,18 @@
 1.0.59:
     - 'Updated table sunal_games_categories_youtube'
     - builder_table_update_sunal_games_categories_youtube.php
+1.0.60:
+    - 'Updated table sunal_games_rules'
+    - builder_table_update_sunal_games_rules_2.php
+1.0.61:
+    - 'Created table sunal_games_tournaments_map'
+    - builder_table_create_sunal_games_tournaments_map.php
+1.0.62:
+    - 'Updated table sunal_games_tournaments_map'
+    - builder_table_update_sunal_games_map_tournaments.php
+1.0.63:
+    - 'Created table sunal_games_map'
+    - builder_table_create_sunal_games_map.php
+1.0.64:
+    - 'Updated table sunal_games_tournaments'
+    - builder_table_update_sunal_games_tournaments_12.php

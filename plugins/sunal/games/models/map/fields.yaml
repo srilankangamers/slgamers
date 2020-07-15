@@ -1,0 +1,16 @@
+fields:
+    name:
+        label: 'Map Name'
+        span: auto
+        type: text
+    map_img:
+        label: 'Map Image'
+        mode: image
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: auto
+        imageWidth: '200'
+        imageHeight: '200'
+        type: fileupload

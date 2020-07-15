@@ -1,0 +1,10 @@
+name: Maps
+form: $/sunal/games/models/map/fields.yaml
+modelClass: Sunal\Games\Models\Map
+defaultRedirect: sunal/games/maps
+create:
+    redirect: 'sunal/games/maps/update/:id'
+    redirectClose: sunal/games/maps
+update:
+    redirect: sunal/games/maps
+    redirectClose: sunal/games/maps

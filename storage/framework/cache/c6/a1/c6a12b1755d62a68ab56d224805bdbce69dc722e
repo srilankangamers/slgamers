@@ -1,4 +1,4 @@
-1594646551a:1:{s:8:"main.htm";a:6:{s:8:"fileName";s:8:"main.htm";s:7:"content";s:9034:"==
+1594823544a:1:{s:8:"main.htm";a:6:{s:8:"fileName";s:8:"main.htm";s:7:"content";s:9132:"==
 <!DOCTYPE html>
 <html lang="zxx">
 <head>
@@ -9,7 +9,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	
 	<!-- Favicon -->
-	<link href="img/favicon.ico" rel="shortcut icon"/>
+	<link href="{{'assets/img/logo.png'|theme|resize(60,60)}}" rel="shortcut icon"/>
 
 	<!-- Google font -->
 	<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i&display=swap" rel="stylesheet">
@@ -70,7 +70,7 @@
 	</div>
 	<!-- Header section -->
 	<nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-dark">
-		<a class="navbar-brand" href="#"><img src="{{'assets/img/logo.png'|theme|resize(60,60)}}" alt=""></a>
+		<a class="navbar-brand" href="{{'home'|page}}"><img src="{{'assets/img/logo.png'|theme|resize(60,60)}}" alt=""></a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
 		</button>
@@ -98,9 +98,11 @@
 	{% page %}
 	{% else %}
 	<div style=" margin-bottom: 0px; background: url({{'assets/img/banner-bg.jpg'|theme}});" class="jumbotron jumbotron-fluid">
-		<div class="container">
-			<h1 style="text-shadow: black 2px 0px 2px;" class="display-3 text-light font-weight-bolder">{%if record.title %}{{record.title}} {%else%}{{this.page.title}}{% endif %}</h1>
+		<div class="container-fluid">
+			<div class="col-12 col-sm-12 text-left">
+				<h2 style="text-shadow: black 2px 0px 2px;" class=" text-light font-weight-bolder">{%if record.title %}{{record.title}} {%else%}{{this.page.title}}{% endif %}</h2>
 			<p style="text-shadow: black 2px 0px 2px;" class="lead text-light font-weight-bolder">{{this.page.description}}</p>
+			</div>
 
 		</div>
 	</div>
@@ -239,7 +241,7 @@
 	{% framework extras %}
 	{% scripts %}
 </body>
-</html>";s:5:"mtime";i:1594639643;s:6:"markup";s:9030:"<!DOCTYPE html>
+</html>";s:5:"mtime";i:1594818096;s:6:"markup";s:9128:"<!DOCTYPE html>
 <html lang="zxx">
 <head>
 	<title>{{this.page.title}}</title>
@@ -249,7 +251,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	
 	<!-- Favicon -->
-	<link href="img/favicon.ico" rel="shortcut icon"/>
+	<link href="{{'assets/img/logo.png'|theme|resize(60,60)}}" rel="shortcut icon"/>
 
 	<!-- Google font -->
 	<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i&display=swap" rel="stylesheet">
@@ -310,7 +312,7 @@
 	</div>
 	<!-- Header section -->
 	<nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-dark">
-		<a class="navbar-brand" href="#"><img src="{{'assets/img/logo.png'|theme|resize(60,60)}}" alt=""></a>
+		<a class="navbar-brand" href="{{'home'|page}}"><img src="{{'assets/img/logo.png'|theme|resize(60,60)}}" alt=""></a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
 		</button>
@@ -338,9 +340,11 @@
 	{% page %}
 	{% else %}
 	<div style=" margin-bottom: 0px; background: url({{'assets/img/banner-bg.jpg'|theme}});" class="jumbotron jumbotron-fluid">
-		<div class="container">
-			<h1 style="text-shadow: black 2px 0px 2px;" class="display-3 text-light font-weight-bolder">{%if record.title %}{{record.title}} {%else%}{{this.page.title}}{% endif %}</h1>
+		<div class="container-fluid">
+			<div class="col-12 col-sm-12 text-left">
+				<h2 style="text-shadow: black 2px 0px 2px;" class=" text-light font-weight-bolder">{%if record.title %}{{record.title}} {%else%}{{this.page.title}}{% endif %}</h2>
 			<p style="text-shadow: black 2px 0px 2px;" class="lead text-light font-weight-bolder">{{this.page.description}}</p>
+			</div>
 
 		</div>
 	</div>

@@ -1,47 +1,47 @@
 fields:
     tournament_title:
         label: Title
-        span: auto
+        span: left
         type: text
     platform:
         label: Platform
-        span: auto
         options:
             PC: PC
             Mobile: Mobile
             Emulator: Emulator
+        span: right
         type: checkboxlist
     description:
         label: Description
         size: large
-        span: auto
+        span: left
         type: richeditor
     type:
         label: 'Free or Paid'
-        span: auto
         options:
             Paid: Paid
             Free: Free
+        span: right
         type: balloon-selector
     slug:
         label: Slug
-        span: auto
+        span: left
         preset:
             field: tournament_title
             type: slug
         type: text
     first_place:
         label: 'First Place'
-        span: auto
+        span: right
         type: number
     end_date:
         label: Date
         mode: date
-        span: auto
+        span: left
         type: datepicker
     second_place:
         label: 'Second Place'
-        span: auto
+        span: right
         type: number
     third_place:
         label: 'Third Place'
@@ -53,19 +53,29 @@ fields:
         type: number
     poster:
         label: Poster
-        span: auto
         mode: image
+        imageWidth: '300'
+        imageHeight: '300'
         useCaption: true
         thumbOptions:
             mode: crop
             extension: auto
-        imageWidth: '300'
-        imageHeight: '300'
+        span: left
         type: fileupload
     availability:
         label: Availability
-        span: auto
+        span: right
         type: switch
+    maps:
+        label: Maps
+        nameFrom: name
+        descriptionFrom: description
+        span: right
+        type: relation
+    organizer:
+        label: Organizer
+        span: left
+        type: text
 tabs:
     fields:
         winners:

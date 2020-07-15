@@ -1,4 +1,4 @@
-1594646551a:1:{s:17:"video-gallery.htm";a:10:{s:8:"fileName";s:17:"video-gallery.htm";s:7:"content";s:3014:"title = "Video Gallery"
+1594823977a:1:{s:17:"video-gallery.htm";a:10:{s:8:"fileName";s:17:"video-gallery.htm";s:7:"content";s:3003:"title = "Video Gallery"
 url = "/video-gallery/:page?"
 layout = "main"
 is_hidden = 0
@@ -48,10 +48,10 @@ function onStart(){
 
 	<div class="row play text-center text-lg-left">
 		{% for yt in records %}
-		<div class="item col-lg-3 col-md-4 col-6 cont {% for cat in yt.categories %}{{cat.category|lowercase}} {% endfor %}">
-			<div class="card-img-overlay text-white"><p style="text-shadow: 10px 0px 10px black; font-size: 1.5vw;">{{html_limit(yt.title,50)}}</p></div>
-			<img src="https://img.youtube.com/vi/{{yt.path|replace({'https://youtu.be/':''})}}/hqdefault.jpg" alt="Avatar" class="image" style="width:100%">
-			<div class="middle">
+		<div class="item col-lg-3 col-md-4 col-12 cont {% for cat in yt.categories %}{{cat.category|lowercase}} {% endfor %}">
+			<div class="card-img-overlay text-white"><p style="text-shadow: 10px 0px 10px black;">{{html_limit(yt.title,50)}}</p></div>
+			<img src="https://img.youtube.com/vi/{{yt.path|replace({'https://youtu.be/':''})}}/hqdefault.jpg" alt="Avatar" class="image glow" style="width:100%">
+			<div class="middle ">
 				<a class="venobox" data-autoplay="true" data-vbtype="video" href="{{yt.path}}">
 					<div class="text"><i class="fa fa-play" aria-hidden="true"></i></div>
 				</a>
@@ -84,7 +84,7 @@ function onStart(){
 	</nav>
 </div>
 
-<!-- /.container -->";s:5:"mtime";i:1594645037;s:6:"markup";s:2550:"{% set records = builderList.records %}
+<!-- /.container -->";s:5:"mtime";i:1594823376;s:6:"markup";s:2539:"{% set records = builderList.records %}
 {% set displayColumn = builderList.displayColumn %}
 {% set noRecordsMessage = builderList.noRecordsMessage %}
 {% set detailsPage = builderList.detailsPage %}
@@ -109,10 +109,10 @@ function onStart(){
 
 	<div class="row play text-center text-lg-left">
 		{% for yt in records %}
-		<div class="item col-lg-3 col-md-4 col-6 cont {% for cat in yt.categories %}{{cat.category|lowercase}} {% endfor %}">
-			<div class="card-img-overlay text-white"><p style="text-shadow: 10px 0px 10px black; font-size: 1.5vw;">{{html_limit(yt.title,50)}}</p></div>
-			<img src="https://img.youtube.com/vi/{{yt.path|replace({'https://youtu.be/':''})}}/hqdefault.jpg" alt="Avatar" class="image" style="width:100%">
-			<div class="middle">
+		<div class="item col-lg-3 col-md-4 col-12 cont {% for cat in yt.categories %}{{cat.category|lowercase}} {% endfor %}">
+			<div class="card-img-overlay text-white"><p style="text-shadow: 10px 0px 10px black;">{{html_limit(yt.title,50)}}</p></div>
+			<img src="https://img.youtube.com/vi/{{yt.path|replace({'https://youtu.be/':''})}}/hqdefault.jpg" alt="Avatar" class="image glow" style="width:100%">
+			<div class="middle ">
 				<a class="venobox" data-autoplay="true" data-vbtype="video" href="{{yt.path}}">
 					<div class="text"><i class="fa fa-play" aria-hidden="true"></i></div>
 				</a>

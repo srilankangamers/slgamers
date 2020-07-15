@@ -14,13 +14,24 @@ fields:
         size: large
         span: auto
         type: richeditor
-    bank:
-        label: 'Bank Details'
-        span: auto
-        size: large
-        type: richeditor
     tec:
         label: 'Technical Problems'
         span: auto
         size: large
         type: richeditor
+    section1:
+        label: 'Bank Details'
+        span: full
+        type: section
+    bank_name:
+        label: 'Bank Name'
+        span: auto
+        type: text
+    bank_user_name:
+        label: 'Account Holder Name'
+        span: auto
+        type: text
+    bank_user_acc:
+        label: 'Holder Account number'
+        span: auto
+        type: text

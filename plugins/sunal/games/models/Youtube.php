@@ -35,6 +35,7 @@ class Youtube extends Model
        'table' => 'sunal_games_categories_youtube',
        'order' => 'category'
      ]
+
    ];
 
  }

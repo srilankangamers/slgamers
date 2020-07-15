@@ -1,0 +1,7 @@
+columns:
+    name:
+        label: 'Map Name'
+        type: text
+        searchable: true
+        invisible: false
+        sortable: true
