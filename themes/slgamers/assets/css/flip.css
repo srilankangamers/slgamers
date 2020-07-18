@@ -3,6 +3,14 @@
   box-shadow: 1px 1px 2px black, 0 0 10px blue, 0 0 5px darkblue;
 }
 
+.tb-glow {
+  box-shadow: 0 -1px 1px -2px cyan, 0 0 5px cyan, 0 0 5px darkblue;
+}
+
+a.txt-glow:hover {
+  text-shadow: 0px 0px 2px black, 0 0 10px cyan, 0 0 5px darkblue;
+}
+
 /* effect-shine */
 a.effect-shine:hover {
   -webkit-mask-image: linear-gradient(-75deg, rgba(0,0,0,.6) 30%, #000 50%, rgba(0,0,0,.6) 70%);
@@ -18,4 +26,86 @@ a.effect-shine:hover {
   to {
     -webkit-mask-position: -50%;
   }
+}
+
+.effect-shine-still {
+  -webkit-mask-image: linear-gradient(-75deg, rgba(0,0,0,.6) 30%, #000 50%, rgba(0,0,0,.6) 70%);
+  -webkit-mask-size: 200%;
+  animation: shine 2s infinite;
+}
+
+@-webkit-keyframes shine {
+  from {
+    -webkit-mask-position: 150%;
+  }
+  
+  to {
+    -webkit-mask-position: -50%;
+  }
+}
+.cont {
+  position: relative;
+  width: 100% !important;
+  margin-bottom: 10px;
+}
+
+.image {
+  opacity: 1;
+  display: block;
+  width: 100%!important;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.cont:hover .image {
+  
+}
+
+.cont:hover .middle {
+  opacity: 1;
+}
+
+.text {
+  background-color: red;
+  color: white;
+  font-size: 3vh;
+  padding: 16px 32px;
+  border-radius: 30px;
+  text-align: center;
+}
+
+.item {
+
+  width: 25%;
+  margin-bottom: 20px;
+
+}
+.gradient{
+   background-image: url('../img/bg.jpg');
+   background-repeat: repeat;
+
+}
+.bg-db{
+
+   background-color: #1f0330;
+}
+
+.fonttitle{
+font-family: Lucida Grande,Lucida Sans Unicode,Lucida Sans,Geneva,Verdana,sans-serif; 
+}
+
+.fontsub{
+font-family: Rockwell Extra Bold,Rockwell Bold,monospace;
 }

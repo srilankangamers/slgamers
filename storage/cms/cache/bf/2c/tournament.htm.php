@@ -1,5 +1,12 @@
 <?php 
-class Cms5f0f120e1857c734888615_5ff821da292b287e1351de0cbcc59786Class extends Cms\Classes\PageCode
+use Sunal\Games\Models\Register;use Sunal\Games\Models\Tournament;use Sunal\Games\Models\Game;class Cms5f12a23013dba026851536_712c350bf31a1dbaff51941beb55c8dcClass extends Cms\Classes\PageCode
 {
 
+
+
+public function onStart(){
+  $this['regist'] = Register::get();
+  $this['games'] = Game::get();
+  $this['tt'] = Tournament::get();
+}
 }

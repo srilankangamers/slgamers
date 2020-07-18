@@ -189,3 +189,39 @@
 1.0.64:
     - 'Updated table sunal_games_tournaments'
     - builder_table_update_sunal_games_tournaments_12.php
+1.0.65:
+    - 'Drop table sunal_games_registration_tournaments'
+    - builder_table_delete_sunal_games_registration_tournaments.php
+1.0.66:
+    - 'Created table sunal_games_registration_tournaments'
+    - builder_table_create_sunal_games_registration_tournaments.php
+1.0.67:
+    - 'Updated table sunal_games_registration_tournaments'
+    - builder_table_update_sunal_games_registration_tournaments.php
+1.0.68:
+    - 'Drop table sunal_games_registration_tournaments'
+    - builder_table_delete_sunal_games_registration_tournaments_2.php
+1.0.69:
+    - 'Updated table sunal_games_registration'
+    - builder_table_update_sunal_games_registration_3.php
+1.0.70:
+    - 'Updated table sunal_games_registration_tournaments'
+    - builder_table_update_sunal_games_register_tournaments.php
+1.0.71:
+    - 'Updated table sunal_games_registration_tournaments'
+    - builder_table_update_sunal_games_registration_tournaments_2.php
+1.0.72:
+    - 'Updated table sunal_games_registration_tournaments'
+    - builder_table_update_sunal_games_registration_tournaments_3.php
+1.0.73:
+    - 'Updated table sunal_games_registration_tournaments'
+    - builder_table_update_sunal_games_registration_tournaments_4.php
+1.0.74:
+    - 'Updated table sunal_games_registration_tournaments'
+    - builder_table_update_sunal_games_registration_tournaments_5.php
+1.0.75:
+    - 'Updated table sunal_games_registration_tournaments'
+    - builder_table_update_sunal_games_registration_tournaments_6.php
+1.0.76:
+    - 'Updated table sunal_games_registration_tournaments'
+    - builder_table_update_sunal_games_registration_tournaments_7.php

@@ -1,0 +1,80 @@
+title = "Registration"
+url = "/registration/:slug"
+layout = "main"
+is_hidden = 0
+
+[builderDetails]
+modelClass = "Sunal\Games\Models\Tournament"
+identifierValue = "{{ :slug }}"
+modelKeyColumn = "slug"
+displayColumn = "tournament_title"
+notFoundMessage = "Record not found"
+
+[registerform]
+==
+<?php
+use Sunal\Games\Models\Rule;
+use Sunal\Games\Models\Register;
+
+function onStart(){
+  $this['regs'] = Register::get();
+
+}
+?>
+==
+{% set record = builderDetails.record %}
+{% set displayColumn = builderDetails.displayColumn %}
+{% set notFoundMessage = builderDetails.notFoundMessage %}
+{% if record %}
+<div class="container">
+	<div class="row">
+		<div class="col-md-3"></div>
+		<div class="col-md-6 glow" style="margin-top: 10px; margin-bottom: 10px;">
+			<form data-request="onSave" data-request-files data-request-flash>
+		<input type="hidden" name="_handler" value="onSave">
+		{{ form_token() }}
+		{{ form_sessionkey() }}
+		<h2>Register Now</h2>
+		<br>
+		<div class="form-row">
+			<div class="form-group col-md-12">
+				<label> Player Name</label>
+				<input type="text" class="form-control" name="name">
+			</div>
+			<div class="form-group col-md-12">
+				<label> Contact Number (Whatsapp)</label>
+				<input type="text" class="form-control" name="contact">
+			</div>
+			<div class="form-group col-md-12">
+				<label>Player IGN</label>
+				<input type="text" class="form-control" name="ign">
+			</div>
+			<div class="form-group col-md-12">
+				<label>Game Account ID</label>
+				<input type="text" class="form-control" name="game_id">
+			</div>
+			<div class="form-group" hidden="true">
+				<label for="exampleFormControlSelect1">Select Tournament</label>
+				<select name="tour_id" class="form-control float-right">
+					
+					<option id="tname" value="{{record.id}}">{{record.tournament_title}} ({{record.type}})</option>
+					
+				</select>
+			</div>
+			{% if record.type == 'Paid' %}
+				<div class="form-group col-md-12">
+				<label>Upload Bank Slip (Only For Paid Tournaments)</label>
+				<input type="file" class="form-control" name="bankslip" accept="image/*" data-request="onUpload" data-request-files data-request-flash >
+				<br>
+				<div style="width: 150px; height: 150px;" id="imageresult">No Image to Preview</div>
+				<br>
+			</div>
+			{% endif %}
+			<div class="col-md-9"></div>
+			<div class="col-md-3"><button type="submit" class="btn float-right btn-primary">Register <i class="fas fa-user-edit"></i></button></div>
+			</div>
+		</form>
+		</div>
+	</div>
+</div>
+{% endif %}

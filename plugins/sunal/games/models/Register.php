@@ -31,4 +31,14 @@ class Register extends Model
         'bankslip' => 'System\Models\File'
 
     ];
+
+    public $belongsToMany = [
+
+        'tourns' => [
+
+            'Sunal\Games\Models\Register',
+            'table' => 'sunal_games_registration_tournaments',
+            'order' => 'tournament_title'
+        ]
+    ];
 }

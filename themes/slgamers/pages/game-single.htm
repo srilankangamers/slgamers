@@ -25,11 +25,9 @@ pageNumber = "{{ :page }}"
 ==
 <?
 use Sunal\Games\Models\Rule;
-use Sunal\Games\Models\Tournament;
 
 function onStart(){
   $this['rules'] = Rule::get();
-  $this['tournaments'] = Tournament::get();
 
 }
 
@@ -61,13 +59,46 @@ function onStart(){
             <div style="width: 200px; height: 200px;" class="card bg-transparent text-white">
               <img src="{{map.map_img|resize(200,200,{'mode':'crop'})}}" class="rounded" alt="...">
               <div class="card-img-overlay">
-                <h5 class="card-title text-center">{{map.name}}</h5>
+                <h3 class="card-title text-center effect-shine-still">{{map.name}}</h3>
               </div>
             </div>
           </div>
           {% endfor %}
           <div class="text-white">{{tmnt.description|raw}}</div>
         </div>
+        <div class="container text-white"  id="register">
+  <div class="row">
+    <div class="col-lg-12 col-md-4" style="overflow-y: scroll; height: 600px;">
+      <h2>RULES</h2>
+      <br>
+      {% for rule in rules %}
+      {{rule.gen_rules|raw}}
+      <br>
+      {{rule.game_rules|raw}}
+      <br>
+      {{rule.tec|raw}}
+      <br>
+      {{rule.bans|raw}}
+      <br>
+      {% if tmnt.type == 'Paid' %}
+      <h2>Bank Details For Payment</h2>
+      <p>Bank Name</p> {{rule.bank_name}}<br>
+      <p>Bank Account Holder Name</p> {{rule.bank_user_name}}<br>
+      <p>Bank Account Number</p> {{rule.bank_user_acc}}<br>
+
+      {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</div>
+{% else %}
+<div style="background-color: darkblue; padding: 50px; margin: 50px;" class="container glow text-center text-white">
+  <h1>No Tournament</h1>
+  <h3>No active Tournament for this game.</h3>
+  <br>
+  <a class="btn btn-outline-primary" href="/games">Go Back</a>
+</div>
+{% endfor %}
       </div>
       <div class="col-lg-4 sidebar">
         <div class="sb-widget">
@@ -75,6 +106,7 @@ function onStart(){
           <ul class="sb-cata-list list-group glow">
             {% for record in records %}
             <li class=" list-group-item bg-transparent {% if record.slug == this.param['slug'] %} list-group-item-action glow {% endif %}"><a class="text-white" style="color: black;" href="/game-single/{{record.slug}}">{% if record.slug == this.param['slug'] %} <i class="fa fa-arrow-right"></i> {{record.title}}</a> {% else %} {{record.title}}</a> {% endif %}</li>
+
             {% endfor %}
           </ul>
         </div>
@@ -107,7 +139,6 @@ function onStart(){
                 <td>{{w.prize}}</td>
               </tr>
             </tbody>
-
             {% endfor %}    
           </table>
         </div>
@@ -117,71 +148,3 @@ function onStart(){
   </div>
 </section>
 <!-- Blog section end -->
-<div class="jumbotron">
-  <div class="row">
-    <div class="col-lg-6 col-md-4">
-      <form data-request="onSave" data-request-files data-request-flash>
-        <input type="hidden" name="_handler" value="onSave">
-        {{ form_token() }}
-        {{ form_sessionkey() }}
-        <h2>Register Now</h2>
-        <br>
-        <div class="form-row">
-          <div class="form-group col-md-6">
-            <label> Player Name</label>
-            <input type="text" class="form-control" name="name">
-          </div>
-          <div class="form-group col-md-6">
-            <label> Contact Number (Whatsapp)</label>
-            <input type="text" class="form-control" name="contact">
-          </div>
-          <div class="form-group col-md-6">
-            <label>Player IGN</label>
-            <input type="text" class="form-control" name="ign">
-          </div>
-          <div class="form-group col-md-6">
-            <label>Game Account ID</label>
-            <input type="text" class="form-control" name="game_id">
-          </div>
-          {% for t in record.tournaments %}
-          
-          {% if t.type == 'Paid' %}
-          <div class="form-group col-md-6">
-            <label>Upload Bank Slip</label>
-            <input type="file" class="form-control" name="bankslip" accept="image/*" data-request="onUpload" data-request-files data-request-flash >
-            <br>
-            <div style="width: 150px; height: 150px;" id="imageresult">No Image to Preview</div>
-            <br>
-          </div>
-          {% endif %}
-          {% endfor %}
-        </div>
-        <button type="submit" class="btn btn-primary">Register</button>
-      </form>
-    </div>
-    <div class="col-lg-6 col-md-4" style="overflow-y: scroll; height: 600px;">
-      <h2>RULES</h2>
-      <br>
-      {% for rule in rules %}
-      {{rule.gen_rules|raw}}
-      <br>
-      {{rule.game_rules|raw}}
-      <br>
-      {{rule.tec|raw}}
-      <br>
-      {{rule.bans|raw}}
-      <br>
-      {% if tmnt.type == 'Paid' %}
-      <h2>Bank Details For Payment</h2>
-      <p>Bank Name</p> {{rule.bank_name}}<br>
-      <p>Bank Account Holder Name</p> {{rule.bank_user_name}}<br>
-      <p>Bank Account Number</p> {{rule.bank_user_acc}}<br>
-
-      {% endif%}
-      {% endfor %}
-    </div>
-  </div>
-</div>
-
-
-{% endfor %}

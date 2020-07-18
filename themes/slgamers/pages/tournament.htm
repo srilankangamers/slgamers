@@ -13,6 +13,20 @@ noRecordsMessage = "No records found"
 detailsPage = "-"
 detailsUrlParameter = "id"
 pageNumber = "{{ :page }}"
+
+[registerform]
+==
+<?php
+use Sunal\Games\Models\Register;
+use Sunal\Games\Models\Tournament;
+use Sunal\Games\Models\Game;
+
+function onStart(){
+  $this['regist'] = Register::get();
+  $this['games'] = Game::get();
+  $this['tt'] = Tournament::get();
+}
+?>
 ==
 {% set records = builderList.records %}
 {% set displayColumn = builderList.displayColumn %}
@@ -26,34 +40,45 @@ pageNumber = "{{ :page }}"
   <div class="row text-center text-lg-left">
     {% for record in records %}
     <div class="col-lg-3 col-md-4 col-6=12">
-      <div class="card bg-db glow" style="margin-bottom: 10px;">
+      <div class="card bg-dark glow" style="margin-bottom: 10px;">
        <img class="card-img-top" src="{{record.poster.path|resize(286,180,{'mode':'crop'})}}" alt="Card image cap">
-       <div class="card-body">
-        <h5 style="height: 3rem;" class="card-title text-white fonttitle">{{record.tournament_title}}</h5>
-        <p class="card-text fontsub">{{html_limit(record.description,50)}}</p>
-      </div>
-      <table class="table table-striped table-dark fontsub">
-        <thead>
-          <tr>
-            <th scope="col">Organized By</th>
-            <th scope="col"><a class="effect-shine text-white" target="_blank" href="https://www.facebook.com/slgamerss/">{{record.organizer}}</a></th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            {# second table content #}
-          </tr>
-        </tbody>
-      </table>
-      <div class="card-body">
+       <div class="card-body txt-glow">
         {% for game in record.games %}
-            <a href="/game-single/{{game.slug}}" class="text-white card-link effect-shine fontsub btn float-right btn-outline-primary">Register <i class="fas fa-user-edit"></i></a>
+        <a class="txt-glow" href="/game-single/{{game.slug}}"><h5 style="height: 3rem;" class="card-title text-white fonttitle">{{record.tournament_title}}</h5></a>
         {% endfor %}
       </div>
-    </div>    
-  </div>
-  {% endfor %}
-</div>
-</div>
+      <table class="table table-striped table-dark table-bordered fontsub">
+        <thead>
+          <tr class="tb-glow">
+            <th scope="row">Organized By</th>
+            <td scope="col"><a class="effect-shine text-nowrap txt-glow text-white" target="_blank" href="https://www.facebook.com/slgamerss/">{{record.organizer}}</a><iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Fslgamerss&width=78&layout=button_count&action=like&size=small&share=false&height=21&appId" width="78" height="21" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe><script src="https://apis.google.com/js/platform.js"></script>
 
-<!-- /.container -->
+              <div class="g-ytsubscribe" data-channelid="UClhjTqSobY0Ovq3lUdLx4Yg" data-layout="default" data-theme="dark" data-count="default"></div></td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="tb-glow">
+              <th scope="row">Joined gamers</th>
+              {% set total = 0 %}
+              {% for gamers in record.regs %}
+              {% set total = loop.length %}
+
+              {% endfor %}
+              <td class="text-right" scope="col"><h3 style="color: #6e7cff"><i class="fas fa-users"></i> {{total}}</h3></td>
+            </tr>
+            <tr class="tb-glow">
+              <th scope="row">Type</th>
+              <td class="text-right" scope="col">{{record.type}}</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="card-body">
+          <a href="/registration/{{record.slug}}" class="text-white card-link effect-shine fontsub btn float-right btn-outline-primary">
+            Register <i class="fas fa-user-edit"></i>
+          </a>
+        </div>
+      </div>    
+    </div>
+    {% endfor %}
+  </div>
+</div>

@@ -5,6 +5,7 @@ use Input;
 use Validator;
 use redirect;
 use Sunal\Games\Models\Register;
+use Sunal\Games\Models\Tournament;
 use Flash;
 use ValidationException;
 use System\Models\File;
@@ -31,7 +32,8 @@ class RegisterForm extends ComponentBase
                 'contact' => 'required',
                 'ign' => 'required',
                 'game_id' => 'required',
-                'bankslip' => 'required|mimes:jpeg,bmp,png',
+                'tour_id' => 'numeric',
+                //'bankslip' => 'required|mimes:jpeg,bmp,png',
 
             ]
 
@@ -39,18 +41,24 @@ class RegisterForm extends ComponentBase
         if($validator->fails()){
             throw new ValidationException($validator);
         }
-
-
-
+        $tournament = new Tournament();
         $register = new Register();
         $register->name = Input::get('name');
         $register->contact = Input::get('contact');
         $register->ign = Input::get('ign');
         $register->game_id = Input::get('game_id');
         $register->bankslip = Input::file('bankslip');
+        $register->tournament_id = Input::get('tour_id');
         $register->save();
+        $register->tourns()->attach([
+            1 => [ 
+                    'tournament_id' => Input::get('tour_id'),
+                    'register_id' => $register->id
+                ]
+        ]);
+        
         Flash::success('Registration Complete');
-  
+        
 
     }
     
